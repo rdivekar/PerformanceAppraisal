@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Performance Appraisal - Index page</title>
+	<link rel="stylesheet" type="text/css" href="css/pa.css">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+<body>
+	<!-- header starts here -->
+	<header class="container">
+		<div class="row">
+			<div class="pa-logo pull-left">
+				Performance Appraisal <br>
+				Managment System
+			</div>
+			<div class="pa-welcome-cnt pull-right">Welcome John Doe <span>&#x25BC;</span></div>
+		</div>
+	</header>
+	<!-- header ends here -->
+	<!-- page content starts here -->
+	<section class="pa-body-cnt container">
+		<div class="row">
+			<h1 class="pa-h1">Performance Appraisal Pending &#x25BC; <span>from: <input type="date"> to: <input type="date"></span></h1>
+			<div class="pa-search"><input type="text" size="50" placeholder="Search"></div>
+			<div>
+				<div class="pa-cta-cnt pull-left"><button class="btn" data-toggle="modal" data-target="#addEmployee"><strong>+ Add Employee</strong></button></div>
+				<div class="pa-pagination pull-right">
+					<a href=""><< Prev</a>
+					<select>
+						<option>1 of 5</option>
+						<option>2 of 5</option>
+						<option>3 of 5</option>
+						<option>4 of 5</option>
+						<option>5 of 5</option>
+					</select>
+					<a href="">Next >></a>
+				</div>
+			</div>
+			<div class="pa-tbl-cnt">
+				<table>
+					<thead>
+						<tr>
+							<th><input type="checkbox"></th>
+							<th>Employee ID</th>
+							<th>Employee Name</th>
+							<th>Date of Joining</th>
+							<th>Last Appraisal Date</th>
+							<th>Scheduled Appraisal Date</th>
+							<th>Appraisal Cycle</th>
+							<th>Manager</th>
+							<th>Status</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td><input type="checkbox"></td>
+							<td>1111</td>
+							<td>John Doe</td>
+							<td>1<sup>st</sup> Dec'16</td>
+							<td>--</td>
+							<td>June' 17</td>
+							<td>Half yearly confirmation</td>
+							<td><input type="text"></td>
+							<td>Initialized</td>
+						</tr>
+						<tr>
+							<td><input type="checkbox"></td>
+							<td>2222</td>
+							<td>Annie M.</td>
+							<td>1<sup>st</sup> Dec'16</td>
+							<td>June'15</td>
+							<td>Nove' 17</td>
+							<td>Yearly</td>
+							<td><input type="text"></td>
+							<td>Due</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+			<div class="pa-cta-cnt pull-right"><button class="btn">Action &#x25BC;</button></div>
+		</div>
+	</section>
+	<!-- page content ends here -->
+	<!-- footer starts here -->
+	<footer class="container">
+		<div class="row">
+			Footer
+		</div>
+	</footer>
+	<!-- footer ends here -->
+
+	<!-- Modal -->
+<div id="addEmployee" class="modal fade" role="dialog">
+  <div class="modal-dialog pa-body-cnt">
+
+    <!-- Modal content-->
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+        <h4 class="modal-title">Add Employee</h4>
+      </div>
+      <div class="modal-body">
+      	<div class="pa-search"><input type="text" size="50" placeholder="Search"></div>
+      	<div class="pa-tbl-cnt">
+			<table>
+				<thead>
+					<tr>
+						<th><input type="checkbox"></th>
+						<th>Employee ID</th>
+						<th>Employee Name</th>
+						<th>Date of Joining</th>
+						<th>Last Appraisal Date</th>
+						<th>Scheduled Appraisal Date</th>
+						<th>Appraisal Cycle</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td><input type="checkbox"></td>
+						<td>1111</td>
+						<td>John Doe</td>
+						<td>1<sup>st</sup> Dec'16</td>
+						<td>--</td>
+						<td>June' 17</td>
+						<td>Half yearly confirmation</td>
+					</tr>
+					<tr>
+						<td><input type="checkbox"></td>
+						<td>2222</td>
+						<td>Annie M.</td>
+						<td>1<sup>st</sup> Dec'16</td>
+						<td>June'15</td>
+						<td>Nove' 17</td>
+						<td>Yearly</td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Submit</button>
+      </div>
+    </div>
+
+  </div>
+</div>
+</body>
+</html>
