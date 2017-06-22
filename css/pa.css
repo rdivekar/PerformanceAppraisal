@@ -56,7 +56,7 @@ header .pa-welcome-cnt span {
 .pa-body-cnt .pa-h1 {
 
 }
-.pa-body-cnt .pa-h1 span{
+.pa-body-cnt .pa-h1 span, .pa-body-cnt .pa-h2 span{
 	font-size: 12px;
 }
 .pa-body-cnt .pa-search {
@@ -76,7 +76,7 @@ header .pa-welcome-cnt span {
 
 }
 .pa-emp-dtl-cnt .comment-section {
-	
+
 }
 /* employee details ends here */
 /* table style starts here */
