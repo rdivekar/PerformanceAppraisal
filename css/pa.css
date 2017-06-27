@@ -1,10 +1,4 @@
 /* eTouch Performance Appraisal application */
-body {
-
-}
-a {
-
-}
 html, body, div, span, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, button, abbr, acronym, address, code, em, img, small, strike, strong, sub, sup, var, b, i, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, figure, figcaption, footer, header, hgroup, menu, nav, output, section, summary, time{
 	/*margin: 0;
 	padding: 0;
@@ -17,8 +11,14 @@ article, aside, details, figcaption, figure,
 footer, header, hgroup, menu, nav, section {
 	display: block;
 }
-body {
+html body {
 	line-height: 1;
+	background-color: #e4e7ed;
+	color: #202020;
+	font-family: 'Roboto', sans-serif;
+}
+a {
+
 }
 ol, ul {
 	list-style: none;
@@ -37,21 +37,145 @@ table {
 }
 /* header section */
 header{
-	background-color: #e8e8e8;
+	background-color: #fff;
+	margin-bottom: 25px;
+}
+header .sub-header {
+	border-top: solid 3px #02a397;
+	background-color: rgba(0,0,0,0.80);
+	color: #fff;
+	box-shadow: 0px 5px 8px #888888;
+	padding: 15px 0;
+}
+header .sub-header h1 {
+	text-indent: 10px;
+	font-size: 18px;
+	margin: 0px;
+}
+header .sub-header .add-action{
+	background-color: #f34d77;
+	color: #fff;
+	display: inline-block;
+	height: 40px;
+	width: 40px;
+	position: absolute;
+	z-index: 1;
+	right: 1px;
+	top: -20px;
+	text-align: center;
+	border-radius: 20px;
+	font-size: 25px;
+	font-weight: bold;
+	cursor: default;
+	max-width: auto;
+	padding-top: 5px;
+	padding: 5px 8px;
+	overflow: hidden;
+	float: left;
+	-webkit-animation: in 1s;
+}
+header .sub-header .add-action span {
+	float: right;
+	font-size: 15px;
+	margin-top: 7px;
+}
+header .sub-header .add-action:hover {
+	text-decoration: none;
+	-webkit-animation: out 1s;
+}
+header .sub-header .add-action:hover span{
+	
+}
+@-webkit-keyframes in {
+    from   { width: 40px; }
+    to { width: 100px;}
+}
+
+@-webkit-keyframes out {
+    0%   {width: 100px;}
+    100% {width: 40px;}
+}
+header .sub-header .arrow {
+	font-size: 150%;
+	line-height: 0px;
+}
+header .sub-header .date-details {
+	font-size: 16px;
+	color: #fff;
+}
+header .sub-header .date-details input {
+	color: #fff;
+    background: transparent;
+    border: 0;
+}
+header .sub-header .profile-name span{
+	color: #5fbabe;
+	font-size: 20px;
+}
+header .sub-header .profile-details ul {
+	padding-left: 10px;
+	list-style-type: disc;
+}
+header .sub-header .profile-details ul li {
+	display: inline-block;
+  	margin-right: 0.5em;
+}
+header .sub-header .profile-details ul li:before {
+	content: '\00b7';
+	font-size: 25px;
+	line-height: 0px;
 }
 header .pa-logo {
-
+	padding-left: 10px;
+}
+header .pa-logo img {
+	width: 110px;
+	background-color: ;
+}
+header .heading {
+	font-size: 18px;
+	font-weight: bold;
+	margin-top: 20px;
+	color: #313541;
 }
 header .pa-welcome-cnt {
-
+	margin-top: 10px;
+	display: table;
+	color: #4d4d4d;
+	font-size: 14px;
 }
 header .pa-welcome-cnt span {
 
 }
+header .pa-welcome-cnt .notification {
+	/*background: url(../images/notification.png) no-repeat;*/
+	height: 26px;
+	width: 23px;
+	display: inline-block;
+	margin-right: 20px;
+	fill: #4d4d4c;
+	position: relative;
+	top: 6px;
+}
+header .pa-welcome-cnt .notification sup {
+	background-color: #f14c75;
+	height: 15px;
+	width: 15px;
+	border-radius: 50%;
+	color: #fff;
+	font-size: 11px;
+	padding: 5px;
+	padding-top: 8px;
+	display: inline-block;
+	position: absolute;
+	right: -1px;
+	top: -3px;
+	cursor: default;
+}
 /* header section ends */
 /* body section */
 .pa-body-cnt{
-
+	margin: 10px;
 }
 .pa-body-cnt .pa-h1 {
 
@@ -59,8 +183,22 @@ header .pa-welcome-cnt span {
 .pa-body-cnt .pa-h1 span, .pa-body-cnt .pa-h2 span{
 	font-size: 12px;
 }
-.pa-body-cnt .pa-search {
-	text-align: right;
+.pa-body-cnt .pa-search, .pa-body-cnt .pa-action {
+	background-color: rgba(255, 255, 255, 0.4);
+	padding: 8px;
+	margin-bottom: 5px;
+}
+.pa-body-cnt .pa-search input {
+	border: 0;
+	background: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='30' height='30'><path fill='#313541' d='M9.5,3A6.5,6.5 0 0,1 16,9.5C16,11.11 15.41,12.59 14.44,13.73L14.71,14H15.5L20.5,19L19,20.5L14,15.5V14.71L13.73,14.44C12.59,15.41 11.11,16 9.5,16A6.5,6.5 0 0,1 3,9.5A6.5,6.5 0 0,1 9.5,3M9.5,5C7,5 5,7 5,9.5C5,12 7,14 9.5,14C12,14 14,12 14,9.5C14,7 12,5 9.5,5Z' /></svg>") no-repeat right top #fff;
+	height: 25px;
+	padding: 5px;
+	line-height: 25px;
+	color: #6d7074;
+	font-size: 13px;
+}
+.pa-body-cnt .pa-action {
+	padding: 13px 8px;
 }
 .pa-body-cnt .pa-pagination {
 	
@@ -87,17 +225,20 @@ header .pa-welcome-cnt span {
 
 }
 .pa-tbl-cnt table {
-	border: solid 1px #e8e8e8;
+	background-color: #fff;
 	border-width: 1px 0 0 1px;
 	width: 100%;
+	font-size: 13px;
 }
 .pa-tbl-cnt th {
 	border: solid 1px #e8e8e8;
-	border-width: 0 1px 1px 0;
+	border-width: 0 0 1px 0;
+	padding: 10px;
 }
 .pa-tbl-cnt td {
 	border: solid 1px #e8e8e8;
-	border-width: 0 1px 1px 0;
+	border-width: 0 0 1px 0;
+	padding: 10px;
 }
 .pa-cta-cnt .pa-btn {
 
