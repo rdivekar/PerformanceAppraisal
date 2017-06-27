@@ -3,25 +3,40 @@
 <head>
 	<title>Performance Appraisal - Index page</title>
 	<link rel="stylesheet" type="text/css" href="css/pa.css">
-	<link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 </head>
 <body>
 	<!-- header starts here -->
-	<header class="container">
+	<header class="container-fluid">
 		<div class="row">
-			<div class="pa-logo pull-left">
-				Performance Appraisal <br>
-				Managment System
+			<div class="col-xs-3 col-sm-2 col-md-2 col-lg-2 pa-logo">
+				<img src="images/etouch-logo.png">
 			</div>
-			<div class="pa-welcome-cnt pull-right">Welcome John Doe &#x25BC;</div>
+			<div class="col-xs-9 col-sm-7 col-md-7 col-lg-7 heading">Performance Appraisal Managment System</div>
+			<div class="col-xs-12 col-sm-3 col-md-3 col-lg-3 text-right pa-welcome-cnt">
+				<span class="notification">
+					<svg style="width:24px;height:24px" viewBox="0 0 24 24">
+    					<path d="M14,20A2,2 0 0,1 12,22A2,2 0 0,1 10,20H14M12,2A1,1 0 0,1 13,3V4.08C15.84,4.56 18,7.03 18,10V16L21,19H3L6,16V10C6,7.03 8.16,4.56 11,4.08V3A1,1 0 0,1 12,2Z" />
+					</svg>
+					<sup>4</sup>
+				</span>
+				Welcome <strong>Emily Perkins</strong> 
+				<span class="user"><img src="images/user.png"></span>
+			</div>
+		</div>
+		<div class="row sub-header">
+			<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+				<h1 class="pa-h1">Performance Appraisal Emily Perkins <span class="arrow">&#x2304;</span></h1>
+			</div>
 		</div>
 	</header>
 	<!-- header ends here -->
 	<!-- page content starts here -->
-	<section class="pa-body-cnt container">
+	<section class="pa-body-cnt container-fluid">
 		<div class="row">
-			<h1 class="pa-h1">John Doe's Appraisal &#x25BC;</h1>
-			<div class="pa-tbl-cnt">
+			<div class="pa-tbl-cnt col-xs-12 col-sm-12 col-md-12 col-lg-12">
 				<table>
 					<thead>
 						<tr>
@@ -33,12 +48,12 @@
 					<tbody>
 						<tr>
 							<td>Jan'16 to Dec'17</td>
-							<td><a href="#">URL Link</a></td>
-							<td>Due/Filling in process/Sent to Manager/ Sent to HR</td>
+							<td><a href="employee-Manager-Screen3.html">URL</a></td>
+							<td>Due</td>
 						</tr>
 						<tr>
-							<td>Jan'15 to Dec'16</td>
-							<td><a href="#">John-Doe-Appraisal.pdf</a></td>
+							<td>Jan'16 to Dec'17</td>
+							<td><a href="#">EmilyPerkins-Performance-Appraisal(Dec'16)</a></td>
 							<td>Completed</td>
 						</tr>
 					</tbody>
@@ -48,11 +63,88 @@
 	</section>
 	<!-- page content ends here -->
 	<!-- footer starts here -->
-	<footer class="container">
+	<footer class="container-fluid">
 		<div class="row">
-			Footer
+			<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">Footer</div>
 		</div>
 	</footer>
 	<!-- footer ends here -->
+
+	<!-- add employee Modal -->
+	<div id="addEmployee" class="modal fade" role="dialog">
+	  <div class="modal-dialog pa-body-cnt">
+
+	    <!-- Modal content-->
+	    <div class="modal-content">
+	      <div class="modal-header">
+	        <button type="button" class="close" data-dismiss="modal">&times;</button>
+	        <h4 class="modal-title">Add Employee</h4>
+	      </div>
+	      <div class="modal-body">
+	      	<div class="pa-search"><input type="text" size="50" placeholder="Search"></div>
+	      	<div class="pa-tbl-cnt">
+				<table>
+					<thead>
+						<tr>
+							<th><input type="checkbox"></th>
+							<th>Employee ID</th>
+							<th>Employee Name</th>
+							<th>Date of Joining</th>
+							<th>Last Appraisal Date</th>
+							<th>Scheduled Appraisal Date</th>
+							<th>Appraisal Cycle</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td><input type="checkbox"></td>
+							<td>1111</td>
+							<td>John Doe</td>
+							<td>1<sup>st</sup> Dec'16</td>
+							<td>--</td>
+							<td>June' 17</td>
+							<td>Half yearly confirmation</td>
+						</tr>
+						<tr>
+							<td><input type="checkbox"></td>
+							<td>2222</td>
+							<td>Annie M.</td>
+							<td>1<sup>st</sup> Dec'16</td>
+							<td>June'15</td>
+							<td>Nove' 17</td>
+							<td>Yearly</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+	      </div>
+	      <div class="modal-footer">
+	        <button type="button" class="btn btn-default" data-dismiss="modal">Submit</button>
+	      </div>
+	    </div>
+
+	  </div>
+	</div>
+	<!-- Action comment Modal -->
+	<div id="action" class="modal fade" role="dialog">
+	  <div class="modal-dialog pa-body-cnt">
+
+	    <!-- Modal content-->
+	    <div class="modal-content">
+	      <div class="modal-header">
+	        <button type="button" class="close" data-dismiss="modal">&times;</button>
+	        <h4 class="modal-title">Hold the Appraisal</h4>
+	      </div>
+	      <div class="modal-body">
+	      	Comment:<br>
+	      	<textarea rows="" cols="75"></textarea>
+	      </div>
+	      <div class="modal-footer">
+	        <button type="button" class="btn btn-default" data-dismiss="modal">Submit</button>
+	      </div>
+	    </div>
+
+	  </div>
+	</div>
 </body>
 </html>
