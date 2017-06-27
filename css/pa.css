@@ -1,0 +1,114 @@
+/* eTouch Performance Appraisal application */
+body {
+
+}
+a {
+
+}
+html, body, div, span, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, button, abbr, acronym, address, code, em, img, small, strike, strong, sub, sup, var, b, i, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, figure, figcaption, footer, header, hgroup, menu, nav, output, section, summary, time{
+	/*margin: 0;
+	padding: 0;
+	border: 0;
+	line-height: 1;
+	vertical-align: baseline; */
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+/* header section */
+header{
+	background-color: #e8e8e8;
+}
+header .pa-logo {
+
+}
+header .pa-welcome-cnt {
+
+}
+header .pa-welcome-cnt span {
+
+}
+/* header section ends */
+/* body section */
+.pa-body-cnt{
+
+}
+.pa-body-cnt .pa-h1 {
+
+}
+.pa-body-cnt .pa-h1 span, .pa-body-cnt .pa-h2 span{
+	font-size: 12px;
+}
+.pa-body-cnt .pa-search {
+	text-align: right;
+}
+.pa-body-cnt .pa-pagination {
+	
+}
+/* employee details starts here */
+.pa-body-cnt .pa-emp-dtl-cnt {
+
+}
+.pa-emp-dtl-cnt .pa-emp-label {
+
+}
+.pa-emp-dtl-cnt .pa-emp-value {
+
+}
+.pa-emp-dtl-cnt .comment-section {
+
+}
+/* employee details ends here */
+/* table style starts here */
+.pa-body-cnt .pa-tbl-cnt {
+
+}
+.pa-tbl-caption {
+
+}
+.pa-tbl-cnt table {
+	border: solid 1px #e8e8e8;
+	border-width: 1px 0 0 1px;
+	width: 100%;
+}
+.pa-tbl-cnt th {
+	border: solid 1px #e8e8e8;
+	border-width: 0 1px 1px 0;
+}
+.pa-tbl-cnt td {
+	border: solid 1px #e8e8e8;
+	border-width: 0 1px 1px 0;
+}
+.pa-cta-cnt .pa-btn {
+
+}
+/* table style ends here */
+/* modal classes */
+
+/* modal classes ends here */
+/* body section ends */
+/* footer section */
+footer{
+
+}
+/* footer section ends */
