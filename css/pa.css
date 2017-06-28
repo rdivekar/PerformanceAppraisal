@@ -308,9 +308,38 @@ left: 4px;
 .pa-body-cnt .pa-action {
 	padding: 13px 8px 0;
 }
-.pa-body-cnt .pa-pagination {
-	
-}
+.pa-pagination-section {
+        background: #fff;
+        padding: 0px 10px 10px;
+        font-size: 13px;
+        }
+      .pa-pagination {
+      }
+      .pa-pagination span{
+        position: relative;
+      }
+      .pa-pagination .pa-arrow {
+        top: 5px;
+      }
+      .pa-curr-page-number {
+        width: 35px;
+        border: 1px solid #ccc;
+        border-radius: 2px;
+        background: #fafafa;
+        margin: 0 5px;
+      }
+      .pa-active {
+        fill: #149bfe;
+      }
+      .pa-inactive {
+        fill: #c3c3c3;
+      }
+      .pa-arrow-icon {
+        width: 20px;
+        height: 20px;
+        display: inline-block;
+        cursor: pointer;
+      }
 
 /* table style starts here */
 .pa-body-cnt .pa-tbl-cnt {
