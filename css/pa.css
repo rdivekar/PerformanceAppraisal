@@ -161,8 +161,20 @@ header .sub-header .pa-emp-dtl-cnt ul {
 header .sub-header .pa-emp-dtl-cnt ul li + li {
 	margin-top: 1em;
 }
-.pa-emp-dtl-cnt .pa-emp-label {
-
+.pa-emp-description-cnt .pa-emp-label {
+  font-weight: bold;
+  width: 220px;
+  display: inline-block;
+}
+.pa-emp-description-cnt .rating-band {
+    display: inline-block;
+    width: 150px;
+    margin: 0 20px;
+}
+.pa-emp-description-cnt .rating-band span {
+  height: 10px;
+  background-color: #65cccb;
+  display: block;
 }
 .pa-emp-dtl-cnt .pa-emp-value {
 	color: #fff;
@@ -237,6 +249,11 @@ header .pa-welcome-cnt .notification sup {
 /* body section */
 .pa-body-cnt{
 	margin: 10px;
+}
+.pa-body-cnt .info-dotted {
+  background-color: #fff;
+  padding: 8px;
+  border: dashed 1px #b8b8ba;
 }
 .sub-header .pa-h1 {
   display: inline-block;
