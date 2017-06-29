@@ -34,6 +34,9 @@ q:before, q:after {
 div {
 	box-sizing: border-box;
 }
+p {
+	line-height: 1.428;
+}
 table {
 	border-collapse: collapse;
 	border-spacing: 0;
@@ -179,6 +182,13 @@ header .sub-header .pa-emp-dtl-cnt ul li + li {
 .pa-emp-dtl-cnt .pa-emp-value {
 	color: #fff;
 }
+.pa-emp-dtl-cnt .responsibility-date {
+	background-color: #f6f6f6;
+	border: none;
+	font-weight: bold;
+	padding: 5px 0;
+    text-align: center;
+}
 .pa-emp-dtl-cnt .comment-section {
 
 }
@@ -296,7 +306,7 @@ left: 4px;
 .pa-body-cnt .pa-h2 + p {
   color: #86878b;
   font-size: 12px;
-  margin-left: 20px;
+  margin-bottom: 5px;
   margin-top: 6px;
 }
 .pa-body-cnt .pa-h3 {
