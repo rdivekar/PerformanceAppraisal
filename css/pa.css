@@ -301,7 +301,7 @@ left: 4px;
 .pa-body-cnt .pa-h2 {
 	color: #3c4d60;
 	font-weight: bold;
-	font-size: 20px;
+	font-size: 16px;
 	margin-top: 0;
 }
 .pa-body-cnt .pa-h2 + p {
@@ -315,8 +315,13 @@ left: 4px;
 	font-weight: normal;
 	margin: 6px 0px;
 }
-.pa-body-cnt .pa-h1 span, .pa-body-cnt .pa-h2 span{
+.pa-body-cnt .pa-h1 span{
 	font-size: 12px;
+}
+.pa-body-cnt .pa-h2 span{
+  font-size: 12px;
+  color: #777777;
+  font-weight: normal;
 }
 .pa-body-cnt .pa-search, .pa-body-cnt .pa-action {
 	background-color: rgba(255, 255, 255, 0.4);
