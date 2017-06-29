@@ -194,6 +194,7 @@ header .sub-header .pa-emp-dtl-cnt ul li + li {
 }
 header .pa-logo {
 	padding: 10px;
+  padding-left: 0;
 }
 header .pa-logo img {
 	width: 100px;
@@ -211,13 +212,19 @@ header .heading:before {
  height: 55px;
  width: 2px;
  position: absolute;
- margin: -20px 0 0 -10px
+ margin: -20px 0 0 -15px
 }
 header .pa-welcome-cnt {
 	margin-top: 18px;
+  margin-bottom: 10px;
 	display: table;
 	color: #4d4d4d;
 	font-size: 12px;
+}
+@media (max-width: 991px){
+  header .pa-welcome-cnt{
+      margin-top: 0px;
+  }
 }
 header .pa-welcome-cnt span.user img {
   height: 35px;
@@ -238,7 +245,7 @@ header .pa-welcome-cnt .notification {
 	margin-right: 20px;
 	fill: #4d4d4c;
 	position: relative;
-	top: 6px;
+	top: 8px;
 }
 header .pa-welcome-cnt .notification sup {
 	background-color: #f14c75;
