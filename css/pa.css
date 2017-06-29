@@ -12,10 +12,11 @@ footer, header, hgroup, menu, nav, section {
 	display: block;
 }
 html body {
-	line-height: 1;
+	line-height: 16px;
 	background-color: #e4e7ed;
 	color: #202020;
 	font-family: 'Roboto', sans-serif;
+  font-size: 12px;
 }
 a {
 
@@ -33,9 +34,6 @@ q:before, q:after {
 }
 div {
 	box-sizing: border-box;
-}
-p {
-	line-height: 1.428;
 }
 table {
 	border-collapse: collapse;
@@ -164,15 +162,24 @@ header .sub-header .pa-emp-dtl-cnt ul {
 header .sub-header .pa-emp-dtl-cnt ul li + li {
 	margin-top: 1em;
 }
+.pa-emp-description-cnt .list-group-item.row{
+  margin: 0;
+  border: 0;
+  border-bottom: 1px solid #ddd;
+}
+.pa-emp-description-cnt .list-group-item.row div {
+  padding: 0;
+}
 .pa-emp-description-cnt .pa-emp-label {
   font-weight: bold;
-  width: 220px;
   display: inline-block;
 }
 .pa-emp-description-cnt .rating-band {
     display: inline-block;
-    width: 150px;
-    margin: 0 20px;
+}
+.pa-emp-description-cnt .rating-band .NA {
+  border: solid 1px #65cccb;
+  background-color: #fff;
 }
 .pa-emp-description-cnt .rating-band span {
   height: 10px;
@@ -194,6 +201,7 @@ header .sub-header .pa-emp-dtl-cnt ul li + li {
 }
 header .pa-logo {
 	padding: 10px;
+  padding-left: 0;
 }
 header .pa-logo img {
 	width: 100px;
@@ -211,13 +219,19 @@ header .heading:before {
  height: 55px;
  width: 2px;
  position: absolute;
- margin: -20px 0 0 -10px
+ margin: -20px 0 0 -15px
 }
 header .pa-welcome-cnt {
 	margin-top: 18px;
+  margin-bottom: 10px;
 	display: table;
 	color: #4d4d4d;
 	font-size: 12px;
+}
+@media (max-width: 991px){
+  header .pa-welcome-cnt{
+      margin-top: 0px;
+  }
 }
 header .pa-welcome-cnt span.user img {
   height: 35px;
@@ -238,7 +252,7 @@ header .pa-welcome-cnt .notification {
 	margin-right: 20px;
 	fill: #4d4d4c;
 	position: relative;
-	top: 6px;
+	top: 8px;
 }
 header .pa-welcome-cnt .notification sup {
 	background-color: #f14c75;
@@ -264,6 +278,7 @@ header .pa-welcome-cnt .notification sup {
   background-color: #fff;
   padding: 8px;
   border: dashed 1px #b8b8ba;
+  line-height: 16px;
 }
 .sub-header .pa-h1 {
   display: inline-block;
@@ -300,7 +315,7 @@ left: 4px;
 .pa-body-cnt .pa-h2 {
 	color: #3c4d60;
 	font-weight: bold;
-	font-size: 20px;
+	font-size: 16px;
 	margin-top: 0;
 }
 .pa-body-cnt .pa-h2 + p {
@@ -311,12 +326,17 @@ left: 4px;
 }
 .pa-body-cnt .pa-h3 {
 	color: #3c4d60;
-	font-size: 15px;
+	font-size: 14px;
 	font-weight: normal;
 	margin: 6px 0px;
 }
-.pa-body-cnt .pa-h1 span, .pa-body-cnt .pa-h2 span{
+.pa-body-cnt .pa-h1 span{
 	font-size: 12px;
+}
+.pa-body-cnt .pa-h2 span{
+  font-size: 12px;
+  color: #777777;
+  font-weight: normal;
 }
 .pa-body-cnt .pa-search, .pa-body-cnt .pa-action {
 	background-color: rgba(255, 255, 255, 0.4);
