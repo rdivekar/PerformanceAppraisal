@@ -12,10 +12,11 @@ footer, header, hgroup, menu, nav, section {
 	display: block;
 }
 html body {
-	line-height: 1;
+	line-height: 16px;
 	background-color: #e4e7ed;
 	color: #202020;
 	font-family: 'Roboto', sans-serif;
+  font-size: 12px;
 }
 a {
 
@@ -161,15 +162,24 @@ header .sub-header .pa-emp-dtl-cnt ul {
 header .sub-header .pa-emp-dtl-cnt ul li + li {
 	margin-top: 1em;
 }
+.pa-emp-description-cnt .list-group-item.row{
+  margin: 0;
+  border: 0;
+  border-bottom: 1px solid #ddd;
+}
+.pa-emp-description-cnt .list-group-item.row div {
+  padding: 0;
+}
 .pa-emp-description-cnt .pa-emp-label {
   font-weight: bold;
-  width: 220px;
   display: inline-block;
 }
 .pa-emp-description-cnt .rating-band {
     display: inline-block;
-    width: 150px;
-    margin: 0 20px;
+}
+.pa-emp-description-cnt .rating-band .NA {
+  border: solid 1px #65cccb;
+  background-color: #fff;
 }
 .pa-emp-description-cnt .rating-band span {
   height: 10px;
@@ -254,6 +264,7 @@ header .pa-welcome-cnt .notification sup {
   background-color: #fff;
   padding: 8px;
   border: dashed 1px #b8b8ba;
+  line-height: 16px;
 }
 .sub-header .pa-h1 {
   display: inline-block;
