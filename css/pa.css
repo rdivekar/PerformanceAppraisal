@@ -40,6 +40,9 @@ table {
 	border-spacing: 0;
 }
 /* button classes starts here */
+.pa-cta-cnt {
+  margin-top: 10px;
+}
 .pa-cta-cnt button {
   color: #fff;
   border-radius: 0;
@@ -337,6 +340,8 @@ left: 4px;
   font-size: 12px;
   color: #777777;
   font-weight: normal;
+  display: block;
+  padding-top: 5px;
 }
 .pa-body-cnt .pa-search, .pa-body-cnt .pa-action {
 	background-color: rgba(255, 255, 255, 0.4);
@@ -568,6 +573,28 @@ left: 4px;
  opacity: 1;
 }
 /* add item css clases ends here */
+/* previous year objective starts here */
+.pre-yr-obj textarea {
+ border: 0px solid #f1f1f1;
+ padding:10px;
+  height: 60px;
+  resize: none;
+  width: 100%;
+  padding-right: 50px;
+}
+.pre-yr-obj .pre-obj-table table tr:hover {
+  /*border: solid 1px; */
+  background-color: #fafafa;
+}
+.pre-yr-obj-padding{background: #fff none repeat scroll 0 0;}
+.pre-obj-table {margin-top:5px;}
+.pre-yr-obj-padding table th{border:none;}
+.pre-yr-obj .es-table.pa-tbl-cnt td{position:relative;}
+.pre-obj-table .close-btn{fill: #dedede;position:absolute;right:3px;top:3px;cursor:pointer; display: none;}
+.pre-obj-table table tr:hover .close-btn {display: block;}
+.pre-obj-table table tr .close-btn:hover {fill: #848484;}
+}
+/* previous year objective ends here */
 /* ratings radio style starts here */
 .es-table .radios-wrapper{
   position:relative;
