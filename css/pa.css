@@ -595,9 +595,9 @@ left: 4px;
 .pre-obj-table {margin-top:5px;}
 .pre-yr-obj-padding table th{border:none;}
 .pre-yr-obj .es-table.pa-tbl-cnt td, .dev-need-actn-tbl td{position:relative;}
-.pre-obj-table .close-btn, .dev-need-actn-tbl .close-btn {fill: #dedede;position:absolute;right:3px;top:3px;cursor:pointer; display: none;}
-.pre-obj-table table tr:hover .close-btn, .dev-need-actn-tbl table tr:hover .close-btn {display: block;}
-.pre-obj-table table tr .close-btn:hover, .dev-need-actn-tbl table tr:hover .close-btn {fill: #848484;}
+.pre-obj-table .close-btn, .dev-need-actn-tbl .close-btn, .training-activities .close-btn {fill: #dedede;position:absolute;right:3px;top:3px;cursor:pointer; display: none;}
+.pre-obj-table table tr:hover .close-btn, .dev-need-actn-tbl table tr:hover .close-btn, .training-activities .activities-content:hover .close-btn{display: block;}
+.pre-obj-table table tr .close-btn:hover, .dev-need-actn-tbl table tr .close-btn:hover, .training-activities .activities-content .close-btn:hover {fill: #848484;}
 }
 /* previous year objective ends here */
 /* ratings radio style starts here */
@@ -662,7 +662,7 @@ left: 4px;
 /* ratings radio style ends here */
 
 /* career-aspirations starts here */
-.career-aspirations .title, .dev-need-actn-tbl .title{padding: 16px 10px;background:#f5f9fc;font-weight:bold;color:#1b3148;margin-bottom:1px;}
+.career-aspirations .title, .dev-need-actn-tbl .title{padding:10px;background:#f5f9fc;font-weight:bold;color:#1b3148;margin-bottom:1px;}
 .dev-need-actn-tbl .title {
 	font-size: 14px;
 }
@@ -674,6 +674,12 @@ left: 4px;
 .career-aspirations .sub-title textarea,.career-aspirations .comments textarea{height:40px; border:1px solid #f1f1f1;width:100%;resize:none;padding:10px;}
 .career-aspirations .comments textarea {height:74px;}
 /* career-aspirations ends here */
+
+/* participating-in-training starts here */
+.training-activities .activities-content{padding: 10px;background:#fff;margin-bottom:2px;position:relative;} 
+.training-activities .activities-content:hover{background:#fafafa;}
+.training-activities .activities-content textarea{height:40px; border:none; width:100%;resize:none;padding:10px;}
+/* participating-in-training ends here */
 
 /* modal classes */
 
