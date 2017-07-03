@@ -450,7 +450,6 @@ left: 4px;
          text-align: center;
          color: #149bfe;
          font-weight: bold;
-         text-transform: uppercase;
          font-size: 13px;
          display: inline-block;
          }
@@ -695,6 +694,7 @@ left: 4px;
 .checkmark-button-container {
   margin: 0px auto 0;
   width:18px;
+  display: inline-block;
 }
 .pa-tbl-cnt td {
   vertical-align: middle;
