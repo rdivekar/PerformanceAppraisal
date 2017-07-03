@@ -598,13 +598,13 @@ left: 4px;
   width: 100%;
   padding-right: 50px;
 }
-.pre-yr-obj .pre-obj-table table tr:hover, .dev-need-actn-tbl table tr:hover{
+.pre-yr-obj .pre-obj-table table tr:hover td, .dev-need-actn-tbl table tr:hover td{
   /*border: solid 1px; */
   background-color: #fafafa;
 }
 .pre-yr-obj-padding{background: #fff none repeat scroll 0 0;}
 .pre-obj-table {margin-top:5px;}
-.pre-yr-obj-padding table th{border:none;}
+/* .pre-yr-obj-padding table th{border:none;} */
 .pre-yr-obj .es-table.pa-tbl-cnt td, .dev-need-actn-tbl td{position:relative;}
 .pre-obj-table .close-btn, .dev-need-actn-tbl .close-btn, .training-activities .close-btn {fill: #dedede;position:absolute;right:3px;top:3px;cursor:pointer; display: none;}
 .pre-obj-table table tr:hover .close-btn, .dev-need-actn-tbl table tr:hover .close-btn, .training-activities .activities-content:hover .close-btn{display: block;}
@@ -699,7 +699,12 @@ left: 4px;
 .training-activities .activities-content:hover{background:#fafafa;}
 .training-activities .activities-content textarea{height:40px; border:none; width:100%;resize:none;padding:10px;}
 /* participating-in-training ends here */
-
+/* Employee Statement Of Objectives starts here */
+.employee-statement-page h2 input.form-control{
+  display: inline-block;
+  width: auto;
+}
+/* Employee Statement Of Objectives ends here */
 /* modal classes */
 
 /* modal classes ends here */
