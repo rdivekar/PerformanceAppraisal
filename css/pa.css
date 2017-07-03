@@ -692,7 +692,7 @@ left: 4px;
 
 /* check-box css*/
 
-.checkmark-button-container {
+.checkmark-button-container, .radio-button-container  {
   margin: 0px auto 0;
   width:18px;
   display: inline-block;
@@ -841,6 +841,54 @@ margin-bottom: 0;
   animation: dothatopcheck 0.4s ease 0s forwards;
 }
 /* check-box css ends*/
+
+
+/*Radio buttons classes*/
+.es-table .radio-button-container {
+      margin-top: 5px;
+}
+.es-table tr td:first-child {
+vertical-align: top;
+}
+ .es-table .radio-button-container label {
+  height: 14px;
+  width: 14px;
+  margin-bottom: 0;
+}
+
+.radio-button-container .check-box::before {
+  top: 9px;
+  left: 7px;
+}
+.radio-button-container .check-box::after {
+  top: 4px;
+  left: 2px;
+}
+
+input[type=radio] {
+  display: none;
+}
+input[type=radio]:checked + .check-box,
+.check-box.checked {
+  border-color: #148c83;
+}
+input[type=radio]:checked + .check-box::after,
+.check-box.checked::after {
+  height: 50px;
+  -moz-animation: dothabottomcheck 0.2s ease 0s forwards;
+  -o-animation: dothabottomcheck 0.2s ease 0s forwards;
+  -webkit-animation: dothabottomcheck 0.2s ease 0s forwards;
+  animation: dothabottomcheck 0.2s ease 0s forwards;
+}
+input[type=radio]:checked + .check-box::before,
+.check-box.checked::before {
+  height: 120px;
+  -moz-animation: dothatopcheck 0.4s ease 0s forwards;
+  -o-animation: dothatopcheck 0.4s ease 0s forwards;
+  -webkit-animation: dothatopcheck 0.4s ease 0s forwards;
+  animation: dothatopcheck 0.4s ease 0s forwards;
+}
+/*Radio buttons classes ends*/
 
 /* too-tip css*/
 .tool-tip-shadow{
