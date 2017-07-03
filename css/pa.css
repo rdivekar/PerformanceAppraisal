@@ -124,7 +124,7 @@ header .sub-header .date-details {
   color: #fff;
   display: inline-block;
   white-space: nowrap;
-  margin-right: 30px;
+  margin-right: 0px;
 }
 header .sub-header .date-details .input-group-addon {
   width: auto;
@@ -145,7 +145,7 @@ header .sub-header .date-details input {
   color: #fff;
     background: transparent;
     border: 0;
-    width: 150px;
+    width: 100px;
     float: none;
 }
 header .sub-header .profile-name span{
@@ -319,6 +319,17 @@ top: 5px;
 font-size: 18px;
 color: #202020;
 left: 4px;
+}
+.sub-header .add-item > div {
+  width: 40px;
+}
+.sub-header .add-item-accomplishment > div .menu-button .menu-open-button:hover {
+  max-width: 200px;
+  left: -155px;
+}
+.sub-header .add-item-activity > div .menu-button .menu-open-button:hover {
+  max-width: 150px;
+  left: -95px;
 }
 .pa-body-cnt .pa-h2 {
   color: #3c4d60;
@@ -587,13 +598,13 @@ left: 4px;
   width: 100%;
   padding-right: 50px;
 }
-.pre-yr-obj .pre-obj-table table tr:hover, .dev-need-actn-tbl table tr:hover{
+.pre-yr-obj .pre-obj-table table tr:hover td, .dev-need-actn-tbl table tr:hover td{
   /*border: solid 1px; */
   background-color: #fafafa;
 }
 .pre-yr-obj-padding{background: #fff none repeat scroll 0 0;}
 .pre-obj-table {margin-top:5px;}
-.pre-yr-obj-padding table th{border:none;}
+/* .pre-yr-obj-padding table th{border:none;} */
 .pre-yr-obj .es-table.pa-tbl-cnt td, .dev-need-actn-tbl td{position:relative;}
 .pre-obj-table .close-btn, .dev-need-actn-tbl .close-btn, .training-activities .close-btn {fill: #dedede;position:absolute;right:3px;top:3px;cursor:pointer; display: none;}
 .pre-obj-table table tr:hover .close-btn, .dev-need-actn-tbl table tr:hover .close-btn, .training-activities .activities-content:hover .close-btn{display: block;}
@@ -662,7 +673,7 @@ left: 4px;
 /* ratings radio style ends here */
 
 /* career-aspirations starts here */
-.career-aspirations .title, .dev-need-actn-tbl .title{
+.career-aspirations .title, .dev-need-actn-tbl .title, .training-activities .title{
   padding:10px;background:rgba(255, 255, 255, 0.4);font-weight:bold;color:#1b3148;margin-bottom:1px;
   /*background-color: rgba(255, 255, 255, 0.4);
   padding: 8px;
@@ -675,9 +686,12 @@ left: 4px;
   font-size: 12px;
   font-weight: normal;
 }
-.career-aspirations .sub-title,.career-aspirations .comments{padding: 5px;background:#fff;margin-bottom:5px;}
-.career-aspirations .sub-title textarea,.career-aspirations .comments textarea{height:40px; border:1px solid #f1f1f1;width:100%;resize:none;padding:10px;}
+.career-aspirations .sub-title,.career-aspirations .comments, .training-activities .sub-title{padding: 5px;background:#fff;margin-bottom:5px;}
+.career-aspirations .sub-title textarea,.career-aspirations .comments textarea, .training-activities .sub-title textarea{height:40px; border:1px solid #f1f1f1;width:100%;resize:none;padding:10px;}
 .career-aspirations .comments textarea {height:74px;}
+.training-activities .title {
+  margin-top: 5px;
+}
 /* career-aspirations ends here */
 
 /* participating-in-training starts here */
@@ -685,7 +699,12 @@ left: 4px;
 .training-activities .activities-content:hover{background:#fafafa;}
 .training-activities .activities-content textarea{height:40px; border:none; width:100%;resize:none;padding:10px;}
 /* participating-in-training ends here */
-
+/* Employee Statement Of Objectives starts here */
+.employee-statement-page h2 input.form-control{
+  display: inline-block;
+  width: auto;
+}
+/* Employee Statement Of Objectives ends here */
 /* modal classes */
 
 /* modal classes ends here */
@@ -855,7 +874,9 @@ vertical-align: top;
   width: 14px;
   margin-bottom: 0;
 }
-
+.es-table li div.radio-button-container label {
+  top: 3px;
+}
 .radio-button-container .check-box::before {
   top: 9px;
   left: 7px;
@@ -889,7 +910,14 @@ input[type=radio]:checked + .check-box::before,
   animation: dothatopcheck 0.4s ease 0s forwards;
 }
 /*Radio buttons classes ends*/
-
+/* over all page css starts here */
+.over-all-cnt .list-group-item {
+   float: left;
+}
+.list-group-item:first-child, .list-group-item:last-child {
+  border-radius: 0;
+}
+/* over all page css ends here */
 /* too-tip css*/
 .tool-tip-shadow{
    -moz-box-shadow: 0 1px 3px 0 rgba(147,147,147,0.55);

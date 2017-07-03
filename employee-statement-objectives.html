@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Performance Appraisal - Previous Year Objectives</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<script type="text/javascript" src="//code.jquery.com/jquery-2.1.1.min.js"></script>
+	<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	
+	<link rel="stylesheet" type="text/css" href="css/pa.css">
+	<link href="css/bootstrap-datetimepicker.css" rel="stylesheet">
+    <script src="//cdnjs.cloudflare.com/ajax/libs/moment.js/2.9.0/moment-with-locales.js"></script>
+    <script src="//cdn.rawgit.com/Eonasdan/bootstrap-datetimepicker/e8bddc60e73c1ec2475f827be36e1957af72e2ea/src/js/bootstrap-datetimepicker.js"></script>
+</head>
+<body>
+	<!-- header starts here -->
+	<header class="container-fluid">
+		<div class="row">
+			<div class="col-xs-12 col-sm-12 col-md-7 col-lg-7">
+				<div class="pa-logo">
+					<img src="images/etouch-logo.png">
+					<p class="heading">Performance Appraisal Management System</p>
+				</div>
+			</div>
+			<div class="col-xs-12 col-sm-12 col-md-5 col-lg-5 text-right pa-welcome-cnt">
+				<span class="notification">
+					<svg style="width:24px;height:24px" viewBox="0 0 24 24">
+    					<path d="M14,20A2,2 0 0,1 12,22A2,2 0 0,1 10,20H14M12,2A1,1 0 0,1 13,3V4.08C15.84,4.56 18,7.03 18,10V16L21,19H3L6,16V10C6,7.03 8.16,4.56 11,4.08V3A1,1 0 0,1 12,2Z" />
+					</svg>
+					<sup>4</sup>
+				</span>
+				Welcome <strong>Emily Perkins</strong> 
+				<span class="user"><img src="images/user-image.jpg"></span>
+			</div>
+		</div>
+		<div class="row sub-header">
+			<div class="col-xs-12 col-sm-12 col-md-1 col-lg-1 text-center profile-image">
+				<img src="images/user-image.jpg">
+			</div>
+			<div class="col-xs-4 col-sm-4 col-md-3 col-lg-3 pa-emp-dtl-cnt">
+				<ul>
+					<li class="profile-name"><span>Emily Perkins</span> (UI Designer)</li>
+					<li><span class="pa-emp-value">Project Delivery</span></li>
+				</ul>
+			</div>
+			<div class="col-xs-4 col-sm-4 col-md-3 col-lg-3 pa-emp-dtl-cnt">
+				<ul>
+					<li><span class="pa-emp-label">Date of Joining: </span><span class="pa-emp-value">12<sup>th</sup> May, 2017</span></li>
+					<li><span class="pa-emp-label">Years in Position:</span> <span class="pa-emp-value">5 Yrs</span></li>
+				</ul>
+			</div>
+			<div class="col-xs-4 col-sm-4 col-md-5 col-lg-5 pa-emp-dtl-cnt">
+				<ul>
+					<li><span class="pa-emp-label">Period Covered by Review:</span> <span class="pa-emp-value">From 04/2016 to 3/2017</span></li>
+				</ul>
+			</div>
+			<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+               <!-- <a class="add-action">+ <span>&nbsp;Add Employee </span></a> -->
+               <div class="pull-right" style="width: 40px;">
+                  <div class="menu-button">
+                     <div class="menu-open-button">
+                        <span class="material-icons">+</span><span class="btn-detail-text">Add Objective</span>
+                     </div>
+                  </div>
+               </div>
+            </div>
+		</div>
+	</header>
+	<!-- header ends here -->
+	<!-- page content starts here -->
+	<section class="pa-body-cnt container-fluid employee-statement-page">
+		<div class="pre-yr-obj">
+		<div class="row">
+			<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+				<h2 class="pa-h2 pull-left">Employee Statement Of Objectives  from <input type='text'  id='datetimepicker6' class="form-control" /> to <input type='text' class="form-control" id='datetimepicker7' /><span>Outline below a reasonable number of goals for the year ahead.  They should be concise, specific and measurable.  The goals should not be ones that are easily attained, but ones that will create a personal challenge and require significant effort to achieve.  Goals will be jointly developed by the employee and the supervisor and may be modified throughout the year by mutual agreement of the employee and his/her supervisor.  
+</span></h2>
+				<p class="pull-left"></p>
+			</div>
+			<div class="pa-tbl-cnt pre-obj-table col-xs-12 col-sm-12 col-md-12 col-lg-12">
+				<div class="pre-yr-obj-padding">
+				<table class="es-table pa-tbl-cnt">
+					<thead>
+						<tr>
+							<th width="40%">Goal  </th>
+							<th width="40%">Goal Measurement</th>
+							<th>Planned Completion Date  </th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td>
+								<textarea></textarea>
+							</td>
+							<td>
+								<textarea></textarea>
+							</td>
+							<td>
+								<div class="form-group">
+					                <div class='input-group date datetimepicker1'>
+					                    <input type='text' class="form-control" />
+					                    <span class="input-group-addon">
+					                        <span class="glyphicon glyphicon-calendar"></span>
+					                    </span>
+					                </div>
+					            </div>
+								<span class="close-btn">
+									<svg height="19" viewBox="0 0 24 24" width="19">
+									    <path d="M12 2C6.47 2 2 6.47 2 12s4.47 10 10 10 10-4.47 10-10S17.53 2 12 2zm5 13.59L15.59 17 12 13.41 8.41 17 7 15.59 10.59 12 7 8.41 8.41 7 12 10.59 15.59 7 17 8.41 13.41 12 17 15.59z"/>
+									</svg>
+								</span></td>
+						</tr>
+						<tr>
+							<td>
+								<textarea></textarea>
+							</td>
+							<td>
+								<textarea></textarea>
+							</td>
+							<td>
+								<div class="form-group">
+					                <div class='input-group date datetimepicker1'>
+					                    <input type='text' class="form-control" />
+					                    <span class="input-group-addon">
+					                        <span class="glyphicon glyphicon-calendar"></span>
+					                    </span>
+					                </div>
+					            </div>
+								<span class="close-btn">
+									<svg height="19" viewBox="0 0 24 24" width="19">
+									    <path d="M12 2C6.47 2 2 6.47 2 12s4.47 10 10 10 10-4.47 10-10S17.53 2 12 2zm5 13.59L15.59 17 12 13.41 8.41 17 7 15.59 10.59 12 7 8.41 8.41 7 12 10.59 15.59 7 17 8.41 13.41 12 17 15.59z"/>
+									</svg>
+								</span>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								<textarea></textarea>
+							</td>
+							<td>
+								<textarea></textarea>
+							</td>
+							<td>
+								<div class="form-group">
+					                <div class='input-group date datetimepicker1'>
+					                    <input type='text' class="form-control" />
+					                    <span class="input-group-addon">
+					                        <span class="glyphicon glyphicon-calendar"></span>
+					                    </span>
+					                </div>
+					            </div>
+								<span class="close-btn">
+									<svg height="19" viewBox="0 0 24 24" width="19">
+									    <path d="M12 2C6.47 2 2 6.47 2 12s4.47 10 10 10 10-4.47 10-10S17.53 2 12 2zm5 13.59L15.59 17 12 13.41 8.41 17 7 15.59 10.59 12 7 8.41 8.41 7 12 10.59 15.59 7 17 8.41 13.41 12 17 15.59z"/>
+									</svg>
+								</span>
+							</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+			<div>
+				<div class="pa-cta-cnt pull-right">
+					<button class="btn secondary" onclick="javascript:window.location='overall-ratings.html'">Previous</button>
+					<button class="btn secondary">Save</button>
+					<button class="btn primary">Complete</button>
+				</div>
+			</div>
+		</div>
+		</div>
+	</section>
+	<!-- page content ends here -->
+	<!-- footer starts here -->
+	<footer class="container-fluid">
+		<div class="row">
+			<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">Footer</div>
+		</div>
+	</footer>
+	<!-- footer ends here -->
+	<script type="text/javascript">
+         $(function () {
+                $('.datetimepicker1').datetimepicker({
+                	//format: 'DD/MM/YYYY';
+                });
+            });
+         $(function () {
+             $('#datetimepicker6').datetimepicker({
+             	format: 'DD/MM/YYYY'
+             });
+             $('#datetimepicker7').datetimepicker({
+                 useCurrent: false, //Important! See issue #1075
+                 format: 'DD/MM/YYYY'
+             });
+             $("#datetimepicker6").on("dp.change", function (e) {
+                 $('#datetimepicker7').data("DateTimePicker").minDate(e.date);
+             });
+             $("#datetimepicker7").on("dp.change", function (e) {
+                 $('#datetimepicker6').data("DateTimePicker").maxDate(e.date);
+             });
+         });
+         $(function () {
+             $('#datetimepicker1').datetimepicker();
+         });
+      </script>
+</body>
+</html>
