@@ -1012,6 +1012,67 @@ height: 3px;
 .pa-addmanager-dropdown .hr-line {
 background-color: #02a397;
 }
+
+/* Model css */
+.modal-content {
+   border-radius: 0;
+}
+.modal-header {
+background-color: #ebebeb;
+padding-bottom: 0;
+}
+.modal-body, .modal-footer {
+   background-color: #eff4fa;
+}
+.modal-header .close {
+   top: -15px;
+    background: #fff;
+    z-index: 1111;
+    position: absolute;
+    opacity: 1;
+    border-radius: 25px;
+    width: 35px;
+    right: -15px;
+    height: 35px;
+}
+.modal {
+  text-align: center;
+  padding: 0!important;
+}
+
+.modal:before {
+  content: '';
+  display: inline-block;
+  height: 100%;
+  vertical-align: middle;
+  margin-right: -4px;
+}
+
+.modal-dialog {
+  display: inline-block;
+  text-align: left;
+  vertical-align: middle;
+}
+.modal .pa-body-cnt {
+margin-top: 10px;
+}
+.modal-footer {
+   margin-top: 0px;
+   padding: 0 15px 15px;
+}
+.modal-body, .modal-footer {
+    background-color: #ebebeb;   
+}
+.modal-header, .modal-footer {
+ border: none;
+}
+.model-table-content {
+background-color: #eff4fa; 
+}
+.modal .pa-body-cnt .pa-search {
+   background: none;
+}
+/* Model css ends */
 /* Add Manager css ends
 /* modal classes ends here */
 /* body section ends */

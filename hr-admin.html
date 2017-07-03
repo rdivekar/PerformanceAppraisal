@@ -8,7 +8,6 @@
       <script src="//ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
       <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
       <script type="text/javascript" src="//code.jquery.com/jquery-2.1.1.min.js"></script>
-      <!-- <link href="//cdn.rawgit.com/Eonasdan/bootstrap-datetimepicker/e8bddc60e73c1ec2475f827be36e1957af72e2ea/build/css/bootstrap-datetimepicker.css" rel="stylesheet"> -->
       <link href="css/bootstrap-datetimepicker.css" rel="stylesheet">
       <script src="//cdnjs.cloudflare.com/ajax/libs/moment.js/2.9.0/moment-with-locales.js"></script>
       <script src="//cdn.rawgit.com/Eonasdan/bootstrap-datetimepicker/e8bddc60e73c1ec2475f827be36e1957af72e2ea/src/js/bootstrap-datetimepicker.js"></script>
@@ -63,22 +62,15 @@
                </div>
                <div class='input-group date date-details'>
                   from <input type='text'  id='datetimepicker6' class="form-control" />
-                  <!--span class="input-group-addon">
-                     <span class="glyphicon glyphicon-calendar"></span>
-                     </span-->
                </div>
                <div class='input-group date date-details'>
                   to <input type='text' class="form-control" id='datetimepicker7' />
-                  <!--span class="input-group-addon">
-                     <span class="glyphicon glyphicon-calendar"></span>
-                     </span-->
                </div>
             </div>
             <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-               <!-- <a class="add-action">+ <span>&nbsp;Add Employee </span></a> -->
                <div class="pull-right" style="width: 40px;">
                   <div class="menu-button">
-                     <div class="menu-open-button">
+                     <div class="menu-open-button modal-open" data-toggle="modal" data-target="#addManagerModal">
                         <span class="material-icons">+</span><span class="btn-detail-text">Add Employee</span>
                      </div>
                   </div>
@@ -110,15 +102,15 @@
                         </span>
                         <ul class="action-dropdown">
                            <div class="hr-line"></div>
-                           <li>Due</li>
-                           <li>Initialized</li>
-                           <li>Approved</li>
-                           <li>Started</li>
-                           <li>Pending at employee</li>
-                           <li>Pending at manger</li>
-                           <li>Accepted</li>
-                           <li>Approved</li>
-                           <li>Approved & Accepted</li>
+                           <li data-toggle="modal" data-target="#commentsModal">Due</li>
+                           <li data-toggle="modal" data-target="#commentsModal">Initialized</li>
+                           <li data-toggle="modal" data-target="#commentsModal">Approved</li>
+                           <li data-toggle="modal" data-target="#commentsModal">Started</li>
+                           <li data-toggle="modal" data-target="#commentsModal">Pending at employee</li>
+                           <li data-toggle="modal" data-target="#commentsModal">Pending at manger</li>
+                           <li data-toggle="modal" data-target="#commentsModal">Accepted</li>
+                           <li data-toggle="modal" data-target="#commentsModal">Approved</li>
+                           <li data-toggle="modal" data-target="#commentsModal">Approved & Accepted</li>
                         </ul>
                      </span>
                   </div>
@@ -158,7 +150,7 @@
                         <td>1111</td>
                         <td>1<sup>st</sup> Dec'16</td>
                         <td>--</td>
-                        <td>June' 17</td>
+                        <td>Jun' 17</td>
                         <td>Half yearly confirmation</td>
                         <td>
                            <div class="pa-addmanager-section">
@@ -307,23 +299,53 @@
          </div>
       </footer>
       <!-- footer ends here -->
-      <!-- add employee Modal -->
-      <div id="addEmployee" class="modal fade" role="dialog">
+      <!-- Action comment Modal -->
+      <div id="commentsModal" class="modal fade" role="dialog">
          <div class="modal-dialog pa-body-cnt">
             <!-- Modal content-->
             <div class="modal-content">
                <div class="modal-header">
                   <button type="button" class="close" data-dismiss="modal">&times;</button>
-                  <h4 class="modal-title">Add Employee</h4>
+                  <h4 class="modal-title"><b>Hold the Appraisal</b></h4>
                </div>
                <div class="modal-body">
+                  Comment:<br>
+                  <textarea rows="" cols="75"></textarea>
+               </div>
+               <div class="modal-footer pa-cta-cnt">
+                  <button type="button" class="btn primary" data-dismiss="modal">Submit</button>
+               </div>
+            </div>
+         </div>
+      </div> 
+<style>
+
+</style>
+
+      <!-- Modal -->
+      <div class="modal fade bd-example-modal-lg" id="addManagerModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg pa-body-cnt" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h4 class="modal-title" id="exampleModalLabel"><b>Add Employee</b></h4>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+               <div class="model-table-content">
                   <div class="pa-search"><input type="text" size="50" placeholder="Search"></div>
                   <div class="pa-tbl-cnt">
                      <table>
                         <thead>
                            <tr>
-                              <th><input type="checkbox"></th>
+                              <th><div class="checkmark-button-container text-center">
+                              <input type="checkbox" id="test1_model" />
+                              <label for="test1_model" class="check-box"></label>
+                           </div></th>
+
                               <th>Employee ID</th>
+                              <th></th>
                               <th>Employee Name</th>
                               <th>Date of Joining</th>
                               <th>Last Appraisal Date</th>
@@ -333,51 +355,41 @@
                         </thead>
                         <tbody>
                            <tr>
-                              <td><input type="checkbox"></td>
+                              <td><div class="checkmark-button-container text-center">
+                              <input type="checkbox" id="test2_model" />
+                              <label for="test2_model" class="check-box"></label>
+                           </div></td>
                               <td>1111</td>
+                              <td><img src="images/user.png"></td>
                               <td>John Doe</td>
                               <td>1<sup>st</sup> Dec'16</td>
                               <td>--</td>
-                              <td>June' 17</td>
+                              <td>Jun' 17</td>
                               <td>Half yearly confirmation</td>
                            </tr>
                            <tr>
-                              <td><input type="checkbox"></td>
+                              <td><div class="checkmark-button-container text-center">
+                              <input type="checkbox" id="test3_model" />
+                              <label for="test3_model" class="check-box"></label>
+                           </div></td>
                               <td>2222</td>
+                              <td><img src="images/user.png"></td>
                               <td>Annie M.</td>
                               <td>1<sup>st</sup> Dec'16</td>
-                              <td>June'15</td>
-                              <td>Nove' 17</td>
+                              <td>Jun' 15</td>
+                              <td>Nov' 17</td>
                               <td>Yearly</td>
                            </tr>
                         </tbody>
                      </table>
                   </div>
                </div>
-               <div class="modal-footer">
-                  <button type="button" class="btn btn-default" data-dismiss="modal">Submit</button>
                </div>
+            <div class="modal-footer pa-cta-cnt">
+               <button class="btn primary" data-dismiss="modal">Submit</button>
             </div>
-         </div>
-      </div>
-      <!-- Action comment Modal -->
-      <div id="action" class="modal fade" role="dialog">
-         <div class="modal-dialog pa-body-cnt">
-            <!-- Modal content-->
-            <div class="modal-content">
-               <div class="modal-header">
-                  <button type="button" class="close" data-dismiss="modal">&times;</button>
-                  <h4 class="modal-title">Hold the Appraisal</h4>
-               </div>
-               <div class="modal-body">
-                  Comment:<br>
-                  <textarea rows="" cols="75"></textarea>
-               </div>
-               <div class="modal-footer">
-                  <button type="button" class="btn btn-default" data-dismiss="modal">Submit</button>
-               </div>
-            </div>
-         </div>
+          </div>
+        </div>
       </div>
       <script type="text/javascript">
          $(function () {
@@ -395,10 +407,41 @@
                  $('#datetimepicker6').data("DateTimePicker").maxDate(e.date);
              });
          });
-      </script>
-      <script type="text/javascript">
+      
          $(function () {
              $('#datetimepicker1').datetimepicker();
+         });
+
+         function setModalMaxHeight(element) {
+           this.$element     = $(element);  
+           this.$content     = this.$element.find('.modal-content');
+           var borderWidth   = this.$content.outerHeight() - this.$content.innerHeight();
+           var dialogMargin  = $(window).width() < 768 ? 20 : 60;
+           var contentHeight = $(window).height() - (dialogMargin + borderWidth);
+           var headerHeight  = this.$element.find('.modal-header').outerHeight() || 0;
+           var footerHeight  = this.$element.find('.modal-footer').outerHeight() || 0;
+           var maxHeight     = contentHeight - (headerHeight + footerHeight);
+
+           this.$content.css({
+               'overflow': 'hidden'
+           });
+           
+           this.$element
+             .find('.modal-body').css({
+               'max-height': maxHeight,
+               'overflow-y': 'auto'
+           });
+         }
+
+         $('.modal-open').on('show.bs.modal', function() {
+           $(this).show();
+           setModalMaxHeight(this);
+         });
+
+         $(window).resize(function() {
+           if ($('.modal-open.in').length != 0) {
+             setModalMaxHeight($('.modal-open.in'));
+           }
          });
       </script>
    </body>
