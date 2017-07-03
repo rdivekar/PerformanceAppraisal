@@ -1,306 +1,406 @@
 <!DOCTYPE html>
 <html>
-<head>
-	<title>Performance Appraisal - Index page</title>
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<link rel="stylesheet" type="text/css" href="css/pa.css">
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-	<script type="text/javascript" src="//code.jquery.com/jquery-2.1.1.min.js"></script>
-    <link href="//cdn.rawgit.com/Eonasdan/bootstrap-datetimepicker/e8bddc60e73c1ec2475f827be36e1957af72e2ea/build/css/bootstrap-datetimepicker.css" rel="stylesheet">
-    <script src="//cdnjs.cloudflare.com/ajax/libs/moment.js/2.9.0/moment-with-locales.js"></script>
-    <script src="//cdn.rawgit.com/Eonasdan/bootstrap-datetimepicker/e8bddc60e73c1ec2475f827be36e1957af72e2ea/src/js/bootstrap-datetimepicker.js"></script>
-</head>
-<body>
-	<!-- header starts here -->
-	<header class="container-fluid">
-		<div class="row">
-			<div class="col-xs-12 col-sm-12 col-md-7 col-lg-7">
-				<div class="pa-logo">
-					<img src="images/etouch-logo.png">
-					<p class="heading">Performance Appraisal Management System</p>
-				</div>
-			</div>
-			<div class="col-xs-12 col-sm-12 col-md-5 col-lg-5 text-right pa-welcome-cnt">
-				<span class="notification">
-					<svg style="width:24px;height:24px" viewBox="0 0 24 24">
-    					<path d="M14,20A2,2 0 0,1 12,22A2,2 0 0,1 10,20H14M12,2A1,1 0 0,1 13,3V4.08C15.84,4.56 18,7.03 18,10V16L21,19H3L6,16V10C6,7.03 8.16,4.56 11,4.08V3A1,1 0 0,1 12,2Z" />
-					</svg>
-					<sup>4</sup>
-				</span>
-				Welcome <strong>Emily Perkins</strong> 
-				<span class="user"><img src="images/user-image.jpg"></span>
-			</div>
-		</div>
-		<div class="row sub-header">
-			<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-				<h1 class="pa-h1 d-inline-block">Performance Appraisal </h1>
-				<div class="hList pa-h1 d-inline-block">
-		         <span class="action">
-		            <div class="action-title action-title_3rd pa-h1">
-		               <span>Pending </span>
-		               <span class="af-carot">
-		                  <svg style="width:16px;height:16px" viewBox="0 0 24 24">
-		                     <path  d="M19.78,11.78L18.36,13.19L12,6.83L5.64,13.19L4.22,11.78L12,4L19.78,11.78Z" />
-		                  </svg>
-		               </span>
-		            </div>
-		            <ul class="action-dropdown">
-		               <div class="hr-line"></div>
-		               <li>Due</li>
-		               <li>Initialized</li>
-		               <li>Approved</li>
-		               <li>Started</li>
-		               <li>Pending at Employee</li>
-		               <li>Pending at Manager</li>
-		               <li>Accepted</li>
-		               <li>Approved</li>
-		               <li>Approved & Accepted</li>
-		            </ul>
-		         </span>
-		      </div> 
-				<div class='input-group date date-details'>
-	                from <input type='text'  id='datetimepicker6' class="form-control" />
-	                <!--span class="input-group-addon">
-	                    <span class="glyphicon glyphicon-calendar"></span>
-	                </span-->
-	            </div>
-	            <div class='input-group date date-details'>
-	                to <input type='text' class="form-control" id='datetimepicker7' />
-	                <!--span class="input-group-addon">
-	                    <span class="glyphicon glyphicon-calendar"></span>
-	                </span-->
-	            </div>
-			</div>
-			<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-				<!-- <a class="add-action">+ <span>&nbsp;Add Employee </span></a> -->
-				<div class="pull-right" style="width: 40px;">
-				<div class="menu-button">
-					<div class="menu-open-button">
-					  <span class="material-icons">+</span><span class="btn-detail-text">Add Employee</span>
-					</div>
-				</div>
-				</div>
-			</div>
-		</div>
-	</header>
-	<!-- header ends here -->
-	<!-- page content starts here -->
-	<section class="pa-body-cnt container-fluid">
-		<div class="row">
-			<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-				<div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 pa-search">
-					<input type="text" size="50" placeholder="Search" class="pull-left">
-				</div>
-				<div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 pa-action">
-					<!-- <a class="pull-right" data-toggle="modal" data-target="#action">Action &#x25BC;</a> -->
-					<div class="hList pull-right">
-				         <span class="action">
-				            <span class="action-title action-title_3rd">
-				               Actions 
-				               <span class="af-carot">
-				                  <svg style="width:16px;height:16px" viewBox="0 0 24 24">
-				                     <path  d="M19.78,11.78L18.36,13.19L12,6.83L5.64,13.19L4.22,11.78L12,4L19.78,11.78Z" />
-				                  </svg>
-				               </span>
-				            </span>
-				            <ul class="action-dropdown">
-				               <div class="hr-line"></div>
-				               <li>Due</li>
-				               <li>Initialized</li>
-				               <li>Approved</li>
-				               <li>Started</li>
-				               <li>Pending at employee</li>
-				               <li>Pending at manger</li>
-				               <li>Accepted</li>
-				               <li>Approved</li>
-				               <li>Approved & Accepted</li>
-				            </ul>
-				         </span>
-				      </div>
-				</div>
-			</div>
-			<div class="pa-tbl-cnt col-xs-12 col-sm-12 col-md-12 col-lg-12">
-				<table>
-					<thead>
-						<tr>
-							<th><input type="checkbox"></th>
-							<th>&nbsp;</th>
-							<th>Employee Name</th>
-							<th>Employee ID</th>
-							<th>Date of Joining</th>
-							<th>Last Appraisal Date</th>
-							<th>Scheduled Appraisal Date</th>
-							<th>Appraisal Cycle</th>
-							<th>Manager</th>
-							<th>Status</th>
-						</tr>
-					</thead>
-					<tbody>
-						<tr>
-							<td><input type="checkbox"></td>
-							
-							<td><img src="images/user.png"></td>
-							<td><a href="description-of-performance-ratings.html">John Doe</a></td>
-							<td>1111</td>
-							<td>1<sup>st</sup> Dec'16</td>
-							<td>--</td>
-							<td>June' 17</td>
-							<td>Half yearly confirmation</td>
-							<td><input type="text"></td>
-							<td>Initialized</td>
-						</tr>
-						<tr>
-							<td><input type="checkbox"></td>
-							<td><img src="images/user.png"></td>
-							<td><a href="description-of-performance-ratings.html">Annie M.</a></td>
-							<td>2222</td>
-							<td>1<sup>st</sup> Dec'16</td>
-							<td>June'15</td>
-							<td>Nove' 17</td>
-							<td>Yearly</td>
-							<td><input type="text"></td>
-							<td>Due</td>
-						</tr>
-						<tr>
-							<td><input type="checkbox"></td>
-							<td><img src="images/user.png"></td>
-							<td><a href="description-of-performance-ratings.html">Amily Perkins</a></td>
-							<td>2222</td>
-							<td>1<sup>st</sup> Dec'16</td>
-							<td>June'15</td>
-							<td>Nove' 17</td>
-							<td>Yearly</td>
-							<td><input type="text"></td>
-							<td>Due</td>
-						</tr>
-					</tbody>
-				</table>
-			</div>
-			<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-				<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 pa-pagination-section">
-				<div class="pa-pagination pull-right">
-					<span class="pa-first pa-arrow"><svg class="pa-inactive pa-arrow-icon" viewBox="0 0 24 24">
-    <path d="M18.41,7.41L17,6L11,12L17,18L18.41,16.59L13.83,12L18.41,7.41M12.41,7.41L11,6L5,12L11,18L12.41,16.59L7.83,12L12.41,7.41Z" />
-</svg></span><span class="pa-previous pa-arrow"><svg class="pa-inactive pa-arrow-icon" viewBox="0 0 24 24">
-    <path d="M15.41,16.58L10.83,12L15.41,7.41L14,6L8,12L14,18L15.41,16.58Z" />
-</svg></span>
-					<span>Pages <input type="text" value="1" class="pa-curr-page-number"/> / <span class="pa-totalpages">65</span></span>
-					<span class="pa-next pa-arrow"><svg class="pa-active pa-arrow-icon" viewBox="0 0 24 24">
-    <path d="M8.59,16.58L13.17,12L8.59,7.41L10,6L16,12L10,18L8.59,16.58Z" />
-</svg></span><span class="pa-last pa-arrow"><svg class="pa-active pa-arrow-icon" viewBox="0 0 24 24">
-    <path d="M5.59,7.41L7,6L13,12L7,18L5.59,16.59L10.17,12L5.59,7.41M11.59,7.41L13,6L19,12L13,18L11.59,16.59L16.17,12L11.59,7.41Z" />
-</svg></span>
-				</div>
-			</div>
-			</div>
-		</div>
-	</section>
-	<!-- page content ends here -->
-	<!-- footer starts here -->
-	<footer class="container-fluid">
-		<div class="row">
-			<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">Copyright 2017</div>
-		</div>
-	</footer>
-	<!-- footer ends here -->
+   <head>
+      <title>Performance Appraisal - Index page</title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <link rel="stylesheet" type="text/css" href="css/pa.css">
+      <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+      <script src="//ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+      <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+      <script type="text/javascript" src="//code.jquery.com/jquery-2.1.1.min.js"></script>
+      <link href="//cdn.rawgit.com/Eonasdan/bootstrap-datetimepicker/e8bddc60e73c1ec2475f827be36e1957af72e2ea/build/css/bootstrap-datetimepicker.css" rel="stylesheet">
+      <script src="//cdnjs.cloudflare.com/ajax/libs/moment.js/2.9.0/moment-with-locales.js"></script>
+      <script src="//cdn.rawgit.com/Eonasdan/bootstrap-datetimepicker/e8bddc60e73c1ec2475f827be36e1957af72e2ea/src/js/bootstrap-datetimepicker.js"></script>
+   </head>
+   <body>
+      <!-- header starts here -->
+      <header class="container-fluid">
+         <div class="row">
+            <div class="col-xs-12 col-sm-12 col-md-7 col-lg-7">
+               <div class="pa-logo">
+                  <img src="images/etouch-logo.png">
+                  <p class="heading">Performance Appraisal Management System</p>
+               </div>
+            </div>
+            <div class="col-xs-12 col-sm-12 col-md-5 col-lg-5 text-right pa-welcome-cnt">
+               <span class="notification">
+                  <svg style="width:24px;height:24px" viewBox="0 0 24 24">
+                     <path d="M14,20A2,2 0 0,1 12,22A2,2 0 0,1 10,20H14M12,2A1,1 0 0,1 13,3V4.08C15.84,4.56 18,7.03 18,10V16L21,19H3L6,16V10C6,7.03 8.16,4.56 11,4.08V3A1,1 0 0,1 12,2Z" />
+                  </svg>
+                  <sup>4</sup>
+               </span>
+               Welcome <strong>Emily Perkins</strong> 
+               <span class="user"><img src="images/user-image.jpg"></span>
+            </div>
+         </div>
+         <div class="row sub-header">
+            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+               <h1 class="pa-h1 d-inline-block">Performance Appraisal </h1>
+               <div class="hList pa-h1 d-inline-block">
+                  <span class="action">
+                     <div class="action-title action-title_3rd pa-h1">
+                        <span>Pending </span>
+                        <span class="af-carot">
+                           <svg style="width:16px;height:16px" viewBox="0 0 24 24">
+                              <path  d="M19.78,11.78L18.36,13.19L12,6.83L5.64,13.19L4.22,11.78L12,4L19.78,11.78Z" />
+                           </svg>
+                        </span>
+                     </div>
+                     <ul class="action-dropdown">
+                        <div class="hr-line"></div>
+                        <li>Due</li>
+                        <li>Initialized</li>
+                        <li>Approved</li>
+                        <li>Started</li>
+                        <li>Pending at Employee</li>
+                        <li>Pending at Manager</li>
+                        <li>Accepted</li>
+                        <li>Approved</li>
+                        <li>Approved & Accepted</li>
+                     </ul>
+                  </span>
+               </div>
+               <div class='input-group date date-details'>
+                  from <input type='text'  id='datetimepicker6' class="form-control" />
+                  <!--span class="input-group-addon">
+                     <span class="glyphicon glyphicon-calendar"></span>
+                     </span-->
+               </div>
+               <div class='input-group date date-details'>
+                  to <input type='text' class="form-control" id='datetimepicker7' />
+                  <!--span class="input-group-addon">
+                     <span class="glyphicon glyphicon-calendar"></span>
+                     </span-->
+               </div>
+            </div>
+            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+               <!-- <a class="add-action">+ <span>&nbsp;Add Employee </span></a> -->
+               <div class="pull-right" style="width: 40px;">
+                  <div class="menu-button">
+                     <div class="menu-open-button">
+                        <span class="material-icons">+</span><span class="btn-detail-text">Add Employee</span>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </header>
+      <style>
+      </style>
+      <!-- header ends here -->
+      <!-- page content starts here -->
+      <section class="pa-body-cnt container-fluid">
+         <div class="row">
+            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+               <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 pa-search">
+                  <input type="text" size="50" placeholder="Search" class="pull-left">
+               </div>
+               <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 pa-action">
+                  <!-- <a class="pull-right" data-toggle="modal" data-target="#action">Action &#x25BC;</a> -->
+                  <div class="hList pull-right">
+                     <span class="action">
+                        <span class="action-title action-title_3rd">
+                           Actions 
+                           <span class="af-carot">
+                              <svg style="width:16px;height:16px" viewBox="0 0 24 24">
+                                 <path  d="M19.78,11.78L18.36,13.19L12,6.83L5.64,13.19L4.22,11.78L12,4L19.78,11.78Z" />
+                              </svg>
+                           </span>
+                        </span>
+                        <ul class="action-dropdown">
+                           <div class="hr-line"></div>
+                           <li>Due</li>
+                           <li>Initialized</li>
+                           <li>Approved</li>
+                           <li>Started</li>
+                           <li>Pending at employee</li>
+                           <li>Pending at manger</li>
+                           <li>Accepted</li>
+                           <li>Approved</li>
+                           <li>Approved & Accepted</li>
+                        </ul>
+                     </span>
+                  </div>
+               </div>
+            </div>
+            <div class="pa-tbl-cnt col-xs-12 col-sm-12 col-md-12 col-lg-12">
+               <table>
+                  <thead>
+                     <tr>
+                        <th style="padding-left: 10px;">
+                           <div class="checkmark-button-container">
+                              <input type="checkbox" id="test1" />
+                              <label for="test1" class="check-box"></label>
+                           </div>
+                        </th>
+                        <th>&nbsp;</th>
+                        <th>Employee Name</th>
+                        <th>Employee ID</th>
+                        <th>Date of Joining</th>
+                        <th>Last Appraisal Date</th>
+                        <th>Scheduled Appraisal Date</th>
+                        <th>Appraisal Cycle</th>
+                        <th>Manager</th>
+                        <th>Status</th>
+                     </tr>
+                  </thead>
+                  <style type="text/css">
 
-	<!-- add employee Modal -->
-	<div id="addEmployee" class="modal fade" role="dialog">
-	  <div class="modal-dialog pa-body-cnt">
-
-	    <!-- Modal content-->
-	    <div class="modal-content">
-	      <div class="modal-header">
-	        <button type="button" class="close" data-dismiss="modal">&times;</button>
-	        <h4 class="modal-title">Add Employee</h4>
-	      </div>
-	      <div class="modal-body">
-	      	<div class="pa-search"><input type="text" size="50" placeholder="Search"></div>
-	      	<div class="pa-tbl-cnt">
-				<table>
-					<thead>
-						<tr>
-							<th><input type="checkbox"></th>
-							<th>Employee ID</th>
-							<th>Employee Name</th>
-							<th>Date of Joining</th>
-							<th>Last Appraisal Date</th>
-							<th>Scheduled Appraisal Date</th>
-							<th>Appraisal Cycle</th>
-						</tr>
-					</thead>
-					<tbody>
-						<tr>
-							<td><input type="checkbox"></td>
-							<td>1111</td>
-							<td>John Doe</td>
-							<td>1<sup>st</sup> Dec'16</td>
-							<td>--</td>
-							<td>June' 17</td>
-							<td>Half yearly confirmation</td>
-						</tr>
-						<tr>
-							<td><input type="checkbox"></td>
-							<td>2222</td>
-							<td>Annie M.</td>
-							<td>1<sup>st</sup> Dec'16</td>
-							<td>June'15</td>
-							<td>Nove' 17</td>
-							<td>Yearly</td>
-						</tr>
-					</tbody>
-				</table>
-			</div>
-	      </div>
-	      <div class="modal-footer">
-	        <button type="button" class="btn btn-default" data-dismiss="modal">Submit</button>
-	      </div>
-	    </div>
-
-	  </div>
-	</div>
-	<!-- Action comment Modal -->
-	<div id="action" class="modal fade" role="dialog">
-	  <div class="modal-dialog pa-body-cnt">
-
-	    <!-- Modal content-->
-	    <div class="modal-content">
-	      <div class="modal-header">
-	        <button type="button" class="close" data-dismiss="modal">&times;</button>
-	        <h4 class="modal-title">Hold the Appraisal</h4>
-	      </div>
-	      <div class="modal-body">
-	      	Comment:<br>
-	      	<textarea rows="" cols="75"></textarea>
-	      </div>
-	      <div class="modal-footer">
-	        <button type="button" class="btn btn-default" data-dismiss="modal">Submit</button>
-	      </div>
-	    </div>
-	  </div>
-	</div>
-<script type="text/javascript">
-    $(function () {
-        $('#datetimepicker6').datetimepicker({
-        	format: 'DD/MM/YYYY'
-        });
-        $('#datetimepicker7').datetimepicker({
-            useCurrent: false //Important! See issue #1075
-        });
-        $("#datetimepicker6").on("dp.change", function (e) {
-            $('#datetimepicker7').data("DateTimePicker").minDate(e.date);
-        });
-        $("#datetimepicker7").on("dp.change", function (e) {
-            $('#datetimepicker6').data("DateTimePicker").maxDate(e.date);
-        });
-    });
-</script>
-<script type="text/javascript">
-    $(function () {
-        $('#datetimepicker1').datetimepicker();
-    });
-</script>
-</body>
+                  </style>
+                  <tbody>
+                     <tr>
+                        <td>
+                           <div class="checkmark-button-container">
+                              <input type="checkbox" id="test2" />
+                              <label for="test2" class="check-box"></label>
+                           </div>
+                        </td>
+                        <td><img src="images/user.png"></td>
+                        <td><a href="description-of-performance-ratings.html">John Doe</a></td>
+                        <td>1111</td>
+                        <td>1<sup>st</sup> Dec'16</td>
+                        <td>--</td>
+                        <td>June' 17</td>
+                        <td>Half yearly confirmation</td>
+                        <td>
+                           <div class="pa-addmanager-section">
+                              <input type="text" class="pa-addmanager">
+                              <div class="pa-plus-icon">
+                                 <svg viewBox="0 0 24 24">
+                                    <path d="M19,13H13V19H11V13H5V11H11V5H13V11H19V13Z" />
+                                 </svg>
+                              </div>
+                           </div>
+                           <div class="pa-addmanager-dropdown tool-tip-shadow">
+                              <div class="hr-line"></div>
+                              <div class="pa-addmanager-data">
+                                 <input type="text" class="input-addmanager"/>
+                                 <div class="grey-hr-line"></div>
+                                 <div class="pa-manager-list" data-spy="scroll" data-target=".navbar" data-offset="50">
+                                    <ul>
+                                       <li><span class="manager-img"><img src="images/user.png"></span><span class="manager-name">Johnny Pena</span></li>
+                                       <li><span class="manager-img"><img src="images/user.png"></span><span class="manager-name">Nicholas Alvarado</span></li>
+                                    </ul>
+                                 </div>
+                              </div>
+                           </div>
+                        </td>
+                        <td>
+                           <div class="pa-tooltip">
+                              Initialized
+                              <div class="pa-tooltip-section">
+                                 <div class="hr-line"></div>
+                                 <div class="pa-tooltip-content">
+                                    <span class="comment-name">NM</span><b>:</b><span class="comment-date">12th May, 2017</span><br>"<span class="detail-commment">Medical Leave</span>"
+                                 </div>
+                              </div>
+                           </div>
+                        </td>
+                     </tr>
+                     <tr>
+                        <td>
+                           <div class="checkmark-button-container">
+                              <input type="checkbox" id="test3" />
+                              <label for="test3" class="check-box"></label>
+                           </div>
+                        </td>
+                        <td><img src="images/user.png"></td>
+                        <td><a href="description-of-performance-ratings.html">Annie M.</a></td>
+                        <td>2222</td>
+                        <td>1<sup>st</sup> Dec'16</td>
+                        <td>June'15</td>
+                        <td>Nove' 17</td>
+                        <td>Yearly</td>
+                        <td>
+                           <div class="pa-addmanager-section">
+                              <input type="text" class="pa-addmanager">
+                              <span class="pa-plus-icon">
+                                 <svg viewBox="0 0 24 24">
+                                    <path d="M19,13H13V19H11V13H5V11H11V5H13V11H19V13Z" />
+                                 </svg>
+                              </span>
+                           </div>
+                        </td>
+                        <td>
+                           <div class="pa-tooltip">
+                              Due
+                              <div class="pa-tooltip-section">
+                                 <div class="hr-line"></div>
+                                 <div class="pa-tooltip-content">
+                                    <span class="comment-name">PK</span><b>:</b><span class="comment-date">15th May, 2017</span><br>"<span class="detail-commment">Medical Leave</span>"
+                                 </div>
+                              </div>
+                           </div>
+                        </td>
+                     </tr>
+                     <tr>
+                        <td>
+                           <div class="checkmark-button-container">
+                              <input type="checkbox" id="test4" />
+                              <label for="test4" class="check-box"></label>
+                           </div>
+                        </td>
+                        <td><img src="images/user.png"></td>
+                        <td><a href="description-of-performance-ratings.html">Amily Perkins</a></td>
+                        <td>2222</td>
+                        <td>1<sup>st</sup> Dec'16</td>
+                        <td>June'15</td>
+                        <td>Nove' 17</td>
+                        <td>Yearly</td>
+                        <td>
+                           <div class="pa-addmanager-section">
+                              <input type="text" class="pa-addmanager">
+                              <span class="pa-plus-icon">
+                                 <svg viewBox="0 0 24 24">
+                                    <path d="M19,13H13V19H11V13H5V11H11V5H13V11H19V13Z" />
+                                 </svg>
+                              </span>
+                           </div>
+                        </td>
+                        <td>
+                           <div class="pa-tooltip">
+                              Due
+                              <div class="pa-tooltip-section">
+                                 <div class="hr-line"></div>
+                                 <div class="pa-tooltip-content">
+                                    <span class="comment-name">AP</span><b>:</b><span class="comment-date">15th May, 2017</span><br>"<span class="detail-commment">Medical Leave</span>"
+                                 </div>
+                              </div>
+                           </div>
+                        </td>
+                     </tr>
+                  </tbody>
+               </table>
+            </div>
+            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+               <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 pa-pagination-section">
+                  <div class="pa-pagination pull-right">
+                     <span class="pa-first pa-arrow">
+                        <svg class="pa-inactive pa-arrow-icon" viewBox="0 0 24 24">
+                           <path d="M18.41,7.41L17,6L11,12L17,18L18.41,16.59L13.83,12L18.41,7.41M12.41,7.41L11,6L5,12L11,18L12.41,16.59L7.83,12L12.41,7.41Z" />
+                        </svg>
+                     </span>
+                     <span class="pa-previous pa-arrow">
+                        <svg class="pa-inactive pa-arrow-icon" viewBox="0 0 24 24">
+                           <path d="M15.41,16.58L10.83,12L15.41,7.41L14,6L8,12L14,18L15.41,16.58Z" />
+                        </svg>
+                     </span>
+                     <span>Pages <input type="text" value="1" class="pa-curr-page-number"/> / <span class="pa-totalpages">65</span></span>
+                     <span class="pa-next pa-arrow">
+                        <svg class="pa-active pa-arrow-icon" viewBox="0 0 24 24">
+                           <path d="M8.59,16.58L13.17,12L8.59,7.41L10,6L16,12L10,18L8.59,16.58Z" />
+                        </svg>
+                     </span>
+                     <span class="pa-last pa-arrow">
+                        <svg class="pa-active pa-arrow-icon" viewBox="0 0 24 24">
+                           <path d="M5.59,7.41L7,6L13,12L7,18L5.59,16.59L10.17,12L5.59,7.41M11.59,7.41L13,6L19,12L13,18L11.59,16.59L16.17,12L11.59,7.41Z" />
+                        </svg>
+                     </span>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </section>
+      <!-- page content ends here -->
+      <!-- footer starts here -->
+      <footer class="container-fluid">
+         <div class="row">
+            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">Copyright 2017</div>
+         </div>
+      </footer>
+      <!-- footer ends here -->
+      <!-- add employee Modal -->
+      <div id="addEmployee" class="modal fade" role="dialog">
+         <div class="modal-dialog pa-body-cnt">
+            <!-- Modal content-->
+            <div class="modal-content">
+               <div class="modal-header">
+                  <button type="button" class="close" data-dismiss="modal">&times;</button>
+                  <h4 class="modal-title">Add Employee</h4>
+               </div>
+               <div class="modal-body">
+                  <div class="pa-search"><input type="text" size="50" placeholder="Search"></div>
+                  <div class="pa-tbl-cnt">
+                     <table>
+                        <thead>
+                           <tr>
+                              <th><input type="checkbox"></th>
+                              <th>Employee ID</th>
+                              <th>Employee Name</th>
+                              <th>Date of Joining</th>
+                              <th>Last Appraisal Date</th>
+                              <th>Scheduled Appraisal Date</th>
+                              <th>Appraisal Cycle</th>
+                           </tr>
+                        </thead>
+                        <tbody>
+                           <tr>
+                              <td><input type="checkbox"></td>
+                              <td>1111</td>
+                              <td>John Doe</td>
+                              <td>1<sup>st</sup> Dec'16</td>
+                              <td>--</td>
+                              <td>June' 17</td>
+                              <td>Half yearly confirmation</td>
+                           </tr>
+                           <tr>
+                              <td><input type="checkbox"></td>
+                              <td>2222</td>
+                              <td>Annie M.</td>
+                              <td>1<sup>st</sup> Dec'16</td>
+                              <td>June'15</td>
+                              <td>Nove' 17</td>
+                              <td>Yearly</td>
+                           </tr>
+                        </tbody>
+                     </table>
+                  </div>
+               </div>
+               <div class="modal-footer">
+                  <button type="button" class="btn btn-default" data-dismiss="modal">Submit</button>
+               </div>
+            </div>
+         </div>
+      </div>
+      <!-- Action comment Modal -->
+      <div id="action" class="modal fade" role="dialog">
+         <div class="modal-dialog pa-body-cnt">
+            <!-- Modal content-->
+            <div class="modal-content">
+               <div class="modal-header">
+                  <button type="button" class="close" data-dismiss="modal">&times;</button>
+                  <h4 class="modal-title">Hold the Appraisal</h4>
+               </div>
+               <div class="modal-body">
+                  Comment:<br>
+                  <textarea rows="" cols="75"></textarea>
+               </div>
+               <div class="modal-footer">
+                  <button type="button" class="btn btn-default" data-dismiss="modal">Submit</button>
+               </div>
+            </div>
+         </div>
+      </div>
+      <script type="text/javascript">
+         $(function () {
+             $('#datetimepicker6').datetimepicker({
+             	format: 'DD/MM/YYYY'
+             });
+             $('#datetimepicker7').datetimepicker({
+                 useCurrent: false //Important! See issue #1075
+             });
+             $("#datetimepicker6").on("dp.change", function (e) {
+                 $('#datetimepicker7').data("DateTimePicker").minDate(e.date);
+             });
+             $("#datetimepicker7").on("dp.change", function (e) {
+                 $('#datetimepicker6').data("DateTimePicker").maxDate(e.date);
+             });
+         });
+      </script>
+      <script type="text/javascript">
+         $(function () {
+             $('#datetimepicker1').datetimepicker();
+         });
+      </script>
+   </body>
 </html>

@@ -1,43 +1,43 @@
 /* eTouch Performance Appraisal application */
 html, body, div, span, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, button, abbr, acronym, address, code, em, img, small, strike, strong, sub, sup, var, b, i, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, figure, figcaption, footer, header, hgroup, menu, nav, output, section, summary, time{
-	/*margin: 0;
-	padding: 0;
-	border: 0;
-	line-height: 1;
-	vertical-align: baseline; */
+  /*margin: 0;
+  padding: 0;
+  border: 0;
+  line-height: 1;
+  vertical-align: baseline; */
 }
 /* HTML5 display-role reset for older browsers */
 article, aside, details, figcaption, figure, 
 footer, header, hgroup, menu, nav, section {
-	display: block;
+  display: block;
 }
 html body {
-	line-height: 16px;
-	background-color: #e4e7ed;
-	color: #202020;
-	font-family: 'Roboto', sans-serif;
+  line-height: 16px;
+  background-color: #e4e7ed;
+  color: #202020;
+  font-family: 'Roboto', sans-serif;
   font-size: 12px;
 }
 a {
 
 }
 ol, ul {
-	list-style: none;
+  list-style: none;
 }
 blockquote, q {
-	quotes: none;
+  quotes: none;
 }
 blockquote:before, blockquote:after,
 q:before, q:after {
-	content: '';
-	content: none;
+  content: '';
+  content: none;
 }
 div {
-	box-sizing: border-box;
+  box-sizing: border-box;
 }
 table {
-	border-collapse: collapse;
-	border-spacing: 0;
+  border-collapse: collapse;
+  border-spacing: 0;
 }
 /* button classes starts here */
 .pa-cta-cnt {
@@ -57,54 +57,54 @@ table {
 /* button classes ends here */
 /* header section */
 header{
-	background-color: #fff;
-	margin-bottom: 25px;
+  background-color: #fff;
+  margin-bottom: 25px;
 }
 header .sub-header {
-	border-top: solid 3px #02a397;
-	background-color: rgba(0,0,0,0.80);
-	color: #fff;
-	box-shadow: 0px 5px 8px #888888;
-	padding: 10px 0;
+  border-top: solid 3px #02a397;
+  background-color: rgba(0,0,0,0.80);
+  color: #fff;
+  box-shadow: 0px 5px 8px #888888;
+  padding: 10px 0;
 }
 header .sub-header h1 {
-	text-indent: 10px;
-	font-size: 18px;
-	margin: 0px;
+  text-indent: 10px;
+  font-size: 18px;
+  margin: 0px;
 }
 header .sub-header .add-action{
-	background-color: #f34d77;
-	color: #fff;
-	display: inline-block;
-	height: 40px;
-	width: 40px;
-	position: absolute;
-	z-index: 1;
-	right: 1px;
-	top: -20px;
-	text-align: center;
-	border-radius: 20px;
-	font-size: 25px;
-	font-weight: bold;
-	cursor: default;
-	max-width: auto;
-	padding-top: 5px;
-	padding: 5px 8px;
-	overflow: hidden;
-	float: left;
-	-webkit-animation: in 1s;
+  background-color: #f34d77;
+  color: #fff;
+  display: inline-block;
+  height: 40px;
+  width: 40px;
+  position: absolute;
+  z-index: 1;
+  right: 1px;
+  top: -20px;
+  text-align: center;
+  border-radius: 20px;
+  font-size: 25px;
+  font-weight: bold;
+  cursor: default;
+  max-width: auto;
+  padding-top: 5px;
+  padding: 5px 8px;
+  overflow: hidden;
+  float: left;
+  -webkit-animation: in 1s;
 }
 header .sub-header .add-action span {
-	float: right;
-	font-size: 15px;
-	margin-top: 7px;
+  float: right;
+  font-size: 15px;
+  margin-top: 7px;
 }
 header .sub-header .add-action:hover {
-	text-decoration: none;
-	-webkit-animation: out 1s;
+  text-decoration: none;
+  -webkit-animation: out 1s;
 }
 header .sub-header .add-action:hover span{
-	
+  
 }
 @-webkit-keyframes in {
     from   { width: 40px; }
@@ -116,25 +116,25 @@ header .sub-header .add-action:hover span{
     100% {width: 40px;}
 }
 header .sub-header .arrow {
-	font-size: 150%;
-	line-height: 0px;
+  font-size: 150%;
+  line-height: 0px;
 }
 header .sub-header .date-details {
-	font-size: 16px;
-	color: #fff;
-	display: inline-block;
-	white-space: nowrap;
-	margin-right: 30px;
+  font-size: 16px;
+  color: #fff;
+  display: inline-block;
+  white-space: nowrap;
+  margin-right: 30px;
 }
 header .sub-header .date-details .input-group-addon {
-	width: auto;
-	display: inline-block;
-	background: transparent;
-	border: 0;
-	padding: 0;
+  width: auto;
+  display: inline-block;
+  background: transparent;
+  border: 0;
+  padding: 0;
 }
 header .sub-header .date-details .input-group-addon .glyphicon {
-	font-size: 20px;
+  font-size: 20px;
     color: #65CCCB;
 }
 /* employee details starts here */
@@ -142,28 +142,28 @@ header .sub-header .date-details .input-group-addon .glyphicon {
 
 /* employee details ends here */
 header .sub-header .date-details input {
-	color: #fff;
+  color: #fff;
     background: transparent;
     border: 0;
     width: 150px;
     float: none;
 }
 header .sub-header .profile-name span{
-	color: #5fbabe;
-	font-size: 20px;
+  color: #5fbabe;
+  font-size: 20px;
 }
 header .sub-header .pa-emp-dtl-cnt {
-	padding-left: 10px;
-	list-style-type: disc;
-	color: #dadada;
-	font-weight: normal;
+  padding-left: 10px;
+  list-style-type: disc;
+  color: #dadada;
+  font-weight: normal;
 }
 header .sub-header .pa-emp-dtl-cnt ul {
-	padding-left: 0;
+  padding-left: 0;
   margin-bottom: 0;
 }
 header .sub-header .pa-emp-dtl-cnt ul li + li {
-	margin-top: 1em;
+  margin-top: 1em;
 }
 .pa-emp-description-cnt .list-group-item.row{
   margin: 0;
@@ -190,36 +190,36 @@ header .sub-header .pa-emp-dtl-cnt ul li + li {
   display: block;
 }
 .pa-emp-dtl-cnt .pa-emp-value {
-	color: #fff;
+  color: #fff;
 }
 .input-box {
-	background-color: #f6f6f6;
-	border: none;
-	font-weight: bold;
-	padding: 5px 0;
+  background-color: #f6f6f6;
+  border: none;
+  font-weight: bold;
+  padding: 5px 0;
     text-align: center;
 }
 .dev-need-actn-tbl .input-box {
-	font-weight: normal;
-	padding-left: 5px;
-	text-align: left;
+  font-weight: normal;
+  padding-left: 5px;
+  text-align: left;
 }
 .pa-emp-dtl-cnt .comment-section {
 
 }
 header .pa-logo {
-	padding: 10px;
+  padding: 10px;
   padding-left: 0;
 }
 header .pa-logo img {
-	width: 100px;
+  width: 100px;
   float: left;
 }
 header .heading {
-	font-size: 18px;
-	font-weight: bold;
-	margin: 20px 0 20px 130px;
-	color: #313541;
+  font-size: 18px;
+  font-weight: bold;
+  margin: 20px 0 20px 130px;
+  color: #313541;
 }
 header .heading:before {
  content:"";
@@ -230,11 +230,11 @@ header .heading:before {
  margin: -20px 0 0 -15px
 }
 header .pa-welcome-cnt {
-	margin-top: 18px;
+  margin-top: 18px;
   margin-bottom: 10px;
-	display: table;
-	color: #4d4d4d;
-	font-size: 12px;
+  display: table;
+  color: #4d4d4d;
+  font-size: 12px;
 }
 @media (max-width: 991px){
   header .pa-welcome-cnt{
@@ -253,34 +253,34 @@ header .pa-welcome-cnt span.user img {
   width: 50px;
 }
 header .pa-welcome-cnt .notification {
-	/*background: url(../images/notification.png) no-repeat;*/
-	height: 26px;
-	width: 23px;
-	display: inline-block;
-	margin-right: 20px;
-	fill: #4d4d4c;
-	position: relative;
-	top: 8px;
+  /*background: url(../images/notification.png) no-repeat;*/
+  height: 26px;
+  width: 23px;
+  display: inline-block;
+  margin-right: 20px;
+  fill: #4d4d4c;
+  position: relative;
+  top: 8px;
 }
 header .pa-welcome-cnt .notification sup {
-	background-color: #f14c75;
-	height: 15px;
-	width: 15px;
-	border-radius: 50%;
-	color: #fff;
-	font-size: 11px;
-	padding: 5px;
-	padding-top: 8px;
-	display: inline-block;
-	position: absolute;
-	right: -1px;
-	top: -3px;
-	cursor: default;
+  background-color: #f14c75;
+  height: 15px;
+  width: 15px;
+  border-radius: 50%;
+  color: #fff;
+  font-size: 11px;
+  padding: 5px;
+  padding-top: 8px;
+  display: inline-block;
+  position: absolute;
+  right: -1px;
+  top: -3px;
+  cursor: default;
 }
 /* header section ends */
 /* body section */
 .pa-body-cnt{
-	margin: 10px;
+  margin: 10px;
 }
 .pa-body-cnt .info-dotted {
   background-color: #fff;
@@ -321,10 +321,10 @@ color: #202020;
 left: 4px;
 }
 .pa-body-cnt .pa-h2 {
-	color: #3c4d60;
-	font-weight: bold;
-	font-size: 16px;
-	margin-top: 0;
+  color: #3c4d60;
+  font-weight: bold;
+  font-size: 16px;
+  margin-top: 0;
 }
 .pa-body-cnt .pa-h2 + p {
   color: #86878b;
@@ -333,13 +333,13 @@ left: 4px;
   margin-top: 6px;
 }
 .pa-body-cnt .pa-h3 {
-	color: #3c4d60;
-	font-size: 14px;
-	font-weight: normal;
-	margin: 6px 0px;
+  color: #3c4d60;
+  font-size: 14px;
+  font-weight: normal;
+  margin: 6px 0px;
 }
 .pa-body-cnt .pa-h1 span{
-	font-size: 12px;
+  font-size: 12px;
 }
 .pa-body-cnt .pa-h2 span{
   font-size: 12px;
@@ -349,21 +349,21 @@ left: 4px;
   padding-top: 5px;
 }
 .pa-body-cnt .pa-search, .pa-body-cnt .pa-action {
-	background-color: rgba(255, 255, 255, 0.4);
-	padding: 8px;
-	margin-bottom: 5px;
+  background-color: rgba(255, 255, 255, 0.4);
+  padding: 8px;
+  margin-bottom: 5px;
 }
 .pa-body-cnt .pa-search input {
-	border: 0;
-	background: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='30' height='30'><path fill='#313541' d='M9.5,3A6.5,6.5 0 0,1 16,9.5C16,11.11 15.41,12.59 14.44,13.73L14.71,14H15.5L20.5,19L19,20.5L14,15.5V14.71L13.73,14.44C12.59,15.41 11.11,16 9.5,16A6.5,6.5 0 0,1 3,9.5A6.5,6.5 0 0,1 9.5,3M9.5,5C7,5 5,7 5,9.5C5,12 7,14 9.5,14C12,14 14,12 14,9.5C14,7 12,5 9.5,5Z' /></svg>") no-repeat right top #fff;
-	height: 25px;
-	padding: 5px;
-	line-height: 25px;
-	color: #6d7074;
-	font-size: 13px;
+  border: 0;
+  background: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='30' height='30'><path fill='#313541' d='M9.5,3A6.5,6.5 0 0,1 16,9.5C16,11.11 15.41,12.59 14.44,13.73L14.71,14H15.5L20.5,19L19,20.5L14,15.5V14.71L13.73,14.44C12.59,15.41 11.11,16 9.5,16A6.5,6.5 0 0,1 3,9.5A6.5,6.5 0 0,1 9.5,3M9.5,5C7,5 5,7 5,9.5C5,12 7,14 9.5,14C12,14 14,12 14,9.5C14,7 12,5 9.5,5Z' /></svg>") no-repeat right top #fff;
+  height: 25px;
+  padding: 5px;
+  line-height: 25px;
+  color: #6d7074;
+  font-size: 13px;
 }
 .pa-body-cnt .pa-action {
-	padding: 13px 8px 0;
+  padding: 13px 8px 0;
 }
 .pa-pagination-section {
         background: #fff;
@@ -406,21 +406,21 @@ left: 4px;
 
 }
 .pa-tbl-cnt table {
-	background-color: #fff;
-	border-width: 1px 0 0 1px;
-	width: 100%;
-	font-size: 13px;
+  background-color: #fff;
+  border-width: 1px 0 0 1px;
+  width: 100%;
+  font-size: 13px;
 }
 .pa-tbl-cnt th {
-	border: solid 1px #e8e8e8;
-	border-width: 0 0 1px 0;
-	padding: 10px;
+  border: solid 1px #e8e8e8;
+  border-width: 0 0 1px 0;
+  padding: 10px;
   color: #3c4d60;
 }
 .pa-tbl-cnt td {
-	border: solid 1px #e8e8e8;
-	border-width: 0 0 1px 0;
-	padding: 10px;
+  border: solid 1px #e8e8e8;
+  border-width: 0 0 1px 0;
+  padding: 10px;
   color: #3c4d60;
   vertical-align: top;
 }
@@ -530,7 +530,7 @@ left: 4px;
 /* action dropdown ends here */
 /* add item css clases */
 .menu-button {
-	position: relative;
+  position: relative;
     left: 0px;
     top: -6px;
 }
@@ -551,16 +551,16 @@ left: 4px;
   cursor: pointer;
 }
 .menu-open-button .material-icons{
-	position: relative;
-    top: 6px;
+  position: relative;
+    top: 10px;
     left: 13px;
     font-size: 24px;
     font-weight: bold;
 }
 
 .menu-open-button .btn-detail-text {
- 	position: absolute;
-  	top: 12px;
+  position: absolute;
+    top: 12px;
   left: 33px;
   white-space: nowrap;
   opacity: 0;
@@ -669,11 +669,11 @@ left: 4px;
   margin-bottom: 5px;*/
 }
 .dev-need-actn-tbl .title {
-	font-size: 14px;
+  font-size: 14px;
 }
 .dev-need-actn-tbl .title span {
-	font-size: 12px;
-	font-weight: normal;
+  font-size: 12px;
+  font-weight: normal;
 }
 .career-aspirations .sub-title,.career-aspirations .comments{padding: 5px;background:#fff;margin-bottom:5px;}
 .career-aspirations .sub-title textarea,.career-aspirations .comments textarea{height:40px; border:1px solid #f1f1f1;width:100%;resize:none;padding:10px;}
@@ -688,6 +688,282 @@ left: 4px;
 
 /* modal classes */
 
+/* modal classes ends here */
+
+/* check-box css*/
+
+.checkmark-button-container {
+  margin: 0px auto 0;
+  width:18px;
+}
+.pa-tbl-cnt td {
+  vertical-align: middle;
+  padding: 5px
+}
+.pa-tbl-cnt th {
+  padding-left: 5px;
+}
+.checkmark-button-container label{
+margin-bottom: 0;
+  }
+
+/* Checkmark style starts */
+@-moz-keyframes dothabottomcheck {
+  0% {
+    height: 0;
+  }
+  100% {
+    height: 7px;
+  }
+}
+@-webkit-keyframes dothabottomcheck {
+  0% {
+    height: 0;
+  }
+  100% {
+    height: 7px;
+  }
+}
+@keyframes dothabottomcheck {
+  0% {
+    height: 0;
+  }
+  100% {
+    height: 7px;
+  }
+}
+@keyframes dothatopcheck {
+  0% {
+    height: 0;
+  }
+  50% {
+    height: 0;
+  }
+  100% {
+    height: 12px;
+  }
+}
+@-webkit-keyframes dothatopcheck {
+  0% {
+    height: 0;
+  }
+  50% {
+    height: 0;
+  }
+  100% {
+    height: 12px;
+  }
+}
+@-moz-keyframes dothatopcheck {
+  0% {
+    height: 0;
+  }
+  50% {
+    height: 0;
+  }
+  100% {
+    height: 12px;
+  }
+}
+.checkmark-button-container input[type=checkbox] {
+  display: none;
+}
+
+.check-box {
+  height: 12px;
+  width: 12px;
+  background-color: transparent;
+  border: 1px solid #dbdbdb;
+  position: relative;
+  display: inline-block;
+  -moz-transition: border-color ease 0.2s;
+  -o-transition: border-color ease 0.2s;
+  -webkit-transition: border-color ease 0.2s;
+  transition: border-color ease 0.2s;
+  cursor: pointer;
+  border-radius: 2px;
+}
+.check-box::before, .check-box::after {
+  position: absolute;
+  height: 0;
+  width: 2px;
+  background-color: #148c83;
+  display: inline-block;  
+  -moz-transform-origin: left top;
+  -ms-transform-origin: left top;
+  -o-transform-origin: left top;
+  -webkit-transform-origin: left top;
+  transform-origin: left top;
+  border-radius: 5px;
+  content: ' ';
+  -webkit-transition: opacity ease .5;
+  -moz-transition: opacity ease .5;
+  transition: opacity ease .5;
+}
+.check-box::before {
+  top: 8px;
+  left: 6px;
+  -moz-transform: rotate(-130deg);
+  -ms-transform: rotate(-130deg);
+  -o-transform: rotate(-130deg);
+  -webkit-transform: rotate(-130deg);
+  transform: rotate(-130deg);
+}
+.check-box::after {
+  top: 3px;
+  left: 1px;
+  -moz-transform: rotate(-30deg);
+  -ms-transform: rotate(-30deg);
+  -o-transform: rotate(-30deg);
+  -webkit-transform: rotate(-30deg);
+  transform: rotate(-30deg);
+}
+
+.checkmark-button-container input[type=checkbox]:checked + .check-box,
+.check-box.checked {
+  border-color: #148c83;
+}
+.checkmark-button-container input[type=checkbox]:checked + .check-box::after,
+.check-box.checked::after {
+  height: 50px;
+  -moz-animation: dothabottomcheck 0.2s ease 0s forwards;
+  -o-animation: dothabottomcheck 0.2s ease 0s forwards;
+  -webkit-animation: dothabottomcheck 0.2s ease 0s forwards;
+  animation: dothabottomcheck 0.2s ease 0s forwards;
+}
+.checkmark-button-container input[type=checkbox]:checked + .check-box::before,
+.check-box.checked::before {
+  height: 120px;
+  -moz-animation: dothatopcheck 0.4s ease 0s forwards;
+  -o-animation: dothatopcheck 0.4s ease 0s forwards;
+  -webkit-animation: dothatopcheck 0.4s ease 0s forwards;
+  animation: dothatopcheck 0.4s ease 0s forwards;
+}
+/* check-box css ends*/
+
+/* too-tip css*/
+.tool-tip-shadow{
+   -moz-box-shadow: 0 1px 3px 0 rgba(147,147,147,0.55);
+    -webkit-box-shadow: 0 1px 3px 0 rgba(147,147,147,0.55);
+    box-shadow: 0 1px 3px 0 rgba(147,147,147,0.55);
+    background: #fafafa;
+}
+.pa-tooltip {
+  position: relative;
+  padding-bottom: 5px;
+}
+.pa-tooltip > .pa-tooltip-section{
+  width: auto;
+  background: #fafafa;
+  font-size: 13px;
+    -moz-box-shadow: 0 1px 3px 0 rgba(147,147,147,0.55);
+    -webkit-box-shadow: 0 1px 3px 0 rgba(147,147,147,0.55);
+    box-shadow: 0 1px 3px 0 rgba(147,147,147,0.55);
+    -moz-transition: all 0.3s ease-in-out;
+    -webkit-transition: all 0.3s ease-in-out;
+   transition: all 0.3s ease-in-out;
+    position: absolute;
+    right: 0;
+    top: 0px;
+    z-index: 1;
+    opacity: 0;
+    pointer-events: none;
+}
+.pa-tooltip:hover > .pa-tooltip-section{
+  opacity: 1;
+  top: 16px;
+}
+.pa-tooltip .pa-tooltip-content{
+  padding: 10px;
+  }
+.pa-tooltip .comment-name{
+font-weight: bold;
+white-space: nowrap;
+}
+.pa-tooltip .comment-date {
+  color: #717171;
+  white-space: nowrap;
+}
+.pa-tooltip .hr-line {
+  background-color: #02a397;
+}
+/* tool-tip css ends*/
+
+/* Add manager css */
+.pa-addmanager-section {
+position: relative;
+float: left;
+}
+.pa-addmanager {
+border: none;
+background: #fafafa;
+padding: 5px 5px 5px 5px;
+box-sizing: content-box;
+}
+.pa-plus-icon {
+display: block;
+position: absolute;
+font-size: 16px;
+right: 1px;
+cursor: pointer;
+top: 0;
+visibility: hidden;
+width: 21px;
+height: 25px;
+text-align: center;
+z-index: 111;
+margin: 0;
+vertical-align: middle;
+}
+.pa-plus-icon svg {
+fill: #02a397;
+width: 15px;
+height: 15px;
+display: inline-block;
+margin-top: 5px;
+}
+.pa-addmanager:hover + .pa-plus-icon, .pa-addmanager:focus + .pa-plus-icon, .pa-plus-icon:hover, .pa-tbl-cnt table tr:hover .pa-plus-icon {
+visibility: visible;
+}
+
+
+.pa-addmanager-dropdown{
+position: absolute;
+z-index: 111;
+top: 71px;
+display: none;
+}  
+
+.pa-addmanager-section .pa-addmanager:focus + div.pa-addmanager-dropdown {
+  display: block;
+
+}
+.pa-addmanager-dropdown .pa-addmanager-data {
+position: relative;
+}  
+.pa-addmanager-dropdown .pa-manager-list {
+padding: 10px;
+overflow: scroll-y;
+}
+.pa-addmanager-dropdown .pa-manager-list ul{
+padding-left: 0;
+}  
+.pa-addmanager-dropdown .pa-manager-list ul li{
+margin-bottom: 10px;
+}
+.pa-addmanager-dropdown .input-addmanager {
+border: none;
+background: none;
+padding: 5px;
+}  
+.pa-addmanager-dropdown .grey-hr-line {
+background: #ccc;
+height: 3px;
+}  
+.pa-addmanager-dropdown .hr-line {
+background-color: #02a397;
+}
+/* Add Manager css ends
 /* modal classes ends here */
 /* body section ends */
 /* footer section */
