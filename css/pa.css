@@ -421,7 +421,7 @@ left: 4px;
   background-color: #fff;
   border-width: 1px 0 0 1px;
   width: 100%;
-  font-size: 13px;
+  /*font-size: 13px; */
 }
 .pa-tbl-cnt th {
   border: solid 1px #e8e8e8;
@@ -673,15 +673,13 @@ left: 4px;
 /* ratings radio style ends here */
 
 /* career-aspirations starts here */
-.pa-tbl-cnt .title{
+.pa-body-cnt .title{
   padding:10px;background:rgba(255, 255, 255, 0.4);font-weight:bold;color:#1b3148;margin-bottom:1px;
   /*background-color: rgba(255, 255, 255, 0.4);
   padding: 8px;
   margin-bottom: 5px;*/
 }
-.dev-need-actn-tbl .title {
-  font-size: 14px;
-}
+
 .dev-need-actn-tbl .title span {
   font-size: 12px;
   font-weight: normal;
@@ -1015,18 +1013,28 @@ display: none;
   display: block;
 
 }
+.pa-addmanager-data .manager-img img {
+  height: 30px;
+  width: 30px;
+  border-radius: 50%;
+  margin-right: 4px;
+}
 .pa-addmanager-dropdown .pa-addmanager-data {
 position: relative;
 }  
 .pa-addmanager-dropdown .pa-manager-list {
-padding: 10px;
-overflow: scroll-y;
+/*padding: 10px; */
+overflow-y: scroll;
 }
 .pa-addmanager-dropdown .pa-manager-list ul{
 padding-left: 0;
 }  
 .pa-addmanager-dropdown .pa-manager-list ul li{
 margin-bottom: 10px;
+cursor: default;
+}
+.pa-addmanager-dropdown .pa-manager-list ul li:hover {
+  background-color: #d8d8d8;
 }
 .pa-addmanager-dropdown .input-addmanager {
 border: none;
