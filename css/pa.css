@@ -147,6 +147,7 @@ header .sub-header .date-details input {
     border: 0;
     width: 100px;
     float: none;
+    border-bottom: 1px dotted #fff;
 }
 header .sub-header .profile-name span{
   color: #5fbabe;
@@ -300,7 +301,6 @@ header .pa-welcome-cnt .notification sup {
     text-transform: capitalize;
     font-size: 18px;
     display: inline-block;
-    border-bottom: 1px dotted #fff;
     margin: 0 5px;
 }
 .sub-header .af-carot {
@@ -1028,9 +1028,9 @@ overflow-y: scroll;
 }
 .pa-addmanager-dropdown .pa-manager-list ul{
 padding-left: 0;
+margin: 0;
 }  
 .pa-addmanager-dropdown .pa-manager-list ul li{
-margin-bottom: 10px;
 cursor: default;
 }
 .pa-addmanager-dropdown .pa-manager-list ul li:hover {
