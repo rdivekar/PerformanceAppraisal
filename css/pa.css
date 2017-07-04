@@ -673,7 +673,7 @@ left: 4px;
 /* ratings radio style ends here */
 
 /* career-aspirations starts here */
-.career-aspirations .title, .dev-need-actn-tbl .title, .training-activities .title{
+.pa-tbl-cnt .title{
   padding:10px;background:rgba(255, 255, 255, 0.4);font-weight:bold;color:#1b3148;margin-bottom:1px;
   /*background-color: rgba(255, 255, 255, 0.4);
   padding: 8px;
@@ -686,9 +686,9 @@ left: 4px;
   font-size: 12px;
   font-weight: normal;
 }
-.career-aspirations .sub-title,.career-aspirations .comments, .training-activities .sub-title{padding: 5px;background:#fff;margin-bottom:5px;}
-.career-aspirations .sub-title textarea,.career-aspirations .comments textarea, .training-activities .sub-title textarea{height:40px; border:1px solid #f1f1f1;width:100%;resize:none;padding:10px;}
-.career-aspirations .comments textarea {height:74px;}
+.pa-tbl-cnt .sub-title{padding: 5px;background:#fff;margin-bottom:5px;}
+.pa-tbl-cnt .comments textarea, .pa-tbl-cnt .sub-title textarea{height:40px; border:1px solid #f1f1f1;width:100%;resize:none;padding:10px;}
+.pa-tbl-cnt .comments textarea {height:74px;}
 .training-activities .title {
   margin-top: 5px;
 }
