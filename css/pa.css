@@ -209,17 +209,17 @@ header .sub-header .pa-emp-dtl-cnt ul li + li {
 
 }
 header .pa-logo {
-  padding: 10px;
+  padding: 5px;
   padding-left: 0;
 }
 header .pa-logo img {
-  width: 100px;
+  width: 80px;
   float: left;
 }
 header .heading {
   font-size: 18px;
   font-weight: bold;
-  margin: 20px 0 20px 130px;
+  margin: 15px 0 15px 130px;
   color: #313541;
 }
 header .heading:before {
@@ -671,7 +671,7 @@ left: 4px;
 
 /* career-aspirations starts here */
 .pa-body-cnt .title{
-  padding:10px;background:rgba(255, 255, 255, 0.4);font-weight:bold;color:#1b3148;margin-bottom:1px;
+  padding:10px;background:rgba(255, 255, 255, 0.4);font-weight:bold;color:#1b3148;margin-bottom:1px; margin-top: 5px;
   /*background-color: rgba(255, 255, 255, 0.4);
   padding: 8px;
   margin-bottom: 5px;*/
@@ -681,8 +681,8 @@ left: 4px;
   font-size: 12px;
   font-weight: normal;
 }
-.pa-tbl-cnt .sub-title{padding: 5px;background:#fff;margin-bottom:5px;}
-.pa-tbl-cnt .comments textarea, .pa-tbl-cnt .sub-title textarea{height:40px; border:1px solid #f1f1f1;width:100%;resize:none;padding:10px;}
+.pa-tbl-cnt .sub-title{background:#fff;margin-bottom:5px;}
+.pa-tbl-cnt .comments textarea, .pa-tbl-cnt .sub-title textarea{height:40px; border:0px solid #f1f1f1;width:100%;resize:none;padding:10px;}
 .pa-tbl-cnt .comments textarea {height:74px;}
 .training-activities .title {
   margin-top: 5px;
@@ -690,7 +690,7 @@ left: 4px;
 /* career-aspirations ends here */
 
 /* participating-in-training starts here */
-.training-activities .activities-content{padding: 10px;background:#fff;margin-bottom:2px;position:relative;} 
+.training-activities .activities-content{background:#fff;margin-bottom:2px;position:relative;} 
 .training-activities .activities-content:hover{background:#fafafa;}
 .training-activities .activities-content textarea{height:40px; border:none; width:100%;resize:none;padding:10px;}
 /* participating-in-training ends here */
@@ -713,14 +713,14 @@ left: 4px;
 }
 .pa-tbl-cnt td {
   vertical-align: middle;
-  padding: 5px
 }
 .pa-tbl-cnt th {
   padding-left: 5px;
 }
 .checkmark-button-container label{
-margin-bottom: 0;
-  }
+  margin-bottom: 0;
+  top: 2px;
+}
 
 /* Checkmark style starts */
 @-moz-keyframes dothabottomcheck {
@@ -873,12 +873,12 @@ vertical-align: top;
   top: 3px;
 }
 .radio-button-container .check-box::before {
-  top: 9px;
-  left: 7px;
+  top: 10px;
+  left: 5px;
 }
 .radio-button-container .check-box::after {
-  top: 4px;
-  left: 2px;
+  top: 5px;
+  left: 0px;
 }
 
 input[type=radio] {
@@ -964,19 +964,19 @@ white-space: nowrap;
 /* Add manager css */
 .pa-addmanager-section {
 position: relative;
-float: left;
 }
 .pa-addmanager {
 border: none;
 background: #fafafa;
 padding: 5px 5px 5px 5px;
 box-sizing: content-box;
+width: 90%;
 }
 .pa-plus-icon {
 display: block;
 position: absolute;
 font-size: 16px;
-right: 1px;
+right: 10px;
 cursor: pointer;
 top: 0;
 visibility: hidden;
@@ -998,12 +998,44 @@ margin-top: 5px;
 visibility: visible;
 }
 
-
+.pa-addmanager-data .pa-added-mgr-list {
+  padding: 3px;
+  min-height: 28px;
+}
+.pa-addmanager-data .pa-added-mgr-list .mgr {
+  background-color: #f6f6f6;
+  border: solid 1px #dfdfdf;
+  padding: 2px;
+  cursor: default;
+  display: inline-block;
+}
+.pa-addmanager-data .pa-added-mgr-list .mgr .remove-mgr {
+  margin-left: 5px;
+  height: 10px;
+  width: 10px;
+  display: inline-block;
+  vertical-align: top;
+  position: relative;
+  top: 3px;
+}
+.pa-addmanager-data .pa-added-mgr-list .mgr .remove-mgr:after {
+  content: 'x';
+  font-size: 10px;
+  top: -4px;
+  position: absolute;
+  left: 2px;
+}
+.pa-addmanager-data .pa-added-mgr-list .mgr .remove-mgr:hover {
+  background-color: #7d7d7d;
+  color: #fff;
+}
 .pa-addmanager-dropdown{
-position: absolute;
-z-index: 111;
-top: 71px;
-display: none;
+  position: absolute;
+  z-index: 111;
+  top: 71px;
+  display: none;
+  min-width: 183px;
+  max-width: 200px;
 }  
 
 .pa-addmanager-section .pa-addmanager:focus + div.pa-addmanager-dropdown {
