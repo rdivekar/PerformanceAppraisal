@@ -39,7 +39,7 @@
                <div class="hList pa-h1 d-inline-block">
                   <span class="action">
                      <div class="action-title action-title_3rd pa-h1">
-                        <span>Pending </span>
+                        <span class="txt">Pending </span>
                         <span class="af-carot">
                            <svg style="width:16px;height:16px" viewBox="0 0 24 24">
                               <path  d="M19.78,11.78L18.36,13.19L12,6.83L5.64,13.19L4.22,11.78L12,4L19.78,11.78Z" />
@@ -443,6 +443,16 @@
              setModalMaxHeight($('.modal-open.in'));
            }
          });
+         // status dropdown action added starts here 
+         $('.action-dropdown li').click(function(){
+            var statusVal = $(this).text();
+            //console.log(statusVal);
+            //$(this).parent().prev().children('.txt').text() = statusVal;
+            //console.log($(this).parent().prev().children('.txt').text());
+            $(this).parent().prev().children('.txt').text(statusVal);
+            
+         });
+         // status dropdown action added ends here 
       </script>
    </body>
 </html>

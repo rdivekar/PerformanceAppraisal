@@ -120,7 +120,7 @@ header .sub-header .arrow {
   line-height: 0px;
 }
 header .sub-header .date-details {
-  font-size: 16px;
+  font-size: 18px;
   color: #fff;
   display: inline-block;
   white-space: nowrap;
@@ -305,12 +305,9 @@ header .pa-welcome-cnt .notification sup {
 }
 .sub-header .af-carot {
   fill: #fff;
-   top: 0px;
-       position: relative;
+  top: -2px;
+  position: relative;
 
-}
-.sub-header .action:hover .af-carot {
-top: 5px;
 }
 .sub-header .hr-line {
   background: #02a397;
@@ -529,7 +526,7 @@ left: 4px;
          -ms-transform: rotate(0deg); 
          -webkit-transform: rotate(0deg); 
          transform: rotate(0deg);
-         top: 2px;
+         top: 6px;
          }
          .hr-line {
          height: 2px;
