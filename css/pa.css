@@ -64,7 +64,7 @@ header .sub-header {
   border-top: solid 3px #85c525;
   background-color: #0d83dd;
   color: #fff;
-  box-shadow: 0px 5px 8px #888888;
+  box-shadow: 0px 2px 4px #888888;
   padding: 10px 0;
 }
 header .sub-header h1 {
@@ -447,7 +447,7 @@ left: 4px;
 
 /* table style starts here */
 .pa-body-cnt .pa-tbl-cnt {
-
+  /*box-shadow: 0px 2px 4px #888888;*/
 }
 .pa-tbl-caption {
 
@@ -926,6 +926,7 @@ vertical-align: top;
 .position-duties .es-table .radio-button-container {
   position: relative;
   top: 2px;
+  margin-right: 8px;
 }
 input[type=radio] {
   display: none;
