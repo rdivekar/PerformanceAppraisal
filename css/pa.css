@@ -1014,7 +1014,7 @@ visibility: hidden;
 width: 21px;
 height: 25px;
 text-align: center;
-z-index: 111;
+z-index: 1;
 margin: 0;
 vertical-align: middle;
 }
@@ -1075,7 +1075,7 @@ visibility: visible;
 }
 .pa-addmanager-dropdown.show {
   opacity: 1;
-  z-index: 1;
+  z-index: 2;
 }
 .pa-addmanager-section .pa-addmanager:focus + div.pa-addmanager-dropdown {
   display: block;
