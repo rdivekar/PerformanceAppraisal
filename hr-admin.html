@@ -39,7 +39,7 @@
                <div class="hList pa-h1 d-inline-block">
                   <span class="action">
                      <div class="action-title action-title_3rd pa-h1">
-                        <span>Pending </span>
+                        <span class="txt">Pending </span>
                         <span class="af-carot">
                            <svg style="width:16px;height:16px" viewBox="0 0 24 24">
                               <path  d="M19.78,11.78L18.36,13.19L12,6.83L5.64,13.19L4.22,11.78L12,4L19.78,11.78Z" />
@@ -131,7 +131,7 @@
                         <th>Employee ID</th>
                         <th>Date of Joining</th>
                         <th>Last Appraisal</th>
-                        <th>Scheduled Appraisal</th>
+                        <th>Appraisal Scheduled</th>
                         <th>Appraisal Cycle</th>
                         <th>Manager</th>
                         <th>Status</th>
@@ -146,15 +146,15 @@
                            </div>
                         </td>
                         <td><img src="images/user.png"></td>
-                        <td><a href="description-of-performance-ratings.html">John Doe</a></td>
+                        <td><a href="employee.html">John Doe</a></td>
                         <td>1111</td>
-                        <td>1<sup>st</sup> Dec'16</td>
+                        <td>1 Dec'16</td>
                         <td>--</td>
-                        <td>Jun' 17</td>
+                        <td>Jun 17</td>
                         <td>Half yearly confirmation</td>
                         <td>
                            <div class="pa-addmanager-section">
-                              <input type="text" class="pa-addmanager">
+                              <input type="text" class="pa-addmanager" value="Johny Pena">
                               <div class="pa-plus-icon">
                                  <svg viewBox="0 0 24 24">
                                     <path d="M19,13H13V19H11V13H5V11H11V5H13V11H19V13Z" />
@@ -164,12 +164,17 @@
                            <div class="pa-addmanager-dropdown tool-tip-shadow">
                               <div class="hr-line"></div>
                               <div class="pa-addmanager-data">
-                                 <input type="text" class="input-addmanager"/>
+                                 <div class="pa-added-mgr-list">
+                                    <div class="mgr">Johny Pena<span class="remove-mgr"></span></div>
+                                    <div class="mgr">Nicolas A<span class="remove-mgr"></span></div>
+                                    <div class="mgr">Nicolas A<span class="remove-mgr"></span></div>
+                                    <div class="mgr">Nicolas A<span class="remove-mgr"></span></div>
+                                 </div>
                                  <div class="grey-hr-line"></div>
                                  <div class="pa-manager-list" data-spy="scroll" data-target=".navbar" data-offset="50">
                                     <ul>
-                                       <li><span class="manager-img"><img src="images/user.png"></span><span class="manager-name">Johnny Pena</span></li>
-                                       <li><span class="manager-img"><img src="images/user.png"></span><span class="manager-name">Nicholas Alvarado</span></li>
+                                       <li><span class="manager-img"><img src="images/user-image.jpg"></span><span class="manager-name">Johnny Pena</span></li>
+                                       <li><span class="manager-img"><img src="images/user-image.jpg"></span><span class="manager-name">Nicholas Alvarado</span></li>
                                     </ul>
                                  </div>
                               </div>
@@ -195,11 +200,11 @@
                            </div>
                         </td>
                         <td><img src="images/user.png"></td>
-                        <td><a href="description-of-performance-ratings.html">Annie M.</a></td>
+                        <td><a href="employee.html">Annie M.</a></td>
                         <td>2222</td>
-                        <td>1<sup>st</sup> Dec'16</td>
-                        <td>Jun'15</td>
-                        <td>Nov' 17</td>
+                        <td>1 Dec'16</td>
+                        <td>Jun 15</td>
+                        <td>Nov 17</td>
                         <td>Yearly</td>
                         <td>
                            <div class="pa-addmanager-section">
@@ -231,11 +236,11 @@
                            </div>
                         </td>
                         <td><img src="images/user.png"></td>
-                        <td><a href="description-of-performance-ratings.html">Amily Perkins</a></td>
+                        <td><a href="employee.html">Amily Perkins</a></td>
                         <td>2222</td>
-                        <td>1<sup>st</sup> Dec'16</td>
-                        <td>Jun'15</td>
-                        <td>Nov' 17</td>
+                        <td>1 Dec'16</td>
+                        <td>Jun 15</td>
+                        <td>Nov 17</td>
                         <td>Yearly</td>
                         <td>
                            <div class="pa-addmanager-section">
@@ -334,7 +339,7 @@
             </div>
             <div class="modal-body">
                <div class="model-table-content">
-                  <div class="pa-search"><input type="text" size="50" placeholder="Search"></div>
+                  <div class="pa-search"><input type="text" class="form-control" placeholder="Search"><input type="text" size="50" placeholder="Search"></div>
                   <div class="pa-tbl-cnt">
                      <table>
                         <thead>
@@ -362,9 +367,9 @@
                               <td>1111</td>
                               <td><img src="images/user.png"></td>
                               <td>John Doe</td>
-                              <td>1<sup>st</sup> Dec'16</td>
+                              <td>1 Dec'16</td>
                               <td>--</td>
-                              <td>Jun' 17</td>
+                              <td>Jun 17</td>
                               <td>Half yearly confirmation</td>
                            </tr>
                            <tr>
@@ -375,9 +380,9 @@
                               <td>2222</td>
                               <td><img src="images/user.png"></td>
                               <td>Annie M.</td>
-                              <td>1<sup>st</sup> Dec'16</td>
-                              <td>Jun' 15</td>
-                              <td>Nov' 17</td>
+                              <td>1 Dec'16</td>
+                              <td>Jun 15</td>
+                              <td>Nov 17</td>
                               <td>Yearly</td>
                            </tr>
                         </tbody>
@@ -443,6 +448,47 @@
              setModalMaxHeight($('.modal-open.in'));
            }
          });
+         // status dropdown action added starts here 
+         $('.action-dropdown li').click(function(){
+            var statusVal = $(this).text();
+            //console.log(statusVal);
+            //$(this).parent().prev().children('.txt').text() = statusVal;
+            //console.log($(this).parent().prev().children('.txt').text());
+            $(this).parent().prev().children('.txt').text(statusVal);
+            
+         });
+         // status dropdown action added ends here 
+         // remove manager starts here 
+         $('.remove-mgr').click(function(){
+            $(this).parent('.mgr').remove();
+         })
+
+         // $(document).ready(function(e){
+         //    $(".pa-plus-icon").click(function(e){
+         //       setTimeout(function(){ 
+         //          console.log($(this).chi);
+         //          $(this).parents('.pa-addmanager-section').next('.pa-addmanager-dropdown').show(); 
+         //          console.log('dsfdsf2');
+         //       });
+         //    });
+                // $("[class!='pa-addmanager-dropdown'],[class!='pa-plus-icon']").click(function(){
+                //   $(".pa-addmanager-dropdown").hide();
+                // });
+         // });
+         
+         
+
+         // $(document).click(function(e) 
+         //    {
+         //        var container = $(e.target).parents('.pa-plus-icon');
+
+         //        // if the target of the click isn't the container nor a descendant of the container
+         //        if (!container.is(e.target) && container.has(e.target).length === 0) 
+         //        {
+         //            container.hide();
+         //        }
+         //    });
+         // remove manager ends here 
       </script>
    </body>
 </html>
