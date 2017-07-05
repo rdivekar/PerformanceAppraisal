@@ -543,12 +543,13 @@
             // });
             $('.pa-plus-icon').click(function(){
                //console.log($(this).parent().next().css('opacity',1));
+               $('.pa-addmanager-dropdown').removeClass('show');
                $(this).parent().next().addClass('show');
             });
 
             $(document).on('click', function(e) {
                 if ( $(e.target).closest('.pa-plus-icon').length ) {
-                    console.log(e.target)
+                    //console.log(e.target)
                     $(e.target).closest('.pa-addmanager-dropdown').addClass('show');
                 }else if ( ! $(e.target).closest('.pa-addmanager-dropdown').length ) {
                     //console.log($(this))
