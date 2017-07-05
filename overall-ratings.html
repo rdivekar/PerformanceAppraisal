@@ -52,32 +52,123 @@
 			</div>
 		</div>
 	</header>
+	<style>
+	
+	@media (min-width: 768px) {
+		.list-group li {
+			width: 48%;	
+			margin-left: 10px;
+			margin-bottom: 10px;
+				}
+	}
+	@media (min-width: 992px) {
+		.list-group li {
+			width: 24%;
+			margin-left: 10px;
+		}
+	}
+	@media (min-width: 1200px) {
+		.list-group li {
+			width: 24%;
+		}
+		
+	}
+	.over-all-cnt .list-group-item {
+    float: left;
+    text-align: center;
+    padding: 25px;
+    font-size: 14px;
+    font-weight: bold;
+}
+.es-table .radio-button-container {
+    position: absolute;
+    margin-left: -20px;
+    margin-top: -2px;
+}
+.active-selection {
+background: #02a397;
+color : #fff;
+-webkit-transition : background 0.5s;;
+transition : background 0.5s;
+}
+.deactive-selection {
+background: #fff;
+color : #202020;
+-webkit-transition : background 0.5s;
+transition : background 0.5s;
+}
+.pa-table-opr {
+	margin-top: 10px;
+}
+.no-gutters .list-group {
+margin-bottom: 0
+}
+.pa-discussed-content {
+	background: #fff;
+	margin-top: 10px;
+	padding: 10px;
+}
+.pa-discussed-content p{
+	margin-bottom: 0px;
+}
+.underline {
+	border-bottom: 1px dotted #202020;
+	font-weight: bold;
+}
+	</style>
 	<!-- header ends here -->
 	<!-- page content starts here -->
 	<section class="pa-body-cnt container-fluid">		
-		<div class="row">
+		<div class="row no-gutters">
 			<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 pa-emp-dtl-cnt es-table">
 				<h2 class="pa-h2">Overall performance rating </h2>
 				<ul class="list-group over-all-cnt row">
-					<li class="list-group-item pull-left" for="test1">
+					<li class="list-group-item col-md-3 col-sm-6 col-xs-12" for="test1">
 						<div class="radio-button-container">
-                              <input type="radio" id="test1" name="overall_rating" />
-                              <label class="check-box"></label>
-                           </div> <span>Above Expectations</span></li>
-					<li class="list-group-item pull-left" for="test2">
+								    <input type="checkbox" id="radio1" name="employee" />
+								    <label for="radio1" class="check-box"></label>
+								</div><span>Above Expectations</span></li>
+					<li class="list-group-item col-md-3 col-sm-6 col-xs-12" for="test2">
 						<div class="radio-button-container">
-                              <input type="radio" id="test2" name="overall_rating" />
-                              <label class="check-box"></label>
-                           </div> <span>Meets Expectations </span></li>
-					<li class="list-group-item pull-left" for="test3"><div class="radio-button-container">
-                              <input type="radio" id="test3" name="overall_rating"  />
-                              <label class="check-box"></label>
-                           </div> <span>Opportunity for Improvement</span></li>
-                     <li class="list-group-item pull-left" for="test4"><div class="radio-button-container">
-                              <input type="radio" id="test4" name="overall_rating"  />
-                              <label class="check-box"></label>
-                           </div> <span>Unsatisfactory Performance</span></li>
+								    <input type="checkbox" id="radio2" name="employee" />
+								    <label for="radio2" class="check-box"></label>
+								</div> <span>Meets Expectations </span></li>
+					<li class="list-group-item col-md-3 col-sm-6 col-xs-12" for="test3"><div class="radio-button-container">
+								    <input type="checkbox" id="radio3" name="employee" />
+								    <label for="radio3" class="check-box"></label>
+								</div> <span>Opportunity for Improvement</span></li>
+                     <li class="list-group-item col-md-3 col-sm-6 col-xs-12" for="test4"><div class="radio-button-container">
+								    <input type="checkbox" id="radio4" name="employee" />
+								    <label for="radio4" class="check-box"></label>
+								</div><span>Unsatisfactory Performance</span></li>
 				</ul>
+			</div>
+			<div class="pa-tbl-cnt">
+				<table>
+					<tr>
+						<th style="width: 20%">Rating Manager</th>
+						<th style="width: 80%">Date(dd/mm/yyyy)</th>
+					</tr>
+					<tr>
+						<td>Jeremy Bosch</td>
+						<td><input type="text" class="input-box" value="15 &supth Jun 2017"></td>
+					</tr>
+				</table>
+				<table class="pa-table-opr">
+					<tr>
+						<th style="width: 20%">Approved By</th>
+						<th style="width: 80%">Date(dd/mm/yyyy)</th>
+					</tr>
+					<tr>
+						<td>Wilson Michael</td>
+						<td><input type="text" class="input-box" value="15th Jun 2017"></td>
+					</tr>
+				</table>
+				<div class="pa-discussed-content">
+					<p>Performance Appraisel discussed on <span class="underline">15th Jun 2017</span> with <span class="underline" >Emily Perkins</span></p>
+				</div>
+
+
 			</div>
 			<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 pa-emp-dtl-cnt">
 				<div class="pa-cta-cnt pull-right">
@@ -96,6 +187,31 @@
 			Footer
 		</div>
 	</footer>
+	<script>
+$(document).ready(function(){
+	var inputclicked = $('.list-group > li input');
+	inputclicked.on('click', function(){
+	var $this = $(this);
+		if(inputclicked.is(":checked")){
+
+			$this.parents('li').toggleClass('active-selection').toggleClass('deactive-selection');;
+			//$this.parent().fadeOut('.radio-button-container');
+			
+			if(!$(this).parents("li").next().hasClass("active-selection") || !$(this).parents("li").prev().hasClass("active-selection")){
+				
+				
+			}
+			else{
+				$this.parents('li').siblings('li').addClass('deactive-selection').removeClass('active-selection').children().fadeIn(".radio-button-container");
+			}
+			
+			
+		}
+
+	})
+
+})
+	</script>
 	<!-- footer ends here -->
 </body>
 </html>
