@@ -125,20 +125,20 @@ margin-bottom: 0
 				<ul class="list-group over-all-cnt row">
 					<li class="list-group-item col-md-3 col-sm-6 col-xs-12" for="test1">
 						<div class="radio-button-container">
-								    <input type="checkbox" id="radio1" name="employee" />
+								    <input type="checkbox" class="checkboxbtn" id="radio1" name="employee" />
 								    <label for="radio1" class="check-box"></label>
 								</div><span>Above Expectations</span></li>
 					<li class="list-group-item col-md-3 col-sm-6 col-xs-12" for="test2">
 						<div class="radio-button-container">
-								    <input type="checkbox" id="radio2" name="employee" />
+								    <input type="checkbox" class="checkboxbtn" id="radio2" name="employee" />
 								    <label for="radio2" class="check-box"></label>
 								</div> <span>Meets Expectations </span></li>
 					<li class="list-group-item col-md-3 col-sm-6 col-xs-12" for="test3"><div class="radio-button-container">
-								    <input type="checkbox" id="radio3" name="employee" />
+								    <input type="checkbox" class="checkboxbtn" id="radio3" name="employee" />
 								    <label for="radio3" class="check-box"></label>
 								</div> <span>Opportunity for Improvement</span></li>
                      <li class="list-group-item col-md-3 col-sm-6 col-xs-12" for="test4"><div class="radio-button-container">
-								    <input type="checkbox" id="radio4" name="employee" />
+								    <input type="checkbox" class="checkboxbtn" id="radio4" name="employee" />
 								    <label for="radio4" class="check-box"></label>
 								</div><span>Unsatisfactory Performance</span></li>
 				</ul>
@@ -190,23 +190,49 @@ margin-bottom: 0
 	<script>
 $(document).ready(function(){
 	var inputclicked = $('.list-group > li input');
+	//var indexclicked  = $('.list-group > li').index();
 	inputclicked.on('click', function(){
 	var $this = $(this);
-		if(inputclicked.is(":checked")){
+	$this.parents('li').toggleClass('active-selection');//.toggleClass('deactive-selection');
 
-			$this.parents('li').toggleClass('active-selection').toggleClass('deactive-selection');;
+	var index = 0;
+    $('.checkboxbtn').each(function() {
+        if (this.checked) {
+            console.log("Box is checked at index=" + $(this).closest("li").index());
+            var indexselector = $(this).closest("li").index();
+
+            if(indexselector == (indexselector % 1)){
+            	console.log("only one clicked")
+            }
+        }
+        index++;
+    });
+    //console.log(index);
+		//if(inputclicked.is(":checked")){
+			
+
+			
 			//$this.parent().fadeOut('.radio-button-container');
-			
-			if(!$(this).parents("li").next().hasClass("active-selection") || !$(this).parents("li").prev().hasClass("active-selection")){
+			/*$(this).parents("ul").children().each(function(i){
+				if($(this).hasClass("active-selection")){
+					//console.log($(this).hasClass("active-selection")+''+!$(this).eq() - i == 1 || !$(this).eq() - i == -1);
+					if(!parseInt($(this).index()) - i == 1 && !parseInt($(this).index()) - i == -1 && !parseInt($(this).index()) - i == 0){
+						console.log($(this).index());
+						$(this).removeClass('active-selection');
+					}
+				}
+			});*/
+			// if($(this).parents("li").next().hasClass("active-selection") || $(this).parents("li").prev().hasClass("active-selection")){
+			// 	$(this).parents("li").nextUntil($(this).parents("li").next()).removeClass("active-selection");
+			// 	$(this).parents("li").prevUntil($(this).parents("li").prev()).removeClass("active-selection");
 				
-				
-			}
-			else{
-				$this.parents('li').siblings('li').addClass('deactive-selection').removeClass('active-selection').children().fadeIn(".radio-button-container");
-			}
+			// }
+			// else{
+			// 	//$this.parents('li').siblings('li').addClass('deactive-selection').removeClass('active-selection').children().fadeIn(".radio-button-container");
+			// }
 			
 			
-		}
+		//}
 
 	})
 
