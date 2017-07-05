@@ -271,6 +271,7 @@ header .pa-welcome-cnt .notification sup {
 /* body section */
 .pa-body-cnt{
   margin: 10px;
+  margin-bottom: 60px;
 }
 .pa-body-cnt .info-dotted {
   background-color: #fff;
@@ -922,7 +923,10 @@ vertical-align: top;
   top: 6px;
   left: 0px;
 }
-
+.position-duties .es-table .radio-button-container {
+  position: relative;
+  top: 2px;
+}
 input[type=radio] {
   display: none;
 }

@@ -4,9 +4,12 @@
 	<title>Performance Appraisal - Index page</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<script type="text/javascript" src="//code.jquery.com/jquery-2.1.1.min.js"></script>
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 	<link rel="stylesheet" type="text/css" href="css/pa.css">
+	<link href="css/bootstrap-datetimepicker.css" rel="stylesheet">
+    <script src="//cdnjs.cloudflare.com/ajax/libs/moment.js/2.9.0/moment-with-locales.js"></script>
+    <script src="//cdn.rawgit.com/Eonasdan/bootstrap-datetimepicker/e8bddc60e73c1ec2475f827be36e1957af72e2ea/src/js/bootstrap-datetimepicker.js"></script>
 </head>
 <body>
 	<!-- header starts here -->
@@ -54,26 +57,26 @@
 	</header>
 	<!-- header ends here -->
 	<!-- page content starts here -->
-	<section class="pa-body-cnt container-fluid">		
+	<section class="pa-body-cnt container-fluid position-duties">		
 		<div class="row">
 			<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 pa-emp-dtl-cnt">
 				<h2 class="pa-h2">Position Duties and Responsibilities</h2>
 				<p>Review the significant duties and responsibilities of the employee's position. If necessary, update the position description to reflect the current functions of the job. The performance appraisal is not complete unless a position description has been reviewed/discussed with the employee and is attached to this performance appraisal.</p>
-				<ul class="list-group">
+				<ul class="list-group es-table">
 					<li class="list-group-item">
-						<div class="checkmark-button-container">
-                              <input type="checkbox" id="test1" />
+						<div class="radio-button-container">
+                              <input type="radio" name="position_duties" id="test1" />
                               <label for="test1" class="check-box"></label>
-                           </div> <span>Newly developed</span> position description effective <input type="text" class="input-box"> is being submitted.  </li>
+                           </div> <span>Newly developed</span> position description effective <input type="text" class="input-box datetimepicker1"> is being submitted.  </li>
 					<li class="list-group-item">
-						<div class="checkmark-button-container">
-                              <input type="checkbox" id="test2" />
+						<div class="radio-button-container">
+                              <input type="radio" name="position_duties" id="test2" />
                               <label for="test2" class="check-box"></label>
-                           </div> <span>Attached</span> position description dated <input type="text" class="input-box"> has been reviewed and there is no change.  </li>
-					<li class="list-group-item"><div class="checkmark-button-container">
-                              <input type="checkbox" id="test3" />
+                           </div> <span>Attached</span> position description dated <input type="text" class="input-box datetimepicker1"> has been reviewed and there is no change.  </li>
+					<li class="list-group-item"><div class="radio-button-container">
+                              <input type="radio" name="position_duties" id="test3" />
                               <label for="test3" class="check-box"></label>
-                           </div> <span>Attached</span> position description dated <input type="text" class="input-box"> has been updated and discussed with the employee.</li>
+                           </div> <span>Attached</span> position description dated <input type="text" class="input-box datetimepicker1"> has been updated and discussed with the employee.</li>
 				</ul>
 			</div>
 			<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 pa-emp-dtl-cnt">
@@ -94,5 +97,13 @@
 		</div>
 	</footer>
 	<!-- footer ends here -->
+	<script type="text/javascript">
+		$(function () {
+                $('.datetimepicker1').datetimepicker({
+                	format: 'DD/MM/YYYY'
+                	// default: 'none'
+                });
+            });
+	</script>
 </body>
 </html>
