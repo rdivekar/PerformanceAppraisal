@@ -317,6 +317,10 @@ left: 4px;
   max-width: 150px;
   left: -95px;
 }
+.sub-header .add-item-objective > div .menu-button .menu-open-button:hover {
+  max-width: 150px;
+  left: -105px;
+}
 .pa-body-cnt .pa-h2 {
   color: #3c4d60;
   font-weight: bold;
@@ -468,6 +472,7 @@ left: 4px;
 }
 .pa-tbl-cnt .col-rating {
   text-align: center;
+  padding: 5px;
 }
 .pa-tbl-cnt .col-rating ul {
   margin: 0;
@@ -659,7 +664,7 @@ left: 4px;
 .es-table label{
   float:left;
   width:100%;
-  border: 1px solid #dbdbdb;
+  border: 2px solid #888888;
   background:#fff;
   border-radius:50%;
   cursor:pointer;
@@ -752,7 +757,7 @@ left: 4px;
   position: relative;
 }
 .pa-tbl-cnt th {
-  padding-left: 5px;
+  /*padding-left: 5px;*/
 }
 .checkmark-button-container label{
   margin-bottom: 0;
@@ -902,19 +907,19 @@ left: 4px;
 vertical-align: top;
 }
  .es-table .radio-button-container label {
-  height: 14px;
-  width: 14px;
+  height: 18px;
+  width: 18px;
   margin-bottom: 0;
 }
 .es-table li div.radio-button-container label {
   top: 3px;
 }
 .radio-button-container .check-box::before {
-  top: 10px;
+  top: 12px;
   left: 5px;
 }
 .radio-button-container .check-box::after {
-  top: 5px;
+  top: 6px;
   left: 0px;
 }
 
