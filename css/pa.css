@@ -360,7 +360,7 @@ left: 4px;
 }
 .pa-body-cnt .pa-search .pa-search-result {
   position: absolute;
-  z-index: 1;
+  z-index: -1;
   width: 90%;
 }
 .pa-body-cnt .pa-search .pa-search-result ul{
@@ -376,6 +376,12 @@ left: 4px;
   -o-transition:  all 0.5s ease;
   transition:  all 0.5s ease;
   opacity: 0;
+}
+.pa-body-cnt .pa-search .pa-search-result.show {
+  z-index: 1;
+}
+.pa-body-cnt .pa-search .pa-search-result.show ul {
+  opacity: 1;
 }
 .pa-body-cnt .pa-search .pa-search-result ul li {
   padding: 3px;
@@ -607,8 +613,8 @@ left: 4px;
 
 }
 .menu-open-button:hover {
-  max-width: 150px;
-  left: -110px;
+  max-width: 184px;
+  left: -145px;
   background: 
 
 }

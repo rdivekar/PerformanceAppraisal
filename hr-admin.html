@@ -71,7 +71,7 @@
                <div class="pull-right" style="width: 40px;">
                   <div class="menu-button">
                      <div class="menu-open-button modal-open" data-toggle="modal" data-target="#addManagerModal">
-                        <span class="material-icons">+</span><span class="btn-detail-text">Add Employee</span>
+                        <span class="material-icons">+</span><span class="btn-detail-text">Schedule Appraisal</span>
                      </div>
                   </div>
                </div>
@@ -561,10 +561,10 @@
             // search starts here 
             $('.pa-search input').focus(function(){
                //console.log($(this).parent().children('.pa-search-result').children('ul'))
-               $(this).parent().children('.pa-search-result').children('ul').css('opacity', 1);
+               $(this).parent().children('.pa-search-result').addClass('show');
             });
             $('.pa-search input').focusout(function(){
-               $(this).parent().children('.pa-search-result').children('ul').css('opacity', 0);
+               $(this).parent().children('.pa-search-result').removeClass('show');
             })
             // search ends here 
          })
