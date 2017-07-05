@@ -385,7 +385,7 @@ left: 4px;
   color: #0d83dd;
   text-decoration: none;
 }
-.pa-body-cnt .pa-search .pa-search-result ul li a:hover {
+.pa-body-cnt .pa-search .pa-search-result ul li:hover a {
   color: #062942;
 }
 .pa-body-cnt .pa-search input + button[type='submit'] {
@@ -743,6 +743,7 @@ left: 4px;
 }
 .pa-tbl-cnt td {
   vertical-align: middle;
+  position: relative;
 }
 .pa-tbl-cnt th {
   padding-left: 5px;
@@ -1061,13 +1062,21 @@ visibility: visible;
 }
 .pa-addmanager-dropdown{
   position: absolute;
-  z-index: 111;
-  top: 71px;
-  display: none;
+  z-index: -1;
+  top: 36px;
+  opacity: 0;
   min-width: 183px;
   max-width: 200px;
-}  
-
+  transition: all 0.5s ease;
+  -webkit-transition: all 0.5s ease;
+  -moz-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+.pa-addmanager-dropdown.show {
+  opacity: 1;
+  z-index: 1;
+}
 .pa-addmanager-section .pa-addmanager:focus + div.pa-addmanager-dropdown {
   display: block;
 

@@ -216,12 +216,30 @@
                         <td>Yearly</td>
                         <td>
                            <div class="pa-addmanager-section">
-                              <input type="text" class="pa-addmanager">
-                              <span class="pa-plus-icon">
+                              <input type="text" class="pa-addmanager" value="Johny Pena">
+                              <div class="pa-plus-icon">
                                  <svg viewBox="0 0 24 24">
                                     <path d="M19,13H13V19H11V13H5V11H11V5H13V11H19V13Z" />
                                  </svg>
-                              </span>
+                              </div>
+                           </div>
+                           <div class="pa-addmanager-dropdown tool-tip-shadow">
+                              <div class="hr-line"></div>
+                              <div class="pa-addmanager-data">
+                                 <div class="pa-added-mgr-list">
+                                    <div class="mgr">Johny Pena<span class="remove-mgr"></span></div>
+                                    <div class="mgr">Nicolas A<span class="remove-mgr"></span></div>
+                                    <div class="mgr">Nicolas A<span class="remove-mgr"></span></div>
+                                    <div class="mgr">Nicolas A<span class="remove-mgr"></span></div>
+                                 </div>
+                                 <div class="grey-hr-line"></div>
+                                 <div class="pa-manager-list" data-spy="scroll" data-target=".navbar" data-offset="50">
+                                    <ul>
+                                       <li><span class="manager-img"><img src="images/user-image.jpg"></span><span class="manager-name">Johnny Pena</span></li>
+                                       <li><span class="manager-img"><img src="images/user-image.jpg"></span><span class="manager-name">Nicholas Alvarado</span></li>
+                                    </ul>
+                                 </div>
+                              </div>
                            </div>
                         </td>
                         <td>
@@ -252,12 +270,30 @@
                         <td>Yearly</td>
                         <td>
                            <div class="pa-addmanager-section">
-                              <input type="text" class="pa-addmanager">
-                              <span class="pa-plus-icon">
+                              <input type="text" class="pa-addmanager" value="Johny Pena">
+                              <div class="pa-plus-icon">
                                  <svg viewBox="0 0 24 24">
                                     <path d="M19,13H13V19H11V13H5V11H11V5H13V11H19V13Z" />
                                  </svg>
-                              </span>
+                              </div>
+                           </div>
+                           <div class="pa-addmanager-dropdown tool-tip-shadow">
+                              <div class="hr-line"></div>
+                              <div class="pa-addmanager-data">
+                                 <div class="pa-added-mgr-list">
+                                    <div class="mgr">Johny Pena<span class="remove-mgr"></span></div>
+                                    <div class="mgr">Nicolas A<span class="remove-mgr"></span></div>
+                                    <div class="mgr">Nicolas A<span class="remove-mgr"></span></div>
+                                    <div class="mgr">Nicolas A<span class="remove-mgr"></span></div>
+                                 </div>
+                                 <div class="grey-hr-line"></div>
+                                 <div class="pa-manager-list" data-spy="scroll" data-target=".navbar" data-offset="50">
+                                    <ul>
+                                       <li><span class="manager-img"><img src="images/user-image.jpg"></span><span class="manager-name">Johnny Pena</span></li>
+                                       <li><span class="manager-img"><img src="images/user-image.jpg"></span><span class="manager-name">Nicholas Alvarado</span></li>
+                                    </ul>
+                                 </div>
+                              </div>
                            </div>
                         </td>
                         <td>
@@ -498,10 +534,38 @@
             //        }
             //    });
             // remove manager ends here 
-            $('.pa-search input').focusin(function(){
-               $(this);
-               //$(this).parent().children('.pa-search-result ul').css('opacity', 1);
+            //add manager starts here
+            // $('.pa-addmanager').focus(function(e){
+            //    //console.log($(this).parent().next().css('opacity',1));
+            //    e.stopPropagation();
+            //    $(this).parent().next().css('opacity', 1);
+
+            // });
+            $('.pa-plus-icon').click(function(){
+               //console.log($(this).parent().next().css('opacity',1));
+               $(this).parent().next().addClass('show');
+            });
+
+            $(document).on('click', function(e) {
+                if ( $(e.target).closest('.pa-plus-icon').length ) {
+                    console.log(e.target)
+                    $(e.target).closest('.pa-addmanager-dropdown').addClass('show');
+                }else if ( ! $(e.target).closest('.pa-addmanager-dropdown').length ) {
+                    //console.log($(this))
+                    $('.pa-addmanager-dropdown').removeClass('show');
+                }
+            });
+            // add manager ends here 
+
+            // search starts here 
+            $('.pa-search input').focus(function(){
+               //console.log($(this).parent().children('.pa-search-result').children('ul'))
+               $(this).parent().children('.pa-search-result').children('ul').css('opacity', 1);
+            });
+            $('.pa-search input').focusout(function(){
+               $(this).parent().children('.pa-search-result').children('ul').css('opacity', 0);
             })
+            // search ends here 
          })
       </script>
    </body>
