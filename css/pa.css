@@ -13,7 +13,7 @@ footer, header, hgroup, menu, nav, section {
 }
 html body {
   line-height: 16px;
-  background-color: #e4e7ed;
+  background-color: #e5f4fe;
   color: #202020;
   font-family: 'Roboto', sans-serif;
   font-size: 12px;
@@ -61,8 +61,8 @@ header{
   margin-bottom: 25px;
 }
 header .sub-header {
-  border-top: solid 3px #02a397;
-  background-color: rgba(0,0,0,0.80);
+  border-top: solid 3px #85c525;
+  background-color: #0d83dd;
   color: #fff;
   box-shadow: 0px 5px 8px #888888;
   padding: 10px 0;
@@ -150,7 +150,7 @@ header .sub-header .date-details input {
     border-bottom: 1px dotted #fff;
 }
 header .sub-header .profile-name span{
-  color: #5fbabe;
+  color: #fff;
   font-size: 20px;
 }
 header .sub-header .pa-emp-dtl-cnt {
@@ -174,21 +174,10 @@ header .sub-header .pa-emp-dtl-cnt ul li + li {
 .pa-emp-description-cnt .list-group-item.row div {
   padding: 0;
 }
-.pa-emp-description-cnt .pa-emp-label {
-  font-weight: bold;
-  display: inline-block;
-}
-.pa-emp-description-cnt .rating-band {
-    display: inline-block;
-}
+
 .pa-emp-description-cnt .rating-band .NA {
   border: solid 1px #65cccb;
   background-color: #fff;
-}
-.pa-emp-description-cnt .rating-band span {
-  height: 10px;
-  background-color: #65cccb;
-  display: block;
 }
 .pa-emp-dtl-cnt .pa-emp-value {
   color: #fff;
@@ -358,6 +347,7 @@ left: 4px;
 }
 .pa-body-cnt .pa-search, .pa-body-cnt .pa-action {
   background-color: rgba(255, 255, 255, 0.4);
+  background-color: #fff;
   padding: 8px;
   margin-bottom: 5px;
 }
@@ -545,7 +535,7 @@ left: 4px;
 .menu-open-button {
   height: 40px;
   border-radius: 25px;
-  background: #ff4081;
+  background: #85c525;
   color: #fff;
   border: none;
   font-size: 16px;
