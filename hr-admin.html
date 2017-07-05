@@ -86,7 +86,15 @@
          <div class="row">
             <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
                <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 pa-search">
-                  <input type="text" size="50" placeholder="Search" class="pull-left">
+                  <input type="text" class="form-control" placeholder="Search">
+                  <button type="submit" class="btn btn-default"></button>
+                  <div class="pa-search-result">
+                     <ul>
+                        <li><a href="#">John Doe (1111)</a></li>
+                        <li><a href="#">Annie M. (2222)</a></li>
+                        <li><a href="#">Amily Perkins (3333)</a></li>
+                     </ul>
+                  </div>
                </div>
                <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 pa-action">
                   <!-- <a class="pull-right" data-toggle="modal" data-target="#action">Action &#x25BC;</a> -->
@@ -237,7 +245,7 @@
                         </td>
                         <td><img src="images/user.png"></td>
                         <td><a href="employee.html">Amily Perkins</a></td>
-                        <td>2222</td>
+                        <td>3333</td>
                         <td>1 Dec'16</td>
                         <td>Jun 15</td>
                         <td>Nov 17</td>
@@ -438,57 +446,63 @@
            });
          }
 
-         $('.modal-open').on('show.bs.modal', function() {
-           $(this).show();
-           setModalMaxHeight(this);
-         });
+         $(function(){
+            $('.modal-open').on('show.bs.modal', function() {
+              $(this).show();
+              setModalMaxHeight(this);
+            });
 
-         $(window).resize(function() {
-           if ($('.modal-open.in').length != 0) {
-             setModalMaxHeight($('.modal-open.in'));
-           }
-         });
-         // status dropdown action added starts here 
-         $('.action-dropdown li').click(function(){
-            var statusVal = $(this).text();
-            //console.log(statusVal);
-            //$(this).parent().prev().children('.txt').text() = statusVal;
-            //console.log($(this).parent().prev().children('.txt').text());
-            $(this).parent().prev().children('.txt').text(statusVal);
+            $(window).resize(function() {
+              if ($('.modal-open.in').length != 0) {
+                setModalMaxHeight($('.modal-open.in'));
+              }
+            });
+            // status dropdown action added starts here 
+            $('.action-dropdown li').click(function(){
+               var statusVal = $(this).text();
+               //console.log(statusVal);
+               //$(this).parent().prev().children('.txt').text() = statusVal;
+               //console.log($(this).parent().prev().children('.txt').text());
+               $(this).parent().prev().children('.txt').text(statusVal);
+               
+            });
+            // status dropdown action added ends here 
+            // remove manager starts here 
+            $('.remove-mgr').click(function(){
+               $(this).parent('.mgr').remove();
+            })
+
+            // $(document).ready(function(e){
+            //    $(".pa-plus-icon").click(function(e){
+            //       setTimeout(function(){ 
+            //          console.log($(this).chi);
+            //          $(this).parents('.pa-addmanager-section').next('.pa-addmanager-dropdown').show(); 
+            //          console.log('dsfdsf2');
+            //       });
+            //    });
+                   // $("[class!='pa-addmanager-dropdown'],[class!='pa-plus-icon']").click(function(){
+                   //   $(".pa-addmanager-dropdown").hide();
+                   // });
+            // });
             
-         });
-         // status dropdown action added ends here 
-         // remove manager starts here 
-         $('.remove-mgr').click(function(){
-            $(this).parent('.mgr').remove();
+            
+
+            // $(document).click(function(e) 
+            //    {
+            //        var container = $(e.target).parents('.pa-plus-icon');
+
+            //        // if the target of the click isn't the container nor a descendant of the container
+            //        if (!container.is(e.target) && container.has(e.target).length === 0) 
+            //        {
+            //            container.hide();
+            //        }
+            //    });
+            // remove manager ends here 
+            $('.pa-search input').focusin(function(){
+               $(this);
+               //$(this).parent().children('.pa-search-result ul').css('opacity', 1);
+            })
          })
-
-         // $(document).ready(function(e){
-         //    $(".pa-plus-icon").click(function(e){
-         //       setTimeout(function(){ 
-         //          console.log($(this).chi);
-         //          $(this).parents('.pa-addmanager-section').next('.pa-addmanager-dropdown').show(); 
-         //          console.log('dsfdsf2');
-         //       });
-         //    });
-                // $("[class!='pa-addmanager-dropdown'],[class!='pa-plus-icon']").click(function(){
-                //   $(".pa-addmanager-dropdown").hide();
-                // });
-         // });
-         
-         
-
-         // $(document).click(function(e) 
-         //    {
-         //        var container = $(e.target).parents('.pa-plus-icon');
-
-         //        // if the target of the click isn't the container nor a descendant of the container
-         //        if (!container.is(e.target) && container.has(e.target).length === 0) 
-         //        {
-         //            container.hide();
-         //        }
-         //    });
-         // remove manager ends here 
       </script>
    </body>
 </html>
