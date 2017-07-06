@@ -21,29 +21,33 @@ $(document).ready(function(){
 	// modal html content for deletion starts here 
 	$('body').append(deletion);
 	$('.close-btn').attr("data-toggle", "modal").attr('data-target', '#deleteAlert');
-	
+	var deleteRow = "";
 	$('.close-btn').click(function(){
 		console.log($(this));
-		var delet = false;	
-		//console.log(deletion);
-		// $(this).parents('tr').remove();
-		// $(this).parents('.activities-content').remove();
-		// $(this).parents('.developmental-needs-actions').remove();
+		//deleteRow = $(this).parents('tr');
+		if($(this).parents().hasClass('developmental-needs-actions')){
+			deleteRow = $(this).parents('.developmental-needs-actions');
+		}
+		else if ($(this).parents().hasClass('activities-content')){
+			deleteRow = $(this).parents('.activities-content');	
+		}
+		else if($(this).parents('tr')){
+			deleteRow = $(this).parents('tr');		
+		}
 	});	
 
 
 
 	$('#deleteAlert .modal-footer button').on('click', function(e){
-		console.log($(this));
+		//console.log($(this));
 		if ($(this).hasClass('primary')) {
 			console.log('primary clicked');
-			delet = true;
-		}
-		else {
-			console.log('secondary clicked');
-			delet = false;
+			//deleteRow = true;
+			deleteRow.remove();
+			deleteRow = "";
+			//console.log(deleteRow);
 		}
 	});
-
+	//console.log(deleteRow);
 	
 })
