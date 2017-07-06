@@ -4,10 +4,12 @@
 	<title>Performance Appraisal - Index page</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<script type="text/javascript" src="//code.jquery.com/jquery-2.1.1.min.js"></script>
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-	<link rel="stylesheet" type="text/css" href="css/pa.css">
-	<script type="text/javascript" src="js/pa.js"></script>
+	<link href="css/bootstrap-datetimepicker.css" rel="stylesheet">
+    <script src="//cdnjs.cloudflare.com/ajax/libs/moment.js/2.9.0/moment-with-locales.js"></script>
+    <script src="//cdn.rawgit.com/Eonasdan/bootstrap-datetimepicker/e8bddc60e73c1ec2475f827be36e1957af72e2ea/src/js/bootstrap-datetimepicker.js"></script>
+    <link rel="stylesheet" type="text/css" href="css/pa.css">
 </head>
 <body>
 	<!-- header starts here -->
@@ -95,7 +97,7 @@
 									<textarea>Lorem Ipsum is simply dummy text of the printing</textarea>
 								</td>
 								<td>
-									<input type="text" class="input-box" value="June 2016">
+									<input type="text" class="input-box datetimepicker1" value="June 2016">
 									<span class="close-btn">
 									<svg height="19" viewBox="0 0 24 24" width="19">
 									    <path d="M12 2C6.47 2 2 6.47 2 12s4.47 10 10 10 10-4.47 10-10S17.53 2 12 2zm5 13.59L15.59 17 12 13.41 8.41 17 7 15.59 10.59 12 7 8.41 8.41 7 12 10.59 15.59 7 17 8.41 13.41 12 17 15.59z"/>
@@ -124,5 +126,13 @@
 		</div>
 	</footer>
 	<!-- footer ends here -->
+	<script type="text/javascript">
+		$(function () {
+                $('.datetimepicker1').datetimepicker({
+                	format: 'DD/MM/YYYY'
+                	// default: 'none'
+                });
+            });
+	</script>
 </body>
 </html>
