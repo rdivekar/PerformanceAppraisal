@@ -1207,11 +1207,3 @@ footer{
   width: 100%;
 }
 /* footer section ends */
-/*Display None & block */
-.display-none:{
-  display: none;
-}
-.display-block:{
-  display: block;
-}
-/*Display None & block ends */
