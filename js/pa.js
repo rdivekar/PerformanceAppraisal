@@ -25,14 +25,17 @@ $(document).ready(function(){
 	$('.close-btn').click(function(){
 		console.log($(this));
 		//deleteRow = $(this).parents('tr');
-		if($(this).parents().hasClass('developmental-needs-actions')){
-			deleteRow = $(this).parents('.developmental-needs-actions');
-		}
-		else if ($(this).parents().hasClass('activities-content')){
-			deleteRow = $(this).parents('.activities-content');	
-		}
-		else if($(this).parents('tr')){
-			deleteRow = $(this).parents('tr');		
+		// if($(this).parents().hasClass('developmental-needs-actions')){
+		// 	deleteRow = $(this).parents('.developmental-needs-actions');
+		// }
+		// else if ($(this).parents().hasClass('activities-content')){
+		// 	deleteRow = $(this).parents('.activities-content');	
+		// }
+		// else if($(this).parents('tr')){
+		// 	deleteRow = $(this).parents('tr');		
+		// }
+		if($(this).parents().hasClass('data-row')){
+			deleteRow = $(this).parents('.data-row');
 		}
 	});	
 

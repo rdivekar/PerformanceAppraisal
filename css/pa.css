@@ -316,18 +316,7 @@ left: 4px;
 .sub-header .add-item > div {
   width: 40px;
 }
-.sub-header .add-item-accomplishment > div .menu-button .menu-open-button:hover {
-  max-width: 200px;
-  left: -155px;
-}
-.sub-header .add-item-activity > div .menu-button .menu-open-button:hover {
-  max-width: 150px;
-  left: -95px;
-}
-.sub-header .add-item-objective > div .menu-button .menu-open-button:hover {
-  max-width: 150px;
-  left: -105px;
-}
+
 .pa-body-cnt .pa-h2 {
   color: #3c4d60;
   font-weight: bold;
@@ -349,7 +338,7 @@ left: 4px;
 .pa-body-cnt .pa-h1 span{
   font-size: 12px;
 }
-.pa-body-cnt .pa-h2 span{
+.pa-body-cnt .pa-h2 span:not(.date-range){
   font-size: 12px;
   color: #777777;
   font-weight: normal;

@@ -11,6 +11,7 @@
 	<link href="css/bootstrap-datetimepicker.css" rel="stylesheet">
     <script src="//cdnjs.cloudflare.com/ajax/libs/moment.js/2.9.0/moment-with-locales.js"></script>
     <script src="//cdn.rawgit.com/Eonasdan/bootstrap-datetimepicker/e8bddc60e73c1ec2475f827be36e1957af72e2ea/src/js/bootstrap-datetimepicker.js"></script>
+    <script type="text/javascript" src="js/pa.js"></script>
 </head>
 <body>
 	<!-- header starts here -->
@@ -54,16 +55,6 @@
 					<li><span class="pa-emp-label">Period Covered by Review:</span> <span class="pa-emp-value">From 04/2016 to 3/2017</span></li>
 				</ul>
 			</div>
-			<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-               <!-- <a class="add-action">+ <span>&nbsp;Add Employee </span></a> -->
-               <div class="pull-right" style="width: 40px;">
-                  <div class="menu-button">
-                     <div class="menu-open-button">
-                        <span class="material-icons">+</span><span class="btn-detail-text">Add Objective</span>
-                     </div>
-                  </div>
-               </div>
-            </div>
 		</div>
 	</header>
 	<!-- header ends here -->
@@ -72,7 +63,7 @@
 		<div class="pre-yr-obj employee-statement">
 			<div class="row">
 				<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-					<h2 class="pa-h2 pull-left">Employee Statement of Objectives  from <input type='text'  id='datetimepicker6' class="form-control" /> to <input type='text' class="form-control" id='datetimepicker7' /><span>Outline below a reasonable number of goals for the year ahead.  They should be concise, specific and measurable.  The goals should not be ones that are easily attained, but ones that will create a personal challenge and require significant effort to achieve.  Goals will be jointly developed by the employee and the supervisor and may be modified throughout the year by mutual agreement of the employee and his/her supervisor.  
+					<h2 class="pa-h2">Employee Statement of Objectives <span class="date-range">from <input type='text'  id='datetimepicker6' class="form-control" /> to <input type='text' class="form-control" id='datetimepicker7' /></span><span>Outline below a reasonable number of goals for the year ahead.  They should be concise, specific and measurable.  The goals should not be ones that are easily attained, but ones that will create a personal challenge and require significant effort to achieve.  Goals will be jointly developed by the employee and the supervisor and may be modified throughout the year by mutual agreement of the employee and his/her supervisor.  
 	</span></h2>
 					<p class="pull-left"></p>
 				</div>
@@ -87,7 +78,7 @@
 							</tr>
 						</thead>
 						<tbody>
-							<tr>
+							<tr class="data-row">
 								<td>
 									<textarea autofocus></textarea>
 								</td>
@@ -109,7 +100,7 @@
 										</svg>
 									</span></td>
 							</tr>
-							<tr>
+							<tr class="data-row">
 								<td>
 									<textarea></textarea>
 								</td>
@@ -132,7 +123,7 @@
 									</span>
 								</td>
 							</tr>
-							<tr>
+							<tr class="data-row">
 								<td>
 									<textarea></textarea>
 								</td>
