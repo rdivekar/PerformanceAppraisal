@@ -162,7 +162,7 @@ header .sub-header .profile-name span{
 header .sub-header .pa-emp-dtl-cnt {
   padding-left: 10px;
   list-style-type: disc;
-  color: #dadada;
+  /*color: #dadada;*/
   font-weight: normal;
 }
 header .sub-header .pa-emp-dtl-cnt ul {
@@ -218,12 +218,12 @@ header .heading {
   color: #313541;
 }
 header .heading:before {
- content:"";
- background: #e4e7ed;
- height: 55px;
- width: 2px;
- position: absolute;
- margin: -20px 0 0 -15px
+    content: "";
+    background: #d2d2d2;
+    height: 44px;
+    width: 2px;
+    position: absolute;
+    margin: -14px 0 0 -25px;
 }
 header .pa-welcome-cnt {
   margin-top: 8px;
@@ -454,13 +454,13 @@ left: 4px;
   /*font-size: 13px; */
 }
 .pa-tbl-cnt th {
-  border: solid 1px #e8e8e8;
+  border: solid 1px #d2d2d2;
   border-width: 0 0 1px 0;
   padding: 10px;
   color: #3c4d60;
 }
 .pa-tbl-cnt td {
-  border: solid 1px #e8e8e8;
+  border: solid 1px #d2d2d2;
   border-width: 0 0 1px 0;
   padding: 10px;
   color: #3c4d60;
