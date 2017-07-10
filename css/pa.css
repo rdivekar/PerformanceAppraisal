@@ -455,6 +455,9 @@ left: 4px;
   height: 14px;
   width: 14px;
 }
+.employee-statement .data-row .date {
+  width: 92%;
+}
 .pa-tbl-cnt table {
   background-color: #fff;
   border-width: 1px 0 0 1px;
