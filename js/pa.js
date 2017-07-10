@@ -1,6 +1,6 @@
 $(document).ready(function(){
+// modal for deletion alert starts here
 	var pageHeading = $('body h2').html();
-
 	var deletion = '<div id="deleteAlert" class="modal fade" role="dialog">\
 					  <div class="modal-dialog">\
 					    <div class="modal-content">\
@@ -18,39 +18,34 @@ $(document).ready(function(){
 					    </div>\
 					  </div>\
 					</div><style>.modal-title span{display: none;}';
-	// modal html content for deletion starts here 
 	$('body').append(deletion);
 	$('.close-btn').attr("data-toggle", "modal").attr('data-target', '#deleteAlert');
 	var deleteRow = "";
 	$('.close-btn').click(function(){
-		console.log($(this));
-		//deleteRow = $(this).parents('tr');
-		// if($(this).parents().hasClass('developmental-needs-actions')){
-		// 	deleteRow = $(this).parents('.developmental-needs-actions');
-		// }
-		// else if ($(this).parents().hasClass('activities-content')){
-		// 	deleteRow = $(this).parents('.activities-content');	
-		// }
-		// else if($(this).parents('tr')){
-		// 	deleteRow = $(this).parents('tr');		
-		// }
 		if($(this).parents().hasClass('data-row')){
 			deleteRow = $(this).parents('.data-row');
 		}
-	});	
-
-
-
+	});
 	$('#deleteAlert .modal-footer button').on('click', function(e){
-		//console.log($(this));
 		if ($(this).hasClass('primary')) {
-			console.log('primary clicked');
-			//deleteRow = true;
 			deleteRow.remove();
 			deleteRow = "";
-			//console.log(deleteRow);
 		}
 	});
-	//console.log(deleteRow);
-	
+	$('.add-item').click(function(){
+		 var totalDiv = ($(this).parent('.title').siblings('.data-row').length) - 1;
+		 var totalTr = ($(this).parents('thead').next('tbody').children('.data-row').length) - 1;
+
+		console.log($(this).parent('.title').siblings('.data-row')[totalDiv]);
+		console.log($(this).parents('thead').next('tbody').children('.data-row')[totalTr]);
+		// if($(this).parents().next().children('.data-row')){
+		// 		console.log('I am in tr');
+		// 		console.log($(this).parents().next().children('.data-row'));
+		// 	}
+		// else if ($(this).parent().next('.data-row')){
+		// 	console.log('I am in div');
+		// 	console.log($(this).next().children('.data-row'));
+		// }
+	})
+	// add row functionality ends here
 })

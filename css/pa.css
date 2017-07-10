@@ -447,6 +447,14 @@ left: 4px;
 .pa-tbl-caption {
 
 }
+.employee-statement .accept {
+  padding: 10px 0;
+}
+.employee-statement .accept .check-box {
+  border: 2px solid #868686;
+  height: 14px;
+  width: 14px;
+}
 .pa-tbl-cnt table {
   background-color: #fff;
   border-width: 1px 0 0 1px;
