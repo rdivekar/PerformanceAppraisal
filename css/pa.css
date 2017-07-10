@@ -129,6 +129,10 @@ header .sub-header .date-details {
   white-space: nowrap;
   margin-right: 0px;
 }
+header .sub-header .date-details input {
+  padding-left: 0px;
+  font-size: 18px;
+}
 header .sub-header .date-details .input-group-addon {
   width: auto;
   display: inline-block;
