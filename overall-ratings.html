@@ -73,7 +73,7 @@
 		}
 		
 	}
-	.over-all-cnt .list-group-item {
+.over-all-cnt .list-group-item {
     float: left;
     text-align: center;
     padding: 25px;
@@ -84,6 +84,9 @@
     position: absolute;
     margin-left: -20px;
     margin-top: -2px;
+}
+.es-table .radio-button-container input[type='checkbox']{
+	display: none;
 }
 .active-selection {
 background: #02a397;
@@ -124,23 +127,25 @@ margin-bottom: 0
 				<h2 class="pa-h2">Overall performance rating </h2>
 				<ul class="list-group over-all-cnt row">
 					<li class="list-group-item col-md-3 col-sm-6 col-xs-12" for="test1">
-						<div class="radio-button-container">
-								    <input type="checkbox" class="checkboxbtn" id="radio1" name="employee" />
-								    <label for="radio1" class="check-box"></label>
-								</div><span>Above Expectations</span></li>
+						<div class="checkmark-button-container">
+						    <input type="checkbox" class="checkboxbtn" id="radio1" name="employee" />
+						    <label for="radio1" class="check-box"></label>
+						</div><span>Above Expectations</span></li>
 					<li class="list-group-item col-md-3 col-sm-6 col-xs-12" for="test2">
-						<div class="radio-button-container">
-								    <input type="checkbox" class="checkboxbtn" id="radio2" name="employee" />
-								    <label for="radio2" class="check-box"></label>
-								</div> <span>Meets Expectations </span></li>
-					<li class="list-group-item col-md-3 col-sm-6 col-xs-12" for="test3"><div class="radio-button-container">
-								    <input type="checkbox" class="checkboxbtn" id="radio3" name="employee" />
-								    <label for="radio3" class="check-box"></label>
-								</div> <span>Opportunity for Improvement</span></li>
-                     <li class="list-group-item col-md-3 col-sm-6 col-xs-12" for="test4"><div class="radio-button-container">
-								    <input type="checkbox" class="checkboxbtn" id="radio4" name="employee" />
-								    <label for="radio4" class="check-box"></label>
-								</div><span>Unsatisfactory Performance</span></li>
+						<div class="checkmark-button-container">
+						    <input type="checkbox" class="checkboxbtn" id="radio2" name="employee" />
+						    <label for="radio2" class="check-box"></label>
+						</div><span>Meets Expectations </span></li>
+					<li class="list-group-item col-md-3 col-sm-6 col-xs-12" for="test3">
+						<div class="checkmark-button-container">
+						    <input type="checkbox" class="checkboxbtn" id="radio3" name="employee" />
+						    <label for="radio3" class="check-box"></label>
+						</div><span>Opportunity for Improvement</span></li>
+                     <li class="list-group-item col-md-3 col-sm-6 col-xs-12" for="test4">
+                     	<div class="checkmark-button-container">
+						    <input type="checkbox" class="checkboxbtn" id="radio4" name="employee" />
+						    <label for="radio4" class="check-box"></label>
+						</div><span>Unsatisfactory Performance</span></li>
 				</ul>
 			</div>
 			<div class="pa-tbl-cnt col-xs-12 col-sm-12 col-md-12 col-lg-12">
@@ -189,53 +194,45 @@ margin-bottom: 0
 	</footer>
 	<script>
 $(document).ready(function(){
-	var inputclicked = $('.list-group > li input');
-	//var indexclicked  = $('.list-group > li').index();
+	var inputclicked = $('.over-all-cnt > li input');
 	inputclicked.on('click', function(){
-	var $this = $(this);
-	$this.parents('li').toggleClass('active-selection');//.toggleClass('deactive-selection');
-
+	$(this).parents('li').toggleClass('active-selection');//.toggleClass('deactive-selection');
+	$('.active-selection').children('input').checked;
 	var index = 0;
-    $('.checkboxbtn').each(function() {
-        if (this.checked) {
-            console.log("Box is checked at index=" + $(this).closest("li").index());
-            var indexselector = $(this).closest("li").index();
+	var prevIndex;
 
-            if(indexselector == (indexselector % 1)){
-            	console.log("only one clicked")
-            }
-        }
-        index++;
-    });
-    //console.log(index);
-		//if(inputclicked.is(":checked")){
-			
 
-			
-			//$this.parent().fadeOut('.radio-button-container');
-			/*$(this).parents("ul").children().each(function(i){
-				if($(this).hasClass("active-selection")){
-					//console.log($(this).hasClass("active-selection")+''+!$(this).eq() - i == 1 || !$(this).eq() - i == -1);
-					if(!parseInt($(this).index()) - i == 1 && !parseInt($(this).index()) - i == -1 && !parseInt($(this).index()) - i == 0){
-						console.log($(this).index());
-						$(this).removeClass('active-selection');
-					}
-				}
-			});*/
-			// if($(this).parents("li").next().hasClass("active-selection") || $(this).parents("li").prev().hasClass("active-selection")){
-			// 	$(this).parents("li").nextUntil($(this).parents("li").next()).removeClass("active-selection");
-			// 	$(this).parents("li").prevUntil($(this).parents("li").prev()).removeClass("active-selection");
-				
-			// }
-			// else{
-			// 	//$this.parents('li').siblings('li').addClass('deactive-selection').removeClass('active-selection').children().fadeIn(".radio-button-container");
-			// }
-			
-			
-		//}
-
+	var prevIndex = $(this).parents("li").index();
+	//console.log(prevIndex);
+	
+	if(($(this).parents('li').next().hasClass('active-selection')) || ($(this).parents('li').prev().hasClass('active-selection'))){
+		if ($(this).parents('li').next().hasClass('active-selection')) {
+			if (prevIndex == 0) {
+				//console.log('i am in 0');
+				$(this).parents('li').next().next().removeClass('active-selection');
+				$(this).parents('li').next().next().next().removeClass('active-selection');
+			}
+			else if (prevIndex == 1) {
+				//console.log('i am in 0');
+				$(this).parents('li').next().next().removeClass('active-selection');
+			}
+		}
+		else if ($(this).parents('li').prev().hasClass('active-selection')) {
+			if (prevIndex == 2) {
+				//console.log('i am in 3');
+				$(this).parents('li').prev().prev().removeClass('active-selection');
+				$(this).parents('li').prev().prev().prev().removeClass('active-selection');
+			}
+			else if (prevIndex == 3) {
+				//console.log('i am in 0');
+				$(this).parents('li').prev().prev().removeClass('active-selection');
+			}
+		}
+	}
+	else{
+		$(this).parents('li').siblings().removeClass('active-selection');
+	}
 	})
-
 })
 	</script>
 	<!-- footer ends here -->

@@ -305,9 +305,11 @@ header .pa-welcome-cnt .notification sup {
 }
 .sub-header .af-carot {
   fill: #fff;
-  top: -2px;
+  
   position: relative;
-
+}
+.sub-header .action:hover .af-carot {
+  
 }
 .sub-header .hr-line {
   background: #02a397;
@@ -915,7 +917,7 @@ left: 4px;
   animation: dothabottomcheck 0.2s ease 0s forwards;
 }
 .checkmark-button-container input[type=checkbox]:checked + .check-box::before,
-.check-box.checked::before {
+.check-box.checked::before, .active-selection .checkmark-button-container input[type=checkbox]::before {
   height: 120px;
   -moz-animation: dothatopcheck 0.4s ease 0s forwards;
   -o-animation: dothatopcheck 0.4s ease 0s forwards;
