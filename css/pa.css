@@ -455,6 +455,12 @@ left: 4px;
   height: 14px;
   width: 14px;
 }
+.checkmark-button-container input[type=checkbox]:disabled + label {
+  border: 2px solid #e4e4e4;
+}
+.employee-statement .accept .check-box {
+
+}
 .employee-statement .data-row .date {
   width: 92%;
 }
