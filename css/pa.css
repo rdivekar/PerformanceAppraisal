@@ -196,8 +196,7 @@ header .sub-header .pa-emp-dtl-cnt ul li + li {
   background-color: #f6f6f6;
   border: none;
   font-weight: bold;
-  padding: 5px 0;
-    text-align: center;
+  padding: 5px;
 }
 .dev-need-actn-tbl .input-box {
   font-weight: normal;
@@ -659,6 +658,9 @@ left: 4px;
   /*border: solid 1px; */
   background-color: #fafafa;
 }
+.position-duties .list-group-item {
+  padding-left: 30px;
+}
 .pre-yr-obj-padding, .position-duties .list-group, .pa-emp-description-cnt .list-group, .employee {
   background: #fff none repeat scroll 0 0;
   box-shadow: 0px 1px 3px rgba(136, 136, 136, 0.5);
@@ -904,12 +906,13 @@ left: 4px;
   transform: rotate(-30deg);
 }
 
+
 .checkmark-button-container input[type=checkbox]:checked + .check-box,
 .check-box.checked {
   border-color: #148c83;
 }
 .checkmark-button-container input[type=checkbox]:checked + .check-box::after,
-.check-box.checked::after {
+.check-box.checked::after, .over-all-ratings .active-selection .checkmark-button-container label::after  {
   height: 50px;
   -moz-animation: dothabottomcheck 0.2s ease 0s forwards;
   -o-animation: dothabottomcheck 0.2s ease 0s forwards;
@@ -917,7 +920,7 @@ left: 4px;
   animation: dothabottomcheck 0.2s ease 0s forwards;
 }
 .checkmark-button-container input[type=checkbox]:checked + .check-box::before,
-.check-box.checked::before, .active-selection .checkmark-button-container input[type=checkbox]::before {
+.check-box.checked::before, .active-selection .checkmark-button-container input[type=checkbox]::before, .over-all-ratings .active-selection .checkmark-button-container label::before {
   height: 120px;
   -moz-animation: dothatopcheck 0.4s ease 0s forwards;
   -o-animation: dothatopcheck 0.4s ease 0s forwards;
@@ -980,7 +983,7 @@ input[type=radio]:checked + .check-box::before,
 }
 /*Radio buttons classes ends*/
 /* over all page css starts here */
-.over-all-cnt .list-group-item {
+.over-all-ratings .list-group-item {
    float: left;
 }
 .list-group-item:first-child, .list-group-item:last-child {
@@ -1160,6 +1163,74 @@ height: 3px;
 background-color: #02a397;
 }
 
+
+/* overall css starts from here */
+@media (min-width: 768px) {
+    .over-all-ratings.list-group li {
+      width: 48%; 
+      margin-left: 10px;
+      margin-bottom: 10px;
+        }
+  }
+  @media (min-width: 992px) {
+    .over-all-ratings.list-group li {
+      width: 24%;
+      margin-left: 10px;
+    }
+  }
+  @media (min-width: 1200px) {
+    .over-all-ratings.list-group li {
+      width: 24%;
+    }
+    
+  }
+.over-all-ratings .list-group-item {
+    float: left;
+    text-align: center;
+    padding: 25px;
+    font-size: 14px;
+    font-weight: bold;
+}
+.es-table .radio-button-container {
+    position: absolute;
+    margin-left: -20px;
+    margin-top: -2px;
+}
+.active-selection {
+background: #02a397;
+color : #fff;
+-webkit-transition : background 0.5s;;
+transition : background 0.5s;
+}
+.pa-table-opr {
+  margin-top: 10px;
+}
+.over-all-cnt .list-group {
+margin-bottom: 0
+}
+.pa-discussed-content {
+  background: #fff;
+  margin-top: 10px;
+  padding: 10px;
+}
+.pa-discussed-content p{
+  margin-bottom: 0px;
+}
+.underline {
+  border-bottom: 1px dotted #202020;
+  font-weight: bold;
+}
+.over-all-ratings .active-selection .checkmark-button-container label::before {
+  top: 10px;
+}
+.over-all-ratings .active-selection .checkmark-button-container label::after {
+  top: 5px;
+}
+.over-all-ratings .checkmark-button-container label.check-box {
+  top: 3px;
+  left: -10px;
+}
+/* overall css ends from here */
 /* Model css */
 .modal-content {
    border-radius: 0;

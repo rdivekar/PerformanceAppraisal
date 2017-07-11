@@ -38,14 +38,43 @@ $(document).ready(function(){
 
 		console.log($(this).parent('.title').siblings('.data-row')[totalDiv]);
 		console.log($(this).parents('thead').next('tbody').children('.data-row')[totalTr]);
-		// if($(this).parents().next().children('.data-row')){
-		// 		console.log('I am in tr');
-		// 		console.log($(this).parents().next().children('.data-row'));
-		// 	}
-		// else if ($(this).parent().next('.data-row')){
-		// 	console.log('I am in div');
-		// 	console.log($(this).next().children('.data-row'));
-		// }
-	})
-	// add row functionality ends here
+	});
+	
+
+	// Overall functionality starts from here 
+	$('.over-all-ratings > li').click( function() {
+	$(this).toggleClass('active-selection');
+	var index = 0;
+	var prevIndex;
+	var prevIndex = $(this).index();
+	var adjNext = $(this).next();
+	var adjPrev = $(this).prev();
+	var prevElem = $(this).prev().prev();
+	var nextElem = $(this).next().next();
+	
+	if(adjNext.hasClass('active-selection') || adjPrev.hasClass('active-selection')){
+		if ($(this).next().hasClass('active-selection')) {
+			if (prevIndex == 0) {
+				nextElem.removeClass('active-selection');
+				nextElem.next().removeClass('active-selection');
+			}
+			else if (prevIndex == 1) {
+				nextElem.removeClass('active-selection');
+			}
+		}
+		else if (adjPrev.hasClass('active-selection')) {
+			if (prevIndex == 2) {
+				prevElem.removeClass('active-selection');
+				prevElem.prev().removeClass('active-selection');
+			}
+			else if (prevIndex == 3) {
+				prevElem.removeClass('active-selection');
+			}
+		}
+	}
+	else{
+			$(this).siblings().removeClass('active-selection');
+		}
+	});
+// Overall functionality ends from here 
 })

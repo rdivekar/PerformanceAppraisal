@@ -4,9 +4,13 @@
 	<title>Performance Appraisal - Index page</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<script type="text/javascript" src="//code.jquery.com/jquery-2.1.1.min.js"></script>
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-	<link rel="stylesheet" type="text/css" href="css/pa.css">
+	<link href="css/bootstrap-datetimepicker.css" rel="stylesheet">
+    <script src="//cdnjs.cloudflare.com/ajax/libs/moment.js/2.9.0/moment-with-locales.js"></script>
+    <script src="//cdn.rawgit.com/Eonasdan/bootstrap-datetimepicker/e8bddc60e73c1ec2475f827be36e1957af72e2ea/src/js/bootstrap-datetimepicker.js"></script>
+    <link rel="stylesheet" type="text/css" href="css/pa.css">
+	<script type="text/javascript" src="js/pa.js"></script>
 </head>
 <body>
 	<!-- header starts here -->
@@ -52,138 +56,68 @@
 			</div>
 		</div>
 	</header>
-	<style>
-	
-	@media (min-width: 768px) {
-		.list-group li {
-			width: 48%;	
-			margin-left: 10px;
-			margin-bottom: 10px;
-				}
-	}
-	@media (min-width: 992px) {
-		.list-group li {
-			width: 24%;
-			margin-left: 10px;
-		}
-	}
-	@media (min-width: 1200px) {
-		.list-group li {
-			width: 24%;
-		}
-		
-	}
-.over-all-cnt .list-group-item {
-    float: left;
-    text-align: center;
-    padding: 25px;
-    font-size: 14px;
-    font-weight: bold;
-}
-.es-table .radio-button-container {
-    position: absolute;
-    margin-left: -20px;
-    margin-top: -2px;
-}
-.es-table .radio-button-container input[type='checkbox']{
-	display: none;
-}
-.active-selection {
-background: #02a397;
-color : #fff;
--webkit-transition : background 0.5s;;
-transition : background 0.5s;
-}
-.deactive-selection {
-background: #fff;
-color : #202020;
--webkit-transition : background 0.5s;
-transition : background 0.5s;
-}
-.pa-table-opr {
-	margin-top: 10px;
-}
-.no-gutters .list-group {
-margin-bottom: 0
-}
-.pa-discussed-content {
-	background: #fff;
-	margin-top: 10px;
-	padding: 10px;
-}
-.pa-discussed-content p{
-	margin-bottom: 0px;
-}
-.underline {
-	border-bottom: 1px dotted #202020;
-	font-weight: bold;
-}
-	</style>
 	<!-- header ends here -->
 	<!-- page content starts here -->
 	<section class="pa-body-cnt container-fluid">		
-		<div class="row no-gutters">
-			<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 pa-emp-dtl-cnt es-table">
-				<h2 class="pa-h2">Overall performance rating </h2>
-				<ul class="list-group over-all-cnt row">
-					<li class="list-group-item col-md-3 col-sm-6 col-xs-12" for="test1">
-						<div class="checkmark-button-container">
-						    <input type="checkbox" class="checkboxbtn" id="radio1" name="employee" />
-						    <label for="radio1" class="check-box"></label>
-						</div><span>Above Expectations</span></li>
-					<li class="list-group-item col-md-3 col-sm-6 col-xs-12" for="test2">
-						<div class="checkmark-button-container">
-						    <input type="checkbox" class="checkboxbtn" id="radio2" name="employee" />
-						    <label for="radio2" class="check-box"></label>
-						</div><span>Meets Expectations </span></li>
-					<li class="list-group-item col-md-3 col-sm-6 col-xs-12" for="test3">
-						<div class="checkmark-button-container">
-						    <input type="checkbox" class="checkboxbtn" id="radio3" name="employee" />
-						    <label for="radio3" class="check-box"></label>
-						</div><span>Opportunity for Improvement</span></li>
-                     <li class="list-group-item col-md-3 col-sm-6 col-xs-12" for="test4">
-                     	<div class="checkmark-button-container">
-						    <input type="checkbox" class="checkboxbtn" id="radio4" name="employee" />
-						    <label for="radio4" class="check-box"></label>
-						</div><span>Unsatisfactory Performance</span></li>
-				</ul>
-			</div>
-			<div class="pa-tbl-cnt col-xs-12 col-sm-12 col-md-12 col-lg-12">
-				<table>
-					<tr>
-						<th style="width: 20%">Rating Manager</th>
-						<th style="width: 80%">Date(dd/mm/yyyy)</th>
-					</tr>
-					<tr>
-						<td>Jeremy Bosch</td>
-						<td><input type="text" class="input-box" value="15 Jun 2017"></td>
-					</tr>
-				</table>
-				<table class="pa-table-opr">
-					<tr>
-						<th style="width: 20%">Approved By</th>
-						<th style="width: 80%">Date(dd/mm/yyyy)</th>
-					</tr>
-					<tr>
-						<td>Wilson Michael</td>
-						<td><input type="text" class="input-box" value="15th Jun 2017"></td>
-					</tr>
-				</table>
-				<div class="pa-discussed-content">
-					<p>Performance Appraisel discussed on <span class="underline">15th Jun 2017</span> with <span class="underline" >Emily Perkins</span></p>
+		<div class="over-all-cnt">
+			<div class="row">
+				<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 pa-emp-dtl-cnt es-table">
+					<h2 class="pa-h2">Overall performance rating </h2>
+					<ul class="list-group over-all-ratings">
+						<li class="list-group-item col-md-3 col-sm-6 col-xs-12" for="radio1">
+							<div class="checkmark-button-container">
+							    <label for="radio1" class="check-box"></label>
+							</div><span>Above Expectations</span></li>
+						<li class="list-group-item col-md-3 col-sm-6 col-xs-12" for="radio2">
+							<div class="checkmark-button-container">
+							    <label for="radio2" class="check-box"></label>
+							</div><span>Meets Expectations </span></li>
+						<li class="list-group-item col-md-3 col-sm-6 col-xs-12" for="radio3">
+							<div class="checkmark-button-container">
+							    <label for="radio3" class="check-box"></label>
+							</div><span>Opportunity for Improvement</span></li>
+	                     <li class="list-group-item col-md-3 col-sm-6 col-xs-12" for="radio4">
+	                     	<div class="checkmark-button-container">
+							    <label for="radio4" class="check-box"></label>
+							</div><span>Unsatisfactory Performance</span></li>
+					</ul>
 				</div>
+				<div class="pa-tbl-cnt col-xs-12 col-sm-12 col-md-12 col-lg-12">
+					<table>
+						<tr>
+							<th style="width: 20%">Rating Manager</th>
+							<th style="width: 80%">Date(dd/mm/yyyy)</th>
+						</tr>
+						<tr>
+							<td>Jeremy Bosch</td>
+							<td><input type="text" class="input-box datetimepicker1" value="15 Jun 2017"></td>
+						</tr>
+					</table>
+					<table class="pa-table-opr">
+						<tr>
+							<th style="width: 20%">Approved By</th>
+							<th style="width: 80%">Date(dd/mm/yyyy)</th>
+						</tr>
+						<tr>
+							<td>Wilson Michael</td>
+							<td><input type="text" class="input-box datetimepicker1" value="15th Jun 2017"></td>
+						</tr>
+					</table>
+					<div class="pa-discussed-content">
+						<p>Performance Appraisel discussed on <span class="underline">15th Jun 2017</span> with <span class="underline" >Emily Perkins</span></p>
+					</div>
 
 
-			</div>
-			<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 pa-emp-dtl-cnt">
-				<div class="pa-cta-cnt pull-right">
-					<button class="btn secondary" onclick="javascript:window.location='participating-in-training-activities.html'">Previous</button>
-					<button class="btn secondary">Save</button>
-					<button class="btn primary" onclick="javascript:window.location='employee-statement-objectives.html'">Next</button>
+				</div>
+				<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 pa-emp-dtl-cnt">
+					<div class="pa-cta-cnt pull-right">
+						<button class="btn secondary" onclick="javascript:window.location='participating-in-training-activities.html'">Previous</button>
+						<button class="btn secondary">Save</button>
+						<button class="btn primary" onclick="javascript:window.location='employee-statement-objectives.html'">Next</button>
+					</div>
 				</div>
 			</div>
 		</div>
-		
 	</section>
 	<!-- page content ends here -->
 	<!-- footer starts here -->
@@ -192,49 +126,14 @@ margin-bottom: 0
 			Footer
 		</div>
 	</footer>
-	<script>
-$(document).ready(function(){
-	var inputclicked = $('.over-all-cnt > li input');
-	inputclicked.on('click', function(){
-	$(this).parents('li').toggleClass('active-selection');//.toggleClass('deactive-selection');
-	$('.active-selection').children('input').checked;
-	var index = 0;
-	var prevIndex;
-
-
-	var prevIndex = $(this).parents("li").index();
-	//console.log(prevIndex);
-	
-	if(($(this).parents('li').next().hasClass('active-selection')) || ($(this).parents('li').prev().hasClass('active-selection'))){
-		if ($(this).parents('li').next().hasClass('active-selection')) {
-			if (prevIndex == 0) {
-				//console.log('i am in 0');
-				$(this).parents('li').next().next().removeClass('active-selection');
-				$(this).parents('li').next().next().next().removeClass('active-selection');
-			}
-			else if (prevIndex == 1) {
-				//console.log('i am in 0');
-				$(this).parents('li').next().next().removeClass('active-selection');
-			}
-		}
-		else if ($(this).parents('li').prev().hasClass('active-selection')) {
-			if (prevIndex == 2) {
-				//console.log('i am in 3');
-				$(this).parents('li').prev().prev().removeClass('active-selection');
-				$(this).parents('li').prev().prev().prev().removeClass('active-selection');
-			}
-			else if (prevIndex == 3) {
-				//console.log('i am in 0');
-				$(this).parents('li').prev().prev().removeClass('active-selection');
-			}
-		}
-	}
-	else{
-		$(this).parents('li').siblings().removeClass('active-selection');
-	}
-	})
-})
-	</script>
 	<!-- footer ends here -->
+	<script type="text/javascript">
+		$(function () {
+                $('.datetimepicker1').datetimepicker({
+                	format: 'DD/MM/YYYY'
+                	// default: 'none'
+                });
+            });
+	</script>
 </body>
 </html>
