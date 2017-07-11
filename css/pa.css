@@ -126,23 +126,12 @@ header .sub-header .date-details {
   font-size: 18px;
   color: #fff;
   display: inline-block;
-  white-space: nowrap;
+  /*white-space: nowrap;*/
   margin-right: 0px;
 }
-header .sub-header .date-details input {
+header .sub-header .date-details > input {
   padding-left: 0px;
   font-size: 18px;
-}
-header .sub-header .date-details .input-group-addon {
-  width: auto;
-  display: inline-block;
-  background: transparent;
-  border: 0;
-  padding: 0;
-}
-header .sub-header .date-details .input-group-addon .glyphicon {
-  font-size: 20px;
-    color: #65CCCB;
 }
 .date input {
   box-shadow: none;
@@ -151,11 +140,11 @@ header .sub-header .date-details .input-group-addon .glyphicon {
 
 
 /* employee details ends here */
-header .sub-header .date-details input {
+header .sub-header .date-details > input {
   color: #fff;
     background: transparent;
     border: 0;
-    width: 100px;
+    width: 110px;
     float: none;
     border-bottom: 1px dotted #fff;
 }

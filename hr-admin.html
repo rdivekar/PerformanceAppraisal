@@ -405,6 +405,7 @@
                               <th>Date of Joining</th>
                               <th>Last Appraisal Date</th>
                               <th>Scheduled Appraisal Date</th>
+                              <th>New Appraisal Date</th>
                               <th>Appraisal Cycle</th>
                            </tr>
                         </thead>
@@ -417,9 +418,10 @@
                               <td>1111</td>
                               <td><img src="images/user.png"></td>
                               <td>John Doe</td>
-                              <td>1 Dec'16</td>
+                              <td>1 Dec 16</td>
                               <td>--</td>
-                              <td>Jun 17</td>
+                              <td>Nov 17</td>
+                              <td><input type="text" class="datetimepicker1"></td>
                               <td>HY</td>
                            </tr>
                            <tr>
@@ -430,9 +432,10 @@
                               <td>2222</td>
                               <td><img src="images/user.png"></td>
                               <td>Annie M.</td>
-                              <td>1 Dec'16</td>
+                              <td>1 Dec 16</td>
                               <td>Jun 15</td>
                               <td>Nov 17</td>
+                              <td><input type="text" class="datetimepicker1"></td>
                               <td>Y</td>
                            </tr>
                         </tbody>
@@ -464,7 +467,10 @@
          });
       
          $(function () {
-             $('#datetimepicker1').datetimepicker();
+             $('.datetimepicker1').datetimepicker({
+                  format: 'DD/MM/YYYY'
+                  // default: 'none'
+                });
          });
 
          function setModalMaxHeight(element) {

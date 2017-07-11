@@ -33,11 +33,21 @@ $(document).ready(function(){
 		}
 	});
 	$('.add-item').click(function(){
-		 var totalDiv = ($(this).parent('.title').siblings('.data-row').length) - 1;
-		 var totalTr = ($(this).parents('thead').next('tbody').children('.data-row').length) - 1;
+		console.log($(this).parent().next().children('.data-row').length);
+		console.log($(this).parents('thead').next().children('.data-row').length);
+		  var totalDiv = ($(this).parent().next().children('.data-row').length) - 1;
+		  var totalTr = ($(this).parents('thead').next().children('.data-row').length) - 1;
+		  var targetElem;
+		  if ($this.parent(th)) {
+		  	targetElem = $(this).parent().next().children('.data-row')[totalDiv];
+		  } else{
 
-		console.log($(this).parent('.title').siblings('.data-row')[totalDiv]);
-		console.log($(this).parents('thead').next('tbody').children('.data-row')[totalTr]);
+		  }
+		  var targetElem = $(this).parent().next().children('.data-row')[totalDiv];
+		 console.log(targetElem);
+		//targetElem.clone().append
+
+		//console.log($(this).parents('thead').next('tbody').children('.data-row')[totalTr]);
 	});
 	
 
