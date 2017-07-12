@@ -307,6 +307,10 @@ font-size: 18px;
 color: #202020;
 left: 4px;
 }
+.sub-header .action-dropdown li.rm {
+  padding-left: 10px;
+  font-weight: bold;
+}
 .sub-header .add-item > div {
   width: 40px;
 }
@@ -920,6 +924,9 @@ left: 4px;
 
 
 /*Radio buttons classes*/
+.data-row-container .data-row:first-child .close-btn{
+  display: none;
+}
 .es-table .radio-button-container {
       margin-top: 5px;
 }
