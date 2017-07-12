@@ -33,18 +33,25 @@ $(document).ready(function(){
 		}
 	});
 	$('.add-item').click(function(){
-		console.log($(this).parent().next().children('.data-row').length);
-		console.log($(this).parents('thead').next().children('.data-row').length);
-		  var totalDiv = ($(this).parent().next().children('.data-row').length) - 1;
-		  var totalTr = ($(this).parents('thead').next().children('.data-row').length) - 1;
-		  var targetElem;
-		  if ($this.parent(th)) {
-		  	targetElem = $(this).parent().next().children('.data-row')[totalDiv];
-		  } else{
-
+		//console.log($(this).parent().next().children('.data-row').length);
+		//console.log($(this).parents('thead').next().children('.data-row').length);
+		  // var totalDiv = ($(this).parent().next().children('.data-row').length - 1);
+		  // var totalTr = ($(this).parents('thead').next().children('.data-row').length - 1);
+		  // var targetElem;
+		  //console.log(totalTr);
+		  //console.log($(this).parent().next().children('.data-row')[totalDiv]);
+		  //targetElem = $(this).parent().next().children('.data-row')[totalDiv];
+		  console.log($(this).parent());
+		  //console.log($(this));
+		   if($(this).parent('th')) {
+		   	//targetElem = $(this).parents('thead').next().children('.data-row')[totalTr];
+		   	console.log('i am in th')
+		   } 
+		   else if($(this).parent('div')){
+		  	console.log('i am in div');
+		  	//targetElem = $(this).parent().next().children('.data-row')[totalDiv];
 		  }
-		  var targetElem = $(this).parent().next().children('.data-row')[totalDiv];
-		 console.log(targetElem);
+		 
 		//targetElem.clone().append
 
 		//console.log($(this).parents('thead').next('tbody').children('.data-row')[totalTr]);
@@ -52,7 +59,7 @@ $(document).ready(function(){
 	
 
 	// Overall functionality starts from here 
-	$('.over-all-ratings > li').click( function() {
+	$('.over-all-ratings > li').click(function() {
 	$(this).toggleClass('active-selection');
 	var index = 0;
 	var prevIndex;
@@ -71,9 +78,16 @@ $(document).ready(function(){
 			else if (prevIndex == 1) {
 				nextElem.removeClass('active-selection');
 			}
+			else if (prevIndex == 2) {
+				nextElem.removeClass('active-selection');
+			}
 		}
 		else if (adjPrev.hasClass('active-selection')) {
-			if (prevIndex == 2) {
+			if (prevIndex == 1) {
+				prevElem.removeClass('active-selection');
+				prevElem.prev().removeClass('active-selection');
+			}
+			else if (prevIndex == 2) {
 				prevElem.removeClass('active-selection');
 				prevElem.prev().removeClass('active-selection');
 			}
@@ -85,6 +99,9 @@ $(document).ready(function(){
 	else{
 			$(this).siblings().removeClass('active-selection');
 		}
-	});
+	$('.over-all-ratings > li').each(function(i){
+		console.log($('.over-all-ratings > li')[i]);
+	})
+});
 // Overall functionality ends from here 
 })
