@@ -40,11 +40,12 @@ $(document).ready(function(){
 		   if($(this).parent('div').hasClass('title')) {
 		   	 targetElem = $(this).parent().next().children('.data-row')[totalDiv];
 		   	 $(targetElem).clone().find('textarea, input:text').val('').end().appendTo(($(this).parent().next('.data-row-container')));
-		   	
+		   	 callDatePicker();
 		   } 
 		   else if($(this).parent('th')){
 		  	 targetElem = $(this).parents('thead').next().children('.data-row')[totalTr];
 		  	 $(targetElem).clone().find('textarea, input:text').val('').end().appendTo(($(this).parents('thead').next('.data-row-container')));
+		  	 callDatePicker()
 		  }
 
 	});
@@ -90,9 +91,36 @@ $(document).ready(function(){
 	else{
 			$(this).siblings().removeClass('active-selection');
 		}
+		var totalSel = [];
 	$('.over-all-ratings > li').each(function(i){
-		console.log($('.over-all-ratings > li.active-selection').length);
-	})
+		if($(this).hasClass("active-selection")){
+			totalSel.push(i);// these are the selected rating index for saving rating
+		}
+	});
+	//console.log(totalSel);
 });
 // Overall functionality ends from here 
+function callDatePicker(){
+	if($('.datetimepicker1').length > 0){
+    	$('.datetimepicker1').datetimepicker({
+	    	format: 'DD/MM/YYYY'
+	    });
+    }
+    if($('#datetimepicker6').length > 0){
+	     $('#datetimepicker6').datetimepicker({
+	     	format: 'DD/MM/YYYY'
+	     });
+	     $('#datetimepicker7').datetimepicker({
+	         useCurrent: false, //Important! See issue #1075
+	         format: 'DD/MM/YYYY'
+	     });
+	     $("#datetimepicker6").on("dp.change", function (e) {
+	         $('#datetimepicker7').data("DateTimePicker").minDate(e.date);
+	     });
+	     $("#datetimepicker7").on("dp.change", function (e) {
+	         $('#datetimepicker6').data("DateTimePicker").maxDate(e.date);
+	     });
+	    }	
+}
+callDatePicker();
 })

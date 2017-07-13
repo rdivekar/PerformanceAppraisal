@@ -5,8 +5,7 @@
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
       <link href="//fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
       <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-      <script src="//ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-      <script src="//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css"></script>
+      <!-- <script src="//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css"></script> -->
       <script type="text/javascript" src="//code.jquery.com/jquery-2.1.1.min.js"></script>
       <link href="css/bootstrap-datetimepicker.css" rel="stylesheet">
       <script src="//cdnjs.cloudflare.com/ajax/libs/moment.js/2.9.0/moment-with-locales.js"></script>
@@ -468,7 +467,6 @@
          $(function () {
              $('.datetimepicker1').datetimepicker({
                   format: 'DD/MM/YYYY'
-                  // default: 'none'
                 });
          });
 
@@ -504,80 +502,32 @@
                 setModalMaxHeight($('.modal-open.in'));
               }
             });
-            // status dropdown action added starts here 
             $('.action-dropdown li').click(function(){
                var statusVal = $(this).text();
-               //console.log(statusVal);
-               //$(this).parent().prev().children('.txt').text() = statusVal;
-               //console.log($(this).parent().prev().children('.txt').text());
                $(this).parent().prev().children('.txt').text(statusVal);
                
             });
-            // status dropdown action added ends here 
-            // remove manager starts here 
             $('.remove-mgr').click(function(){
                $(this).parent('.mgr').remove();
             })
-
-            // $(document).ready(function(e){
-            //    $(".pa-plus-icon").click(function(e){
-            //       setTimeout(function(){ 
-            //          console.log($(this).chi);
-            //          $(this).parents('.pa-addmanager-section').next('.pa-addmanager-dropdown').show(); 
-            //          console.log('dsfdsf2');
-            //       });
-            //    });
-                   // $("[class!='pa-addmanager-dropdown'],[class!='pa-plus-icon']").click(function(){
-                   //   $(".pa-addmanager-dropdown").hide();
-                   // });
-            // });
-            
-            
-
-            // $(document).click(function(e) 
-            //    {
-            //        var container = $(e.target).parents('.pa-plus-icon');
-
-            //        // if the target of the click isn't the container nor a descendant of the container
-            //        if (!container.is(e.target) && container.has(e.target).length === 0) 
-            //        {
-            //            container.hide();
-            //        }
-            //    });
-            // remove manager ends here 
-            //add manager starts here
-            // $('.pa-addmanager').focus(function(e){
-            //    //console.log($(this).parent().next().css('opacity',1));
-            //    e.stopPropagation();
-            //    $(this).parent().next().css('opacity', 1);
-
-            // });
             $('.pa-plus-icon').click(function(){
-               //console.log($(this).parent().next().css('opacity',1));
                $('.pa-addmanager-dropdown').removeClass('show');
                $(this).parent().next().addClass('show');
             });
 
             $(document).on('click', function(e) {
                 if ( $(e.target).closest('.pa-plus-icon').length ) {
-                    //console.log(e.target)
                     $(e.target).closest('.pa-addmanager-dropdown').addClass('show');
                 }else if ( ! $(e.target).closest('.pa-addmanager-dropdown').length ) {
-                    //console.log($(this))
                     $('.pa-addmanager-dropdown').removeClass('show');
                 }
-            });
-            // add manager ends here 
-
-            // search starts here 
+            }); 
             $('.pa-search input').focus(function(){
-               //console.log($(this).parent().children('.pa-search-result').children('ul'))
                $(this).parent().children('.pa-search-result').addClass('show');
             });
             $('.pa-search input').focusout(function(){
                $(this).parent().children('.pa-search-result').removeClass('show');
             })
-            // search ends here 
          })
       </script>
    </body>

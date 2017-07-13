@@ -68,8 +68,8 @@
 					<p class="pull-left"></p>
 				</div>
 				<div class="pa-tbl-cnt pre-obj-table col-xs-12 col-sm-12 col-md-12 col-lg-12">
-					<div class="pre-yr-obj-padding">
-					<table class="es-table pa-tbl-cnt">
+					<div class="pre-yr-obj-padding pa-tbl-cnt">
+					<table class="es-table">
 						<thead>
 							<tr>
 								<th width="40%">Goal  </th>
@@ -184,28 +184,5 @@
 		</div>
 	</footer>
 	<!-- footer ends here -->
-	<script type="text/javascript">
-         $(function () {
-                $('.datetimepicker1').datetimepicker({
-                	format: 'DD/MM/YYYY',
-                });
-            });
-         $(function () {
-             $('#datetimepicker6').datetimepicker({
-             	format: 'DD/MM/YYYY'
-             });
-             $('#datetimepicker7').datetimepicker({
-                 useCurrent: false, //Important! See issue #1075
-                 format: 'DD/MM/YYYY'
-             });
-             $("#datetimepicker6").on("dp.change", function (e) {
-                 $('#datetimepicker7').data("DateTimePicker").minDate(e.date);
-             });
-             $("#datetimepicker7").on("dp.change", function (e) {
-                 $('#datetimepicker6').data("DateTimePicker").maxDate(e.date);
-             });
-         });
-         
-      </script>
 </body>
 </html>

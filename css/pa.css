@@ -468,18 +468,19 @@ left: 4px;
   width: 100%;
   /*font-size: 13px; */
 }
-.pa-tbl-cnt th {
+.pa-tbl-cnt > table > thead > tr > th {
   border: solid 1px #d2d2d2;
   border-width: 0 0 1px 0;
   padding: 10px;
   color: #3c4d60;
 }
-.pa-tbl-cnt td {
+.pa-tbl-cnt > table > tbody > tr > td {
   border: solid 1px #d2d2d2;
   border-width: 0 0 1px 0;
   padding: 10px;
   color: #3c4d60;
-  vertical-align: top;
+  vertical-align: middle;
+  position: relative;
 }
 .pa-tbl-cnt .col-rating {
   text-align: center;
@@ -774,13 +775,6 @@ left: 4px;
   margin: 0px auto 0;
   width:18px;
   display: inline-block;
-}
-.pa-tbl-cnt td {
-  vertical-align: middle;
-  position: relative;
-}
-.pa-tbl-cnt th {
-  /*padding-left: 5px;*/
 }
 .checkmark-button-container label{
   margin-bottom: 0;
@@ -1191,6 +1185,11 @@ background-color: #02a397;
     position: absolute;
     margin-left: -20px;
     margin-top: -2px;
+}
+.es-table .col-rating .radio-button-container {
+    position: absolute;
+    margin-left: -6px;
+    margin-top: -8px;
 }
 .active-selection {
 background: #02a397;
