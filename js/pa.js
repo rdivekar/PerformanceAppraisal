@@ -124,6 +124,12 @@ $(document).ready(function(){
 	});
 	//console.log(totalSel);
 });
+ $('.save').click( function(){
+  $(this).addClass('btn-activated').delay(2000).queue(function(next ){
+     $(this).removeClass('btn-activated');
+     next();
+  })
+});
 // Overall functionality ends from here 
 function callDatePicker(){
 	if($('.datetimepicker1').length > 0){
@@ -147,5 +153,5 @@ function callDatePicker(){
 	     });
 	    }	
 }
-callDatePicker();
-})
+	callDatePicker();
+});
