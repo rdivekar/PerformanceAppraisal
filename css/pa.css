@@ -496,6 +496,25 @@ left: 4px;
 
 }
 /* table style ends here */
+/* add delet row */
+#deleteAlert .modal-title span{display: none;}
+/* add delet row ends here */
+/* error modal starts from here */
+.errorLink {
+  visibility: hidden;
+}
+#errorMessage .modal-content{
+  border-left: 5px red solid;
+}
+#errorMessage .modal-content ul {
+  padding-left: 20px;
+  list-style-type: disc;
+  list-style: red;
+}
+#errorMessage .pa-cta-cnt{
+  text-align: center;
+}
+/* error modal starts from here */
 /* action dropdown starts here */
 .action {
          display: block;

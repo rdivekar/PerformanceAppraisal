@@ -17,7 +17,7 @@ $(document).ready(function(){
 					      </div>\
 					    </div>\
 					  </div>\
-					</div><style>.modal-title span{display: none;}';
+					</div>';
 	$('body').append(deletion);
 	$('.close-btn').attr("data-toggle", "modal").attr('data-target', '#deleteAlert');
 	var deleteRow;
@@ -49,7 +49,32 @@ $(document).ready(function(){
 		  }
 
 	});
-
+// modal for deletion alert ends here
+// modal for error on page starts here 
+	var errorMessage = '<div id="errorMessage" class="modal fade" role="dialog">\
+					  <div class="modal-dialog">\
+					    <div class="modal-content">\
+					      <div class="modal-header">\
+					        <!--<button type="button" class="close" data-dismiss="modal">&times;</button>-->\
+					        <h4 class="modal-title">Error</h4>\
+					      </div>\
+					      <div class="modal-body">\
+					        <ul>\
+					        	<li>error message 1</li>\
+					        	<li>error message 2</li>\
+					        	<li>error message 3</li>\
+					        </ul>\
+					      </div>\
+					      <div class="modal-footer pa-cta-cnt">\
+					        <button type="button" class="btn secondary" data-dismiss="modal">OK</button>\
+					      </div>\
+					    </div>\
+					  </div>\
+					</div>';
+	var errorLink = '<a href="#nogo" data-toggle="modal" data-target="#errorMessage" class="errorLink">error</a>';
+	$('body').append(errorMessage);
+	$('body').append(errorLink);
+// modal for error on page ends here 
 	// Overall functionality starts from here 
 	$('.over-all-ratings > li').click(function() {
 	$(this).toggleClass('active-selection');
