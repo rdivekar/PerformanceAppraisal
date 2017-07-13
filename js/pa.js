@@ -11,7 +11,7 @@ $(document).ready(function(){
 					      <div class="modal-body">\
 					        <p>Some text in the modal.</p>\
 					      </div>\
-					      <div class="modal-footer">\
+					      <div class="modal-footer pa-cta-cnt">\
 					        <button type="button" class="btn secondary" data-dismiss="modal">Cancel</button>\
 					        <button type="button" class="btn primary" data-dismiss="modal">Yes</button>\
 					      </div>\
