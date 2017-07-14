@@ -68,7 +68,9 @@ textarea:focus, button.btn:focus, button.btn:active:focus, input:focus, input:ac
 }
 .pa-cta-cnt button.next:before {
   content: "";
-  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24'><path fill='#fff' d='M8.59,16.58L13.17,12L8.59,7.41L10,6L16,12L10,18L8.59,16.58Z' /></svg>");
+  background-image: url('../images/chevron-right.png');
+  background-size: 100%;
+  /*background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24'><path fill='#fff' d='M8.59,16.58L13.17,12L8.59,7.41L10,6L16,12L10,18L8.59,16.58Z' /></svg>");*/
   position: absolute;
   height: 100%;
   font-size: 125%;
@@ -107,7 +109,9 @@ textarea:focus, button.btn:focus, button.btn:active:focus, input:focus, input:ac
 }
 .pa-cta-cnt button.previous:before {
   content: "";
-  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24'><path fill='#fff' d='M15.41,16.58L10.83,12L15.41,7.41L14,6L8,12L14,18L15.41,16.58Z' /></svg>");
+  background-image: url('../images/chevron-left.png');
+  background-size: 100%;/*
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24'><path fill='#fff' d='M15.41,16.58L10.83,12L15.41,7.41L14,6L8,12L14,18L15.41,16.58Z' /></svg>");*/
   position: absolute;
   height: 100%;
   font-size: 125%;
@@ -143,7 +147,10 @@ textarea:focus, button.btn:focus, button.btn:active:focus, input:focus, input:ac
   padding-left: 35px;
 }
 .pa-cta-cnt button.save:before {
-  content: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='15' height='15' viewBox='0 0 24 24'><path fill='#ffffff' d='M15,9H5V5H15M12,19A3,3 0 0,1 9,16A3,3 0 0,1 12,13A3,3 0 0,1 15,16A3,3 0 0,1 12,19M17,3H5C3.89,3 3,3.9 3,5V19A2,2 0 0,0 5,21H19A2,2 0 0,0 21,19V7L17,3Z' /></svg>");
+  background-image: url('../images/content-save.png');
+  background-size: 100%;
+  content: ' ' ;
+  /*content: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='15' height='15' viewBox='0 0 24 24'><path fill='#ffffff' d='M15,9H5V5H15M12,19A3,3 0 0,1 9,16A3,3 0 0,1 12,13A3,3 0 0,1 15,16A3,3 0 0,1 12,19M17,3H5C3.89,3 3,3.9 3,5V19A2,2 0 0,0 5,21H19A2,2 0 0,0 21,19V7L17,3Z' /></svg>");*/
   position: absolute;
   left: 16px;
   top: 8px;
@@ -151,6 +158,9 @@ textarea:focus, button.btn:focus, button.btn:active:focus, input:focus, input:ac
   line-height: 0.8;
   height: 15px;
   width: 15px;
+}
+.pa-cta-cnt button.save:before path {
+  fill: #fff;
 }
 .pa-cta-cnt button.btn-activated:before {
     -webkit-animation: changeSize 0.5s;
@@ -177,7 +187,10 @@ textarea:focus, button.btn:focus, button.btn:active:focus, input:focus, input:ac
     transition: all 0.2s;
 }
 /* save button animation */
-
+.formField {
+  display: inline-block;
+  width: 100%;
+}
 /* button classes ends here */
 /* header section */
 header{

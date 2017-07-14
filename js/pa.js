@@ -160,4 +160,5 @@ function callDatePicker(){
 	    }	
 }
 	callDatePicker();
+	// $('input, textarea').wrap('<span class="formField"></span>');
 });
