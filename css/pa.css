@@ -774,7 +774,7 @@ input::before {content: 'before--'}
 }
 .menu-open-button .material-icons{
   position: relative;
-    top: 10px;
+    top: 12px;
     left: 13px;
     font-size: 24px;
     font-weight: bold;
@@ -1394,6 +1394,10 @@ margin-bottom: 0
 .modal-header {
 background-color: #ebebeb;
 padding-bottom: 0;
+}
+.modal-body textarea {
+  width: 100%;
+  resize: none;
 }
 .modal-body, .modal-footer {
    background-color: #eff4fa;
