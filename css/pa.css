@@ -52,7 +52,7 @@ textarea:focus, button.btn:focus, button.btn:active:focus, input:focus, input:ac
   font-weight: bold;
   padding: 6px 20px;
 }
-.pa-cta-cnt button:hover {
+.pa-cta-cnt button:hover, .pa-cta-cnt button:focus {
   color: #fff;
 }
 .pa-cta-cnt button.primary {
