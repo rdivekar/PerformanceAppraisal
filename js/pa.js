@@ -133,6 +133,12 @@ $(document).ready(function(){
 // Overall functionality ends from here 
 function callDatePicker(){
 	if($('.datetimepicker1').length > 0){
+		// $('.datetimepicker1').attr('disabled',true);
+		$('.datetimepicker1').on('click', function(){
+			// if ($(this).val() == '') {
+				$(this).val('');
+			// };
+		})
     	$('.datetimepicker1').datetimepicker({
 	    	format: 'DD/MM/YYYY'
 	    });
