@@ -679,6 +679,8 @@ left: 4px;
          -moz-box-shadow: 0 1px 3px 0 rgba(147,147,147,0.55);
          -webkit-box-shadow: 0 1px 3px 0 rgba(147,147,147,0.55);
          box-shadow: 0 1px 3px 0 rgba(147,147,147,0.55);
+          max-height: 350px;
+          overflow-y: auto;
          }
     .action-dropdown li:hover { 
          background: #eee;
