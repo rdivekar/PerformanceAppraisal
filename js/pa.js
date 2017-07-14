@@ -125,7 +125,7 @@ $(document).ready(function(){
 	//console.log(totalSel);
 });
  $('.save').click( function(){
-  $(this).addClass('btn-activated').delay(2000).queue(function(next ){
+  $(this).addClass('btn-activated').delay(1000).queue(function(next ){
      $(this).removeClass('btn-activated');
      next();
   })
