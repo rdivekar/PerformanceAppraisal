@@ -201,16 +201,10 @@ header .sub-header .arrow {
   font-size: 150%;
   line-height: 0px;
 }
-header .sub-header .date-details {
-  font-size: 18px;
-  color: #fff;
+.pa-filter .date-details {
   display: inline-block;
-  /*white-space: nowrap;*/
+  white-space: nowrap;
   margin-right: 0px;
-}
-header .sub-header .date-details > input {
-  padding-left: 0px;
-  font-size: 18px;
 }
 .date input {
   box-shadow: none;
@@ -219,13 +213,14 @@ header .sub-header .date-details > input {
 
 
 /* employee details ends here */
-header .sub-header .date-details > input {
-  color: #fff;
-    background: transparent;
-    border: 0;
-    width: 110px;
-    float: none;
-    border-bottom: 1px dotted #fff;
+.pa-filter input {
+  background: transparent;
+  border: 0;
+  width: 110px;
+  float: none;
+  border-bottom: 1px dotted #000;
+  display: inline-block;
+  border-radius: 0px;
 }
 header .sub-header .profile-name span{
   color: #fff;
@@ -356,7 +351,7 @@ header .pa-welcome-cnt .notification sup {
   border: dashed 1px #b8b8ba;
   line-height: 16px;
 }
-.sub-header .pa-h1 {
+.pa-h1 {
   display: inline-block;
 }
 .sub-header .action-title {
@@ -422,7 +417,7 @@ left: 4px;
   display: block;
   padding-top: 5px;
 }
-.pa-body-cnt .pa-search, .pa-body-cnt .pa-action {
+.pa-body-cnt .pa-search, .pa-body-cnt .pa-action, .pa-filter {
   background-color: rgba(255, 255, 255, 0.4);
   background-color: #fff;
   padding: 8px;
@@ -592,14 +587,14 @@ left: 4px;
   50%,
   70%,
   90% {
-    -webkit-transform: translate3d(-10px, 0, 0);
+    -webkit-transform: translate3d(-5px, 0, 0);
     transform: translate3d(-10px, 0, 0)
   }
   20%,
   40%,
   60%,
   80% {
-    -webkit-transform: translate3d(10px, 0, 0);
+    -webkit-transform: translate3d(5px, 0, 0);
     transform: translate3d(10px, 0, 0)
   }
 }
@@ -626,21 +621,25 @@ left: 4px;
 }
 
 /* add this class */
-.error-validation {
+.error-validation input, .error-validation textarea {
+  background-color: rgba(255, 0, 0, 0.2);
+   -webkit-transition: all 500ms ease-out 0.5s;
+    -moz-transition: all 500ms ease-out 0.5s;
+    -o-transition: all 500ms ease-out 0.5s;
+    transition: all 500ms ease-out 0.5s;
   -webkit-animation-duration:0.5s;
   animation-duration: 0.5s;
   -webkit-animation-fill-mode: both;
   animation-fill-mode: both;
   -webkit-animation-name: shake;
-  animation-name: shake
+  animation-name: shake;
+   
+  
 }
-.error-validation input, .error-validation textarea {
-   -webkit-transition: all 500ms ease-out 1s;
-    -moz-transition: all 500ms ease-out 1s;
-    -o-transition: all 500ms ease-out 1s;
-    transition: all 500ms ease-out 1s;
-  background-color: rgba(255, 0, 0, 0.2);
+.error-validation {
+  
 }
+
 
 /* loader css */
 
@@ -696,6 +695,9 @@ left: 4px;
          position: relative;
          cursor: pointer;
          }
+    .pa-filter .action-title {
+      width: 60px;
+    }
     .action-title {
          width: 96px;
          height: 25px;
@@ -705,6 +707,7 @@ left: 4px;
          font-weight: bold;
          font-size: 13px;
          display: inline-block;
+         text-align: left;
          }
   .action .txt {
     /*transition: all 0.5s ease;*/
@@ -785,56 +788,6 @@ left: 4px;
          margin: 0;
          }
 /* action dropdown ends here */
-/* add item css clases */
-.menu-button {
-  position: relative;
-    left: 0px;
-    top: -6px;
-}
-.menu-open-button {
-  height: 40px;
-  border-radius: 25px;
-  background: #85c525;
-  color: #fff;
-  border: none;
-  font-size: 16px;
-  position: absolute;
-  max-width: 40px;
-  right: 0px;
-  left: 0px;
-  -webkit-transition: max-width .2s ease-out, left .2s ease-out;
-  transition: max-width .3s ease-in-out, left .3s ease-in-out;
-  overflow: hidden;
-  cursor: pointer;
-}
-.menu-open-button .material-icons{
-  position: relative;
-    top: 12px;
-    left: 13px;
-    font-size: 24px;
-    font-weight: bold;
-}
-
-.menu-open-button .btn-detail-text {
-  position: absolute;
-    top: 12px;
-  left: 33px;
-  white-space: nowrap;
-  opacity: 0;
-  -webkit-transition: opacity .3s;
-  transition: opacity .3s;
-
-}
-.menu-open-button:hover {
-  max-width: 184px;
-  left: -145px;
-  background: 
-
-}
-.menu-open-button:hover .btn-detail-text {
- opacity: 1;
-}
-/* add item css clases ends here */
 /* previous year objective starts here */
 .pre-yr-obj textarea, .dev-need-actn-tbl textarea {
  border: 0px solid #f1f1f1;
