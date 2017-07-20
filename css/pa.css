@@ -147,7 +147,18 @@ header .sub-header {
   background-color: #0d83dd;
   color: #fff;
   box-shadow: 0px 2px 4px #888888;
-  padding: 10px 0;
+  padding: 20px 0;
+} 
+header .sub-header  .subnavlinks a{
+  
+  color: #fff;
+  font-size: 16px;
+  font-weight: bold;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+header .sub-header  .subnavlinks a:first-child {
+  margin-left: 0px;
 }
 header .sub-header h1 {
   text-indent: 10px;
@@ -489,7 +500,7 @@ header .pa-welcome-cnt .notification sup {
   position: relative;
 }
 .pa-pagination .pa-arrow {
-  top: 5px;
+  top: 7px;  
 }
 .pa-curr-page-number {
   width: 35px;
@@ -500,10 +511,10 @@ header .pa-welcome-cnt .notification sup {
   text-align: center;
 }
 .pa-active {
-  fill: #149bfe;
+  color: #149bfe;
 }
 .pa-inactive {
-  fill: #c3c3c3;
+  color: #c3c3c3;
 }
 .pa-arrow-icon {
   width: 20px;

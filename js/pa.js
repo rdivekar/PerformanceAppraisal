@@ -160,6 +160,22 @@ function callDatePicker(){
 	         $('#datetimepicker6').data("DateTimePicker").maxDate(e.date);
 	     });
 	    }	
+
+	    if($('#datetimepicker8').length > 0){
+	     $('#datetimepicker8').datetimepicker({
+	     	format: 'MM/YYYY'
+	     });
+	     $('#datetimepicker9').datetimepicker({
+	         useCurrent: false, //Important! See issue #1075
+	         format: 'MM/YYYY'
+	     });
+	     $("#datetimepicker8").on("dp.change", function (e) {
+	         $('#datetimepicker9').data("DateTimePicker").minDate(e.date);
+	     });
+	     $("#datetimepicker8").on("dp.change", function (e) {
+	         $('#datetimepicker9').data("DateTimePicker").maxDate(e.date);
+	     });
+	    }
 }
 	callDatePicker();
 	// $('input, textarea').wrap('<span class="formField"></span>');
