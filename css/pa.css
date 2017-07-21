@@ -105,7 +105,7 @@ textarea:focus, button.btn:focus, button.btn:active:focus, input:focus, input:ac
 }
 /* next button animation */
 /* save button animation */
-.pa-cta-cnt button.save i {
+.pa-cta-cnt button.save i, .pa-cta-cnt button.thumb_up i {
   position: relative;
   overflow: hidden;
   -webkit-transition: all 0.2s;
@@ -1463,4 +1463,5 @@ footer{
   bottom: 0;
   width: 100%;
 }
+
 /* footer section ends */
