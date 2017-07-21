@@ -25,12 +25,6 @@
                </div>
             </div>
             <div class="col-xs-12 col-sm-12 col-md-5 col-lg-5 text-right pa-welcome-cnt">
-              <!--  <span class="notification">
-                  <svg style="width:24px;height:24px" viewBox="0 0 24 24">
-                     <path d="M14,20A2,2 0 0,1 12,22A2,2 0 0,1 10,20H14M12,2A1,1 0 0,1 13,3V4.08C15.84,4.56 18,7.03 18,10V16L21,19H3L6,16V10C6,7.03 8.16,4.56 11,4.08V3A1,1 0 0,1 12,2Z" />
-                  </svg>
-                  <sup>4</sup>
-               </span> -->
                Welcome <strong>Emily Perkins</strong> 
                <span class="user"><img src="images/user-image.jpg"></span>
             </div>
@@ -66,7 +60,7 @@
          <div class="hr-admin">
             <div class="row">
                <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-                  <div class="col-xs-12 col-sm-12 col-md-5 col-lg-5 pa-filter">
+                  <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 pa-filter">
                      <p class="pa-h1 d-inline-block">Appraisal Report</p>
                      <div class="hList pa-h1 d-inline-block">
                         <span class="action">
@@ -99,79 +93,59 @@
                         to <input type='text' class="form-control" id='datetimepicker9' />
                      </div>
                   </div>
-                  <div class="col-xs-12 col-sm-12 col-md-5 col-lg-5 pa-search">
-                     <input type="text" class="form-control" placeholder="Search">
-                     <button type="submit" class="btn btn-default"></button>
-                     <!-- <div class="pa-search-result">
-                        <ul>
-                           <li><a href="#">John Doe (1111)</a></li>
-                           <li><a href="#">Annie M. (2222)</a></li>
-                           <li><a href="#">Amily Perkins (3333)</a></li>
-                        </ul>
-                     </div> -->
-                  </div>
-                  <div class="col-xs-12 col-sm-12 col-md-2 col-lg-2 pa-action">
-                     <!-- <a class="pull-right" data-toggle="modal" data-target="#action">Action &#x25BC;</a> -->
-                     <div class="hList pull-right">
-                        <span class="action">
-                           <span class="action-title action-title_3rd">
-                              Actions 
-                              <span class="af-carot">
-                                 <svg style="width:16px;height:16px" viewBox="0 0 24 24">
-                                    <path  d="M19.78,11.78L18.36,13.19L12,6.83L5.64,13.19L4.22,11.78L12,4L19.78,11.78Z" />
-                                 </svg>
-                              </span>
-                           </span>
-                           <ul class="action-dropdown">
-                              <div class="hr-line"></div>
-                              <li data-toggle="modal" data-target="#addManagerModal">Initiate</li>
-                              <li data-toggle="modal" data-target="#commentsModal">Propose</li>
-                              <li data-toggle="modal" data-target="#commentsModal">Schedule</li>
-                              <li data-toggle="modal" data-target="#commentsModal">Resolve</li>
-                              <li data-toggle="modal" data-target="#commentsModal">Redo</li>
-                              <li data-toggle="modal" data-target="#commentsModal">Review</li>
-                              <li data-toggle="modal" data-target="#commentsModal">Approve</li>
-                           </ul>
-                        </span>
-                     </div>
-                  </div>
                </div>
                <div class="pa-tbl-cnt col-xs-12 col-sm-12 col-md-12 col-lg-12">
-                  <table>
+                  <table id="sum_table">
                      <thead>
-                        <tr>  
-                           <th width="20">Status</th>
-                           <th width="250">Apr' 17</th>
-                           <th width="90">May' 17</th>
-                           <th width="80">Jun' 17</th>
-                           <th width="80">Jul' 17</th>
-                           <th width="80">Aug' 17</th>
+                        <tr class="titlerow">  
+                           <th width="150">Status</th>
+                           <th>Apr' 17</th>
+                           <th >May' 17</th>
+                           <th>Jun' 17</th>
+                           <th>Jul' 17</th>
+                           <th>Aug' 17</th>
                         </tr>
                      </thead>
                      <tbody>
                         <tr>  
-                           <td><img src="images/user.png"></td>
-                           <td><a href="employee.html">John Doe</a></td>
-                           <td>1111</td>
-                           <td>1 Dec'16</td>
-                           <td>--</td>
-                           <td></td>
+                           <td>Initiated</td>
+                           <td>6</td>
+                           <td>7</td>
+                           <td>8</td>
+                           <td>9</td>
+                           <td>10</td>
                         </tr>
                         <tr>
-                           <td><img src="images/user.png"></td>
-                           <td><a href="employee.html">John Doe</a></td>
-                           <td>1111</td>
-                           <td>1 Dec'16</td>
-                           <td>--</td>
-                           <td></td>
+                           <td>Due</td>
+                           <td>18</td>
+                           <td>19</td>
+                           <td>20</td>
+                           <td>21</td>
+                           <td>22</td>
                         </tr>
                         <tr>
-                           <td><img src="images/user.png"></td>
-                           <td><a href="employee.html">John Doe</a></td>
-                           <td>1111</td>
-                           <td>1 Dec'16</td>
-                           <td>--</td>
-                           <td></td>
+                           <td>Pending</td>
+                           <td>11</td>
+                           <td>10</td>
+                           <td>9</td>
+                           <td>8</td>
+                           <td>7</td>
+                        </tr>
+                        <tr>
+                           <td>Completed</td>
+                           <td>22</td>
+                           <td>8</td>
+                           <td>9</td>
+                           <td>10</td>
+                           <td>11</td>
+                        </tr>
+                        <tr class="totalColumn">
+                           <td><b>Total</b></td>
+                           <td class="totalCol"></td>
+                           <td class="totalCol"></td>
+                           <td class="totalCol"></td>
+                           <td class="totalCol"></td>
+                           <td class="totalCol"></td>
                         </tr>
                      </tbody>
                   </table>

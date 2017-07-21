@@ -1,5 +1,19 @@
 $(document).ready(function(){
-// modal for deletion alert starts here
+ //Sum of Report table column data 
+	var totalsByCol = [0, 0, 0, 0, 0];
+	var $dataRows = $("#sum_table tr:not('.totalColumn, .titlerow')");
+	$dataRows.each(function(i) {
+		$(this).find('td:not(tr td:first-child)').each(function(j) {
+			totalsByCol[j] += parseInt($(this).html());
+		});
+	});            
+	for (var i = 0; i < totalsByCol.length - 1; i++) {
+		totalsByCol[totalsByCol] += totalsByCol[i];       
+	}    
+	$("#sum_table td.totalCol").each(function(i) {
+		$(this).html(totalsByCol[i]);
+	});
+ // modal for deletion alert starts here      
 	var pageHeading = $('body h2').html();
 	var deletion = '<div id="deleteAlert" class="modal fade" role="dialog">\
 					  <div class="modal-dialog">\
@@ -139,6 +153,7 @@ function callDatePicker(){
 		$('.datetimepicker1').on('click', function(){
 			// if ($(this).val() == '') {
 				$(this).val('');
+
 			// };
 		})
     	$('.datetimepicker1').datetimepicker({

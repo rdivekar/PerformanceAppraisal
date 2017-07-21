@@ -152,7 +152,7 @@ header .sub-header {
 header .sub-header  .subnavlinks a{
   
   color: #fff;
-  font-size: 16px;
+  font-size: 18px;
   font-weight: bold;
   margin-left: 10px;
   margin-right: 10px;
@@ -214,11 +214,15 @@ header .sub-header .arrow {
 }
 .pa-filter .date-details {
   display: inline-block;
-  white-space: nowrap;
+  //white-space: nowrap;
   margin-right: 0px;
 }
 .date input {
   box-shadow: none;
+}
+.totalCol {
+  font-weight:  700;
+  font-size: 14px
 }
 /* employee details starts here */
 
