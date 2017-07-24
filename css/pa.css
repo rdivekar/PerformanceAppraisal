@@ -1245,9 +1245,25 @@ input[type=radio]:checked + .check-box::before,
 }
 .tracker-content {
   position: relative;
-  left: -25px;
-  width: 70px;
+  left: -40px;
+  width: 100px;
   text-align: center;
+}
+.tracker-number {
+  position: relative;
+  font-size: 12px;
+  color: #fff;
+  left: 7px;
+  top: 2px;
+  font-weight: bold; 
+}
+.tracker-completed .material-icons{
+  font-size: 16px;
+  color: #fff;
+  left: 2px;
+  top: 2px; 
+  font-weight: bold;
+  position: relative;
 }
 /*Tracker CSS Ends*/
 
