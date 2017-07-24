@@ -1192,6 +1192,65 @@ input[type=radio]:checked + .check-box::before,
 }
 /* tool-tip css ends*/
 
+/*Tracker CSS*/
+
+.tracker-container {
+    top: 10px;
+    padding: 10px 30px 10px 10%;
+    width: 100%;
+    display: flex;
+    -ms-display: flex-box;
+    background: #fff;
+    margin-bottom: 20px;
+    box-sizing: border-box;
+    box-shadow: 0px 1px 3px rgba(136, 136, 136, 0.5);
+}
+.tracker-status {
+  display: inline-block;
+  flex: 1;
+  position: relative;
+  padding-left: 2px;
+  padding-right: 7px;
+}
+.tracker-circle, .tracker-circle-deactive {
+  border-radius: 50%;
+  height: 20px;
+  width: 20px;
+  position: relative;
+  left: 0;
+  cursor: pointer;  
+  position: relative;
+  z-index: 1;
+}
+.tracker-circle  {
+  background: #fd9827;
+}
+.tracker-circle-deactive {
+  background: #ccc;
+}
+.tracker-line { 
+  height: 3px;
+  width: 100%;
+  position: relative;
+  top: -11px;
+  left: 22px;
+  padding-right: 15px;
+}
+.tracker-line hr{
+  background: #ccc;
+  height: 3px;
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+.tracker-content {
+  position: relative;
+  left: -25px;
+  width: 70px;
+  text-align: center;
+}
+/*Tracker CSS Ends*/
+
 /* Add manager css */
 .pa-addmanager-section {
   position: relative;
