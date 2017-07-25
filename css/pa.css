@@ -724,6 +724,9 @@ header .pa-welcome-cnt .notification sup {
  display: inline-block;
  text-align: left;
 }
+.action-pending {
+  color: #202020;
+}
 .action .txt {
   /*transition: all 0.5s ease;*/
 }
@@ -795,12 +798,35 @@ header .pa-welcome-cnt .notification sup {
  transform: rotate(0deg);
  top: 6px;
 }
+.pa-action .action:hover .af-carot , .pa-filter .action:hover .af-carot  {
+  top: -1px;
+  left: 40px;
+}
+.pa-action .af-carot .material-icons, .pa-filter .af-carot .material-icons{
+  left: 2px;
+  position: relative;
+  top: 3px;
+}
+.sub-header .action-dropdown {
+  top: 30px;
+}
+.sub-header .af-carot {
+  height: 24px;
+  width: 24px;
+  text-align: center;
+  vertical-align: middle;
+  top: 0;
+}
+.sub-header .action:hover .af-carot {
+  top: 0;
+  left: 0;
+}
 .hr-line {
- height: 2px;
- background: #149bfe;
- width: 100%;
- padding: 0;
- margin: 0;
+   height: 2px;
+   background: #149bfe;
+   width: 100%;
+   padding: 0;
+   margin: 0;
 }
 /* action dropdown ends here */
 /* previous year objective starts here */
@@ -1542,5 +1568,16 @@ footer{
   bottom: 0;
   width: 100%;
 }
+/*bootstrap Calendar CSS */
+.bootstrap-datetimepicker-widget.dropdown-menu.bottom:after, .bootstrap-datetimepicker-widget.dropdown-menu.bottom:before {
+border: none;
 
+}
+.dropdown-menu {
+  border-top: 2px solid #02a397;
+  border-radius: 0;
+}
+.bootstrap-datetimepicker-widget table td.active, .bootstrap-datetimepicker-widget table td.active:hover, .bootstrap-datetimepicker-widget table td span.active{
+  background-color: #0d83dd;
+}
 /* footer section ends */
