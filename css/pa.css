@@ -1582,11 +1582,11 @@ input[type=radio]:checked + .check-box::before,
   display: none;
 }
 .message div{
-      position: absolute;
+      position: fixed;
       z-index: 2;
       width: 100%;
       text-align: center;
-      top: 180px;
+      top: 50%;
 
     }
   .message div span {
@@ -1600,7 +1600,7 @@ input[type=radio]:checked + .check-box::before,
     top: 10px;
     font-weight: bold;
   }
-  .message.succes div span {
+  .message.success div span {
     color: green;
   }
   .message.error div span {

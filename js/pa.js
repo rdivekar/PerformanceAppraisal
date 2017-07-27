@@ -94,6 +94,8 @@ $(document).ready(function(){
 	$('body').append(errorLink);
 	$('body').append(loader);
 	$('body').append(message);
+
+	
 // modal for error on page ends here 
 	// Overall functionality starts from here 
 	$('.over-all-ratings > li').click(function() {
@@ -225,5 +227,11 @@ function callDatePicker(){
 	    }
 }
 	callDatePicker();
+
 	// $('input, textarea').wrap('<span class="formField"></span>');
 });
+function showMessage(m, t){
+		$('.message > div > span').text(t);
+		$(".message").show().addClass(m);
+		setTimeout(function(){ $(".message").hide().removeClass(m);}, 3000);
+	}
