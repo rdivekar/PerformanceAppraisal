@@ -40,7 +40,7 @@
                               </span>
                            </div>
                            <ul class="action-dropdown">
-                              <div class="hr-line"></div>
+                              <li class="hr-line"></li>
                               <li>Monthly Appraisal Status</li>
                               <li>Report 1</li>
                               <li>Report 2</li>
@@ -63,22 +63,22 @@
                      <div class="hList pa-h1 d-inline-block">
                         <span class="action">
                            <div class="action-title action-title_3rd action-pending pa-h1">
-                              <span class="txt">Pending </span>
+                              <span class="txt" value="00">Pending </span>
                               <span class="af-carot">
                                  <i class="material-icons">keyboard_arrow_up</i>
                               </span>
                            </div>
                            <ul class="action-dropdown">
-                              <div class="hr-line"></div>
-                              <li>Initialized</li>
-                              <li>Proposed</li>
-                              <li>Due</li>
-                              <li>Filled</li>
-                              <li>Appraised</li>
-                              <li>Disputed</li>
-                              <li>Completed</li>
-                              <li>Reviewed</li>
-                              <li>Approved</li>
+                              <li class="hr-line"></li>
+                              <li value="01">Initialized</li>
+                              <li value="02">Proposed</li>
+                              <li value="03">Due</li>
+                              <li value="04">Filled</li>
+                              <li value="05">Appraised</li>
+                              <li value="06">Disputed</li>
+                              <li value="07">Completed</li>
+                              <li value="08">Reviewed</li>
+                              <li value="09">Approved</li>
                            </ul>
                         </span>
                      </div>
@@ -461,11 +461,6 @@
               if ($('.modal-open.in').length != 0) {
                 setModalMaxHeight($('.modal-open.in'));
               }
-            });
-            $('.action-dropdown li').click(function(){
-               var statusVal = $(this).text();
-               $(this).parent().prev().children('.txt').text(statusVal);
-               
             });
             $('.remove-mgr').click(function(){
                $(this).parent('.mgr').remove();

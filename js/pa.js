@@ -147,6 +147,34 @@ $(document).ready(function(){
   })
 });
 // Overall functionality ends from here 
+
+// action dropdown functionality 
+$('.action-dropdown > li').prepend('<i class="material-icons">done</i>');
+$("body").on('click','.action-dropdown li', function(){
+   var initStatusTxt = $(this).parent().prev().children('.txt').text();
+   var initStatusVal = $(this).parent().prev().children('.txt').attr('value');
+
+   var statusTxt = $(this).text().replace(/done/g, '');
+   var statusVal = $(this).attr('value');
+   $(this).parent().prev().children('.txt').text(statusTxt);
+   $(this).parent().prev().children('.txt').attr('value', statusVal);
+   $(this).parent().children().removeClass('selected');
+   $(this).addClass('selected');
+   //$(this).prepend('<i class="md-icon dp48">done</i>');
+   //console.log(initStatusVal);
+ //   if(initStatusVal > 00){
+	//    $(this).parent().children().eq(initStatusVal-1).after(("<li value='" + initStatusVal + "'>"+ initStatusTxt +"</li>"));
+	// 	//console.log(initStatusVal+'  '+initStatusTxt+' '+$(this).eq(initStatusVal-1).text());
+	// 	console.log(initStatusVal);
+	//  }
+	// else if(initStatusVal == 00){
+	//  	//console.log(initStatusVal)
+	//  	$(this).parent().children('.hr-line').after(("<li class='rm' value='00'>"+ initStatusTxt +"</li>"));
+	//  	console.log(initStatusVal);
+	//  }
+	//$(this).remove();
+});
+// action dropdown functionality ends
 function callDatePicker(){
 	if($('.datetimepicker1').length > 0){
 		// $('.datetimepicker1').attr('disabled',true);
