@@ -232,6 +232,6 @@ function callDatePicker(){
 });
 function showMessage(m, t){
 		$('.message > div > span').text(t);
-		$(".message").show().addClass(m);
-		setTimeout(function(){ $(".message").hide().removeClass(m);}, 3000);
+		$(".message").fadeIn().addClass(m);
+		setTimeout(function(){ $(".message").fadeOut().removeClass(m);}, 3000);
 	}
