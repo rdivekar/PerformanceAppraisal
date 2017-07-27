@@ -87,9 +87,13 @@ $(document).ready(function(){
 					</div>';
 	var errorLink = '<a href="#nogo" data-toggle="modal" data-target="#errorMessage" class="errorLink">error</a>';
 	var loader = "<div id='loader_container' class='modal fade' role='dialog'><div id='loader'></div></div>"
+	var message = "<div class='message'>\
+						<div class='col-xs-12 col-sm-12 col-md-12 col-lg-12'><span>Data saved Successfully  dsfdsf sd fdsf s!</span></div>\
+					</div>"
 	$('body').append(errorMessage);
 	$('body').append(errorLink);
 	$('body').append(loader);
+	$('body').append(message);
 // modal for error on page ends here 
 	// Overall functionality starts from here 
 	$('.over-all-ratings > li').click(function() {

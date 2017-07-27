@@ -1576,6 +1576,37 @@ input[type=radio]:checked + .check-box::before,
 /* modal classes ends here */
 /* body section ends */
 /* footer section */
+
+/* error and succes message div starts here */
+.message {
+  display: none;
+}
+.message div{
+      position: absolute;
+      z-index: 2;
+      width: 100%;
+      text-align: center;
+      top: 180px;
+
+    }
+  .message div span {
+    display: inline;
+    white-space: nowrap;
+    background-color: #fff;
+    padding: 10px;
+    box-shadow: 0px 3px 15px #888;
+    border-radius: 5px;
+    position: relative;
+    top: 10px;
+    font-weight: bold;
+  }
+  .message.succes div span {
+    color: green;
+  }
+  .message.error div span {
+    color: red;
+  }
+  /* error and succes message div ennds here */
 footer{
   background-color: #8a8a8a;
   color: #fff;
