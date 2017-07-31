@@ -1628,4 +1628,15 @@ border: none;
 .bootstrap-datetimepicker-widget table td.active, .bootstrap-datetimepicker-widget table td.active:hover, .bootstrap-datetimepicker-widget table td span.active{
   background-color: #0d83dd;
 }
+
+@media (min-width: 768px){
+      
+      .modal-dialog.preview-modal {
+          width: 767px;
+          margin: 30px auto;
+        }
+      }
+     .preview-modal ul.over-all-ratings {
+        display: flex;
+      }
 /* footer section ends */
